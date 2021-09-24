@@ -1,0 +1,56 @@
+/*Default values */
+
+html, body{
+    height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* End of default values */
+
+/* CSS for header */
+
+#Header {
+  overflow: hidden;
+  background-color: black;
+  padding: .5em 1em;
+}
+
+#logo {
+  float: left;
+  text-align:center
+}
+
+#logo img {
+  max-width: 215px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+#Header nav {
+  float: right;
+}
+
+#Header nav ul, li{
+  margin: 0; 
+  padding: 0;
+}
+
+#Header nav li {
+  display: inline-block;
+  font-size: 1.25em;
+  padding: 0.75em 1em 0.75em 1em;
+  margin: none;
+  color: white;
+}
+
+#Header nav li:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+/* End of CSS for header */
