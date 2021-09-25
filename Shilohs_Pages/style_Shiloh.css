@@ -1,7 +1,8 @@
 /*Default values */
 
 html, body{
-    height: 100%;
+  height: 100%;
+  font-family: "Bahnschrift light"
 }
 
 body {
@@ -11,6 +12,10 @@ body {
 a {
   text-decoration: none;
   color: #000;
+}
+
+ul {
+  list-style: none;
 }
 
 /* End of default values */
@@ -90,7 +95,23 @@ a {
 }
 
 #aisleSidebar h2 {
-  
+  margin-bottom: 0;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #000;
+}
+
+#aisleSidebar nav ul {
+  padding-left: 0px;
+  margin-top: 0.5em;
+}
+
+#aisleSidebar nav li {
+  font-size: 18px;
+  padding: 0.5em 0;
+}
+
+#aisleSidebar nav li a:hover {
+  color: #800;
 }
 
 /*End of CSS for P2 */
