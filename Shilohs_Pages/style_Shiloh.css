@@ -129,7 +129,6 @@ ul {
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
   width: 220px;
-  height: 370px;
   padding: 1em;
   margin: 2em 2em 0 0;
   display: inline-block;
@@ -142,16 +141,16 @@ ul {
   height: 150px;
 }
 
-.productContainer .price {
-  font-weight: bold;
-}
-
 .productContainer button {
   background-color: #800;
   font-size: 1.2em;
   color: #fff;
   width: 100%;
   padding: 0.3em;
+}
+
+.productContainer button, h3, img:hover {
+  cursor: pointer;
 }
 
 /*End of CSS for P2 */
