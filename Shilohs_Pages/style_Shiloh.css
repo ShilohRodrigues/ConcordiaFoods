@@ -85,16 +85,20 @@ ul {
   font-size: 1.25em;
   border: 2px solid #000;
   margin: 1.25em 0em;
+  width: 100%;
 }
 
 #aisleSidebar {
   background-color: #fff;
   float: left;
   border: 2px solid #000;
-  padding: 1.25em;
+  padding: 1.25em 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+  margin: 0;
+  width: 14%;
 }
 
-#aisleSidebar h2 {
+#aisleSidebar h2, #aisleProducts h2 {
   margin-bottom: 0;
   padding-bottom: 0.3em;
   border-bottom: 2px solid #000;
@@ -112,6 +116,42 @@ ul {
 
 #aisleSidebar nav li a:hover {
   color: #800;
+}
+
+#aisleProducts {
+  padding: 1.25em 5em;
+  float: left;
+  width: 63%;
+}
+
+.productContainer {
+  border: 2px solid #000;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+  width: 220px;
+  height: 370px;
+  padding: 1em;
+  margin: 2em 2em 0 0;
+  display: inline-block;
+}
+
+.productContainer img {
+  display: block;
+  margin: auto;
+  width: 220px;
+  height: 150px;
+}
+
+.productContainer .price {
+  font-weight: bold;
+}
+
+.productContainer button {
+  background-color: #800;
+  font-size: 1.2em;
+  color: #fff;
+  width: 100%;
+  padding: 0.3em;
 }
 
 /*End of CSS for P2 */
