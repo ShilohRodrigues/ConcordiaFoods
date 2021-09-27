@@ -78,16 +78,18 @@ background-color=#800
 #logintext{
 text-align: center;
 }
-.login button{
-background-color: #800;
+.login{
+background-color: #010101;
 font-size: 1.2em;
-color: #fff;
-width: 100%;
+color: white;
+width: 10%;
 padding: 0.3em;
+cursor: pointer;
 }
-.login button, h3, img:hover{
-  cursor: pointer;
+color::first-letter{
+color: red;
 }
+
 
 
 
