@@ -1,0 +1,79 @@
+/*Default values */
+
+html, body{
+  height: 100%;
+  font-family: "Bahnschrift light"
+}
+
+body {
+  background-color: #efefef;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+/* End of default values */
+
+/* CSS for header */
+
+#mainHeader {
+  overflow: hidden;
+  background-color: #000;
+  padding: .5em 1em;  
+}
+
+#mainHeader nav {
+  max-width: 1500px;
+  margin: auto;
+}
+
+#logo {
+  float: left;
+}
+
+#logo img {
+  float: left;
+  max-width: 215px;
+  margin: 0 10px 0 0;
+}
+
+#mainHeader ul {
+  float: right;
+}
+
+#mainHeader nav .active {
+  background-color: #800;
+}
+
+#mainHeader nav ul, li{
+  margin: 0; 
+  padding: 0;
+}
+
+#mainHeader nav li {
+  display: inline-block;
+  font-size: 1.25em;
+  padding: 0.75em 1em 0.75em 1em;
+  margin: none;
+  color: white;
+}
+
+#mainHeader nav li:hover {
+  cursor: pointer;
+  background-color: #800;
+}
+
+/* End of CSS for header */
+
+#login{
+float : center:
+}
+
+
+/*End of CSS for P5 */
