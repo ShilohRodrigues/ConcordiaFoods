@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <meta name = "Description" content = "MeatAisle">
+  <meta name = "Author" content = "Adam Farahat"> 
+  <meta name="keywords" content="grocery, food, store, Concordia, Meat">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <title>Concordia Foods</title>    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style_Shiloh.css">
+</head>
+  
+<body>
+  <div class="container-xxl pt-2">
+    <header id="mainHeader">
+      <div id="logo">
+          <a href="/index.html"><img class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods"></a>
+      </div>
+	   <nav>
+		<div class="dropdown">
+			<button class="dropbtn">Account</button></a>
+				<div class="dropdown-content">
+					<a href="login.html">Login</a>
+					<a href="#">Sign Up</a>
+          </div>
+		</nav>
+      <nav>
+		<a href="#">View Cart</a>
+		<div class="dropdown">
+          <button class="dropbtn active">Products</button>
+          <div class="dropdown-content">
+            <a href="#Produce_Aisle.html">Fruits and Vegetables</a>
+            <a href="#MeatAisle.html">Meats</a>
+            <a href="#">Frozen Foods</a>
+            <a href="#">Snacks</a>
+            <a href="#">Drinks</a>
+          </div> 
+          </div>
+		  <a href="#">Home</a>
+      </nav> 
+    </header>
+	<header id="aisleHeader">
+      <h1>Meats</h1>
+	 </header> 
+	  <aside id="aisleSidebar">
+		<h2>Aisles</h2>
+		<nav>
+			<ul>
+			<li><a href="Produce_Aisle.html">Fruits & Vegetables</a></li>
+			<li><a class="active" href="MeatAisle.html">Meats</a></li> 
+			<li><a href="#">Frozen Foods</a></li>
+			<li><a href="#">Snacks</a></li>
+			<li><a href="#">Drinks</a></li>
+			</ul>
+		</nav>
+    </aside>
+    </header>
+	<article id="aisleProducts">
+      <h2>Our Products</h2>
+      <div class="flex-productContainer">
+        <div class="productContainer">
+          <img class="img-fluid" src="images/GroundBeef.jpg" alt="Ground Beef"/>
+          <h3>Ground Beef</h3>
+          <p class="price">$11.50/kg</p>
+          <button type="button" onclick="window.location.href = 'GroundBeef.html'">View Details</button>
+        </div>
+        <div class="productContainer">
+          <img class="img-fluid" src="images/TBone.jpg" alt="TBone"/>
+          <h3>Steak T-Bone</h3>
+          <p class="price">$22.65/kg</p>
+          <button type="button" onclick="window.location.href = 'TBone.html'">View Details</button>
+        </div>
+        <div class="productContainer">
+          <img class="img-fluid" src="images/ChickenThighs.jpg" alt="ChickenThighs"/>
+          <h3>Chicken Thighs</h3>
+          <p class="price">$6.50/kg</p>
+          <button type="button" onclick="window.location.href = 'ChickenThighs.html'">View Details</button>
+        </div>
+        <div class="productContainer">
+          <img class="img-fluid" src="images/ChickenBreasts.jpg" alt="ChickenBreasts"/>
+          <h3>Chicken Breasts</h3>
+          <p class="price">$7.64/kg</p>
+          <button type="button" onclick="window.location.href = 'ChickenBreasts.html'">View Details</button>
+        </div>
+        <div class="productContainer">
+          <img class="img-fluid" src="images/BeefHeart.jpg" alt="BeefHearts"/>
+          <h3>Beef Hearts</h3>
+          <p class="price">$12.13/kg</p>
+          <button type="button" onclick="window.location.href = 'BeefHeart.html'">View Details</button>
+        </div>
+        <div class="productContainer">
+          <img class="img-fluid" src="images/ChickenHeart.jpg" alt="peaches"/>
+          <h3>Chicken Hearts</h3>
+          <p class="price">$9.90/kg</p>
+          <button type="button" onclick="window.location.href = 'ChickenHeart.html'">View Details</button>
+        </div>
+      </div>
+    </article>
+</html>
