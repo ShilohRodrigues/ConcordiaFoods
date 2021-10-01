@@ -1,1 +1,7 @@
-/* learning Github */ 
+
+/* Banner image size */
+.carousel-inner > .carousel-item > img {
+      width:250px;
+      height:360px;
+
+    }
