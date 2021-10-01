@@ -1,8 +1,7 @@
 
 /* Banner image size */
 .carousel-inner > .carousel-item > img {
-      width:440px;
+      width:250px;
       height:360px;
-      margin-left:  30px;
-      margin-right: 80px;
+
     }
