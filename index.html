@@ -5,16 +5,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="/css/master.css">
-  <link rel="stylesheet" href="Shilohs_Pages/style_Shiloh.css">
+  <link rel="stylesheet" href="Pages/style_Shiloh.css">
 </head>
 
   <body>
     <header id="mainHeader">
       <div id="logo">
-          <a href="/index.html"><img class="img-fluid" src="Shilohs_Pages/images/CFlogo.png" alt="Concordia Foods"></a>
+          <a href="/index.html"><img class="img-fluid" src="Pages/images/CFlogo.png" alt="Concordia Foods"></a>
       </div>
       <nav>
-        <a href="/login-P5/login.html">Account</a>
+        <div class="dropdown">
+          <button class="dropbtn">Account</button>
+          <div class="dropdown-content">
+            <a href="login.html">Login</a>
+            <a href="#">Sign Up</a>
+          </div>
+        </div>
         <a href="#">View Cart</a>
         <div class="dropdown">
           <button class="dropbtn active">Products</button>
@@ -29,7 +35,6 @@
         <a href="/index.html">Home</a>
       </nav>
     </header>
-  </div>
 
 
 
@@ -63,7 +68,7 @@
 
 
   <footer id="mainFooter">
-    <img id="miniLogo" class="img-fluid" src="images/CFlogoShort.png" alt="Concordia Foods logo">
+    <img id="logo" class="img-fluid" src="/Pages/images/CFlogo.png" alt="Concordia Foods logo">
     <div class="ftMain">
       <div class="ftList">
         <p>Aisles</p>
