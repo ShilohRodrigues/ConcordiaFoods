@@ -1,0 +1,89 @@
+.titlecontainer{
+	display: grid;
+	grid-column: 1fr 0.1fr 1fr ;
+	grid-row: 1fr;
+
+	grid-template-areas: "title add AddingTitle ";
+	
+}
+.title{
+	grid-area: title;
+	font-family: 'Open Sans', sans-serif;
+	justify-self: center;
+}
+.Add{
+	grid-area: add;
+	margin-top: 22px;
+}
+.AddingTitle{
+	grid-area: AddingTitle;
+}
+
+.Table{
+	display: grid;
+	margin-left: 20%;
+	margin-right: 20%;
+	grid-column: 2fr 1fr 1fr;
+	grid-auto-columns: 2fr 1fr 1fr;
+	grid-template-areas: "username edit delete";
+
+}
+
+.NameTitle{
+	grid-area: username;
+	font-size: 25px;
+	background-color: black;
+		padding: 10px 10px 10px 10px;
+
+	color: white;
+}
+
+.EditTitle{
+	grid-area: edit;
+	font-size: 25px;
+	background-color: black;
+	padding: 10px 10px 10px 10px;
+	color: white;
+}
+
+.DeleteTitle{
+	grid-area: delete;
+	font-size: 25px;
+	background-color: black;
+		padding: 10px 10px 10px 10px;
+	color: white;
+
+}
+
+img{
+	width: 25px;
+	height: 25px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.Username{
+	font-size: 15px;
+	padding-left: 2%;
+}
+
+body{
+	background-color: #F1F1EF;
+}
+
+
+
+
+@media (max-width:700px){
+
+.Table{
+	
+	margin-left: 5%;
+	margin-right: 5%;
+	
+
+}
+
+
+
+}

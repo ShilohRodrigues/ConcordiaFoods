@@ -1,0 +1,502 @@
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.WholePage{
+
+	display: grid;
+	grid-template-columns: 0.75fr 1fr 1fr;
+	grid-template-rows:auto ;
+	grid-template-areas: 
+    "First Second Third  ";
+}
+
+.FirstPart{
+
+	grid-area: First;
+
+}
+.title{
+	font-size: 80px;
+	text-align: center;
+	font-weight: 500px;
+}
+
+img{
+	height: 30px;
+    width: 45px;
+    padding-right: 3px;
+
+}
+
+.backtostore {
+	display: inline-flex;
+	flex-direction: row;
+	margin-top: 80px;
+	width: 30%;
+	align-items: center;
+	padding-left: 18px;
+}
+
+.link{
+	text-decoration: none;
+}
+
+.backtostoretext{
+	font-size: 18px;
+	font-style: unset;
+	font-weight: 100;
+	color: black;
+	text-decoration: none;
+}
+
+.SecondPart{
+	grid-area: Second;
+	display: grid;
+	grid-template-columns: 0.2fr 1fr 1fr 1fr;
+	grid-template-rows:auto ;
+	grid-template-areas: 
+    "button img name price "
+    "button img Quantity price"
+    "line line line line"
+    "empty empty updateButton updateButton";
+    
+}
+.xbutton{
+	grid-area: button;
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+
+
+}
+.xbutton:hover{
+	grid-area: button;
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: red;
+  	color: black;
+
+
+}
+
+
+.xbutton:active{
+	grid-area: button;
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: darkred;
+  	color: white;
+
+
+}
+
+
+.Pimage{
+	grid-area: img;
+	justify-self: center;
+	align-self: center;
+	width: 100%;
+	height: auto;
+}
+
+.Pname{
+	grid-area: name;
+	align-self: center;
+	justify-self: center;
+}
+
+.Pquantity{
+	grid-area: Quantity;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+
+}
+
+.PButton {
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+}
+
+.PButton:hover{
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: black;
+  	color: white;
+
+
+}
+
+
+.PButton:active{
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: #4f4b4b;
+  	color: white;
+
+
+}
+
+
+.Mbutton {
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+}
+
+.Mbutton:hover{
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: black;
+  	color: white;
+
+
+}
+
+
+.Mbutton:active{
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: #4f4b4b;
+  	color: white;
+
+
+}
+
+.Pprice{
+	grid-area: price;
+	justify-self: center;
+	align-self: center;
+
+}
+.line{
+	grid-area: line;
+	border-bottom: solid 5px;
+    border-color: black;
+    margin: 0px;
+    padding: 0px;
+    height: 5px;
+}
+
+.Update{
+	grid-area: updateButton ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	border-color: black;
+	border-width: 3px;
+
+}
+
+.Update:hover{
+	grid-area: updateButton ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	border-radius: 2px;
+	border-color: black;
+	cursor: pointer;
+
+
+}
+.Update:active{
+	grid-area: updateButton ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: white;
+	color: black;
+	border-radius: 2px;
+	border-color: black;
+	cursor: pointer;
+
+
+}
+
+.ThirdPart{
+	background-color: #F1F1EF;
+	margin-left: 10px;
+	grid-area: Third;
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-template-rows:80px 30px 30px 30px 80px  ;
+	grid-template-areas: 
+    "total total numberofitems numberofitems "
+    "sub sub subamount subamount"
+    "qst qst qstamount qstamount"
+    "gst gst gstamount gstamount"
+    "Total Total Totalamount Totalamount"
+    "checkout checkout checkout checkout";
+
+
+}
+.totaltitle{
+	grid-area:total ;
+	padding-top: 18px;
+	height: 30px;
+	justify-self: center;
+}
+
+.itemstotal{
+	grid-area: numberofitems;
+	padding-top: 29px;
+	height: 30px;
+	justify-self: left;
+}
+
+.subtext{
+	grid-area: sub;
+	justify-self: center;
+}
+.Amounttext{
+	grid-area: subamount;
+	justify-self: left;
+}
+
+.QSTtext{
+	grid-area: qst;
+	justify-self: center;
+}
+
+.QSTamount{
+	grid-area:qstamount ;
+	justify-self: left;
+}
+
+.GSTtext{
+	grid-area: gst;
+	justify-self: center;
+}
+
+.GSTamount{
+	grid-area:gstamount ;
+	justify-self: left;
+}
+
+.totaltext{
+	grid-area: Total;
+	padding-top: 20px;
+	font-size: 25px;
+	font-weight: 800;
+	justify-self: center;
+}
+
+.totalamount{
+	grid-area:Totalamount ;
+	padding-top: 20px;
+	font-size: 25px;
+	font-weight: 800;
+	justify-self: left;
+
+
+}
+.Checkout{
+	grid-area: checkout ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	border-color: black;
+	border-width: 3px;
+    width: 70%;
+    justify-self: center;
+
+}
+
+.Checkout:hover{
+	grid-area: checkout ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	border-radius: 2px;
+	border-color: black;
+	cursor: pointer;
+	width: 70%;
+	justify-self: center;
+	
+
+
+
+}
+.Checkout:active{
+	grid-area: checkout ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: white;
+	color: black;
+	border-radius: 2px;
+	border-color: black;
+	cursor: pointer;
+	width: 70%;
+	justify-self: center;
+
+}
+
+@media (max-width:700px){
+
+
+.WholePage{
+
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows:1fr 1fr 1fr ;
+	grid-template-areas: 
+    "First "
+    "Second "
+    "Third  ";
+}
+
+
+.FirstPart{
+
+	grid-area: First;
+
+}
+
+.SecondPart{
+	grid-area: Second;
+	display: grid;
+	grid-template-columns: 0.3fr 1fr 1fr 1fr;
+	grid-template-rows:auto ;
+	grid-template-areas: 
+    "button img name price "
+    "button img Quantity price"
+    "line line line line"
+    "empty empty updateButton updateButton";
+    
+}
+
+
+.ThirdPart{
+	grid-area: Third;
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr ;
+	grid-template-rows:80px 30px 30px 30px 80px  ;
+	grid-template-areas: 
+    "total total numberofitems  "
+    "sub sub subamount "
+    "qst qst qstamount "
+    "gst gst gstamount "
+    "Total Total Totalamount "
+    "checkout checkout checkout ";
+    padding: 0px 0px 0px 0px;
+    height: 1fr;
+
+
+}
+
+.Checkout{
+	grid-area: checkout ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	border-color: black;
+	border-width: 3px;
+    width: 70%;
+    justify-self: center;
+}
+
+.Checkout:hover{
+	grid-area: checkout ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	border-radius: 2px;
+	border-color: black;
+	cursor: pointer;
+	width: 70%;
+	justify-self: center;
+
+
+}
+.Checkout:active{
+	grid-area: checkout ;
+	margin-top: 10px;
+	height: 40px;
+	background-color: white;
+	color: black;
+	border-radius: 2px;
+	border-color: black;
+	cursor: pointer;
+	width: 70%;
+	justify-self: center;
+}
+
+
+.backtostore {
+	
+	margin-top: 20px;
+	
+}
+
+.title{
+	margin-bottom: 0px;
+}
+}
+
+
+
