@@ -363,3 +363,52 @@ h1, h2, h3 {
 }
 
 /*End of CSS for P3*/
+
+/*CSS for Product List P7*/
+
+#backendHeader {
+  background-color: #b5b5b5;
+  text-align: center;
+  font-size: 1.25em;
+  border: 2px solid #000;
+  margin-top: 1.25em;
+  padding: 1em;
+}
+
+#productTable {
+  margin: 4em auto;
+  width: 70%;
+}
+
+#productTable th { 
+  font-size: 1.5em;
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+
+#productTable td { 
+  font-size: 1.25em;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+#productTable button {
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  #productTable th {
+    min-width: 3em;
+  }
+  #productTable td {
+    min-width: 3em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #productTable td {
+    min-width: 5em;
+  }
+}
+
+/*End of CSS for P7*/

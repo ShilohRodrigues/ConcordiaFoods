@@ -4,10 +4,7 @@ html,body {
 	font-family: "Bahnschrift light";
 }
 body{
-	background-image: url("images/Concordia-logo.jpeg");
-	background-repeat: no-repeat;
 	height: 100%;
-	background-position: center;
 	background-color: white;
 }
 
