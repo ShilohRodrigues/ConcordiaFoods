@@ -9,11 +9,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="shortcut icon" href="images/favicon.ico"/>
   <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-  <title>Concordia Foods</title>    
+  <title>Concordia Foods</title>
   <link rel="stylesheet" href="style_Shiloh.css">
 </head>
 <body>
-	
+
 	<div class="container-xxl pt-2">
 		<header id="mainHeader">
 			<div id="logo">
@@ -37,7 +37,7 @@
 					<a href="#">Snacks</a>
 					<a href="#">Drinks</a>
 				</div>
-				
+
 			</div>
 			<a href="/index.html">Home</a>
 		</nav>
@@ -52,10 +52,16 @@
 	<article id="productDescription">
 		<img src="images/GroundBeef.jpg" alt="Ground Beef"/>
 		<div id="productInfo">
-			<h2>Ground Beef</h2>
 			<p>Ground Beef made fresh with local Quebec cows.</p>
+      <class="price"><p>$11.90/kg</br></p>
+      <form>
+        <label for="quantity">Quantity: </label>
+        <input type="number" id="quality" value="0" min="0" max="100"><br/>
+        <input type="submit" id="btSubmit" value="Add to Cart"/>
+      </form>
+    </div>
 	</article>
-		
+
 
 </body>
 </html>
