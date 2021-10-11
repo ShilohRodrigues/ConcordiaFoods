@@ -4,11 +4,8 @@ html,body {
 	font-family: "Bahnschrift light";
 }
 body{
-	background-image: url("images/back.jpg");
-	background-repeat: no-repeat;
 	height: 100%;
-	background-position: center;
-	background-color: black;
+	background-color: white;
 }
 
 a {
@@ -17,6 +14,7 @@ a {
 }
 
 ul {
+	padding-left: 0;
 	list-style: none;
 }
 
@@ -37,13 +35,24 @@ h3{
 	padding: .5em 1em;  
 }
 
-.mainHeader nav {
+.mainHeader nav .active {
+  background-color: #800;
+}
+
+
+.mainHeader nav a {
+	display: inline-block;
+	font-size:1.25em
+	padding: 0.75em 1em 0.75em 1em;
+	margin: none;
+	color: white;	
 	max-width: 1500px;
 	margin: auto;
 }
 
 .logo {
 	float: left;
+	max-width: 240px;
 }
 
 .logo img {
@@ -58,6 +67,11 @@ h3{
 
 .mainHeader nav .active {
 	background-color: #800;
+	display: inline-block;
+  	font-size: 1.25em;
+  	padding: 0.75em 1em 0.75em 1em;
+ 	margin: none;
+  	color: white;
 }
 
 .mainHeader nav ul, li{
@@ -88,4 +102,43 @@ h3{
 	padding: 5px 32px;
 	text-align: center;
 	text-decoration:none;
+}
+/*Footer CSS*/
+#mainFooter {
+  overflow: hidden;
+  background-color: #000;
+  padding: 0.5em;
+}
+
+#mainFooter p {
+  color: #949494;
+  margin-top: 1em;
+}
+
+.ftMain {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 3em
+}
+
+.ftList li, .ftList a {
+  color: #f4f4f4;
+  line-height: 2em;
+}
+
+.ftList a:hover {
+  color: #800;
+}
+
+@media screen and (max-width: 768px) { 
+  .ftMain .ftList {
+    flex: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) { 
+  .ftMain .ftList {
+    flex: 25%;
+  }
 }
