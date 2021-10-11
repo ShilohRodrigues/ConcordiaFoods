@@ -7,20 +7,37 @@
 	<meta name="keywords" content="grocery,store,login,Concordia,Foods"/>
 	<title>Concordia Foods</title>
 	<link rel="stylesheet" type="text/css" href="loginstyle.css"/>
+	<link rel="stylesheet" type="text/css" href="style_Shiloh.css"/>
 	<link rel="icon" href="images/favicon.ico?v1"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
 	</head>
 	<body>
-		<header class="mainHeader">
-			<nav>
-				<div class="logo">
-					<a href="index.html"><img src="images/CFLogo.png" alt="ConcordiaFoods"/></a>
+		<div class="container-xxl pt-2">
+			<header id="mainHeader">
+				<div id="logo">
+				<a href="/index.html"><img class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods"/></a>
 				</div>
-				<ul>
-					<a href="/index.html"><li>Home</li></a>
-					<a href="#"><li>Products</li></a>
-					<a href="#"><li>Orders</li></a>
-					<a href="#"><li class="active">Account</li></a>
-				</ul>
+				<nav>
+					<div class="dropdown">
+					<button class="dropbtn">Account</button>
+					<div class="dropdown-content">
+						<a href="login.html">Login</a>
+						<a href="#">Sign Up</a>
+					</div>
+				</div>
+				<a href="#">View Cart</a>
+				<div class="dropdown">
+					<button class="dropbtn active">Products</button>
+					<div class="dropdown-content">
+						<a href="Produce_Aisle.html">Fruits and Vegetables</a>
+						<a href="MeatAisle.html">Meats</a>
+						<a href="#">Frozen Foods</a>
+						<a href="#">Snacks</a>
+						<a href="#">Drinks</a>
+					</div>
+
+				</div>
+				<a href="/index.html">Home</a>
 			</nav>
 		</header>
 		<article class="login">
@@ -28,23 +45,19 @@
 			</br>
 			<img src="images/CFlogoShort.png" alt="CFlogoShort.png"/>
 			</br>
-			<h2><large>L</large>ogin</h2>
-			<h2><large>S</large>tudentID</h2>
+			<h3><large>L</large>ogin</h3><br>
+			<large>S</large>tudentID<br>
 			<input type="text">
-			</br>
-			<h2><large>P</large>assword</h2>
-			<input type="password">
-			</br>
-			</br>
-			<button type="submit"class="button"><h2><large>L</large>ogin</h2></button>
-			<p></p>
-			<a href="#forgot-pw" class="forgot-pw"><h2><large>F</large>orgot <large>P</large>assword</style></h2></a>
+			<br><br>
+			<large>P</large>assword<br>
+			<input type="password"><br><br>
+			<button type="submit"class="button"><large>L</large>ogin</button><br><br>
+			<a href="#forgot-pw" class="forgot-pw"><large>F</large>orgot <large>P</large>assword</a>
 		</article>
-	</body>
 	<footer id="mainFooter">
-      <img id="logo" class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods logo">
-      <div class="ftMain">   
-        <div class="ftList">
+    <img id="logo" class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods Logo"/>
+    <div class="ftMain">
+      <div class="ftList">
           <p>Aisles</p>
           <ul>
             <li><a href="Produce_Aisle.html">Fruits & Vegetables</a></li>
@@ -54,14 +67,14 @@
             <li><a href="#">Drinks</a></li>
           </ul>
         </div>
-        <div class="ftList">
-          <p>Login/Sign Up</p>
+      <div class="ftList">
+        <p>Login/Sign Up
           <ul>
             <li><a href="login.html">Login</a></li>
             <li><a href="#">Sign Up</a></li>
           </ul>
-        </div>
-        <div class="ftList">
+      </div>
+      <div class="ftList">
           <p>Authors</p>
           <ul>
             <li>Shiloh Rodrigues</li>
@@ -74,18 +87,15 @@
         <div class="ftList">
           <p>Backend Functions</p>
           <ul>
-            <li><a href="#">Product List</a></li>
+            <li><a href="ProductList.html">Product List</a></li>
             <li><a href="#">Edit a Product</a></li>
             <li><a href="#">User List</a></li>
             <li><a href="#">Edit a User</a></li>
             <li><a href="#">Order List</a></li>
-            <li><a href="#">Edit an Order</a></li>
+            <li><a href="Order_Edit.html">Edit an Order</a></li>
           </ul>
-        </div>   
-      </div>
-    </footer>
+        </div>
+    </div>
+  </footer>
+</body>
 </html>
-			
-			
-	
-	
