@@ -1,6 +1,6 @@
 
 /* Banner image size */
-.carousel-inner > .carousel-item > img {
+.carousel-inner > .carousel-item > a >img {
       width:250px;
       height:360px;
 
