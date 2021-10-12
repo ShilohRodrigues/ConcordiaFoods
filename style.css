@@ -410,6 +410,7 @@ h1, h2, h3 {
     "First Second Third  ";
     margin-top: 80px;
     margin-bottom:80px ;
+  background-color: white !important;
 }
 
 .FirstPart{
