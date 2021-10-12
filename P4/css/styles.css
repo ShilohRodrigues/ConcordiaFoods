@@ -818,6 +818,256 @@ img{
 .title{
 	margin-bottom: 10px;
 }
+
+
+.xbutton:hover{
+	grid-area: button;
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+
+
+}
+
+
+
+.PButton:hover{
+		grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+
+
+}
+
+
+
+
+
+
+.Mbutton:hover{
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+
+
+}
+
+
+
+
+.xbutton2:hover{
+	grid-area: button2;
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+
+
+}
+
+
+
+
+
+
+
+
+
+.PButton2:hover{
+	grid-area: button2;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+
+
+}
+
+
+
+
+
+
+
+.Mbutton2:hover{
+	grid-area: button2;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: white;
+  	color: black;
+
+
+}
+.Mbutton2:active{
+	grid-area: button2;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: #4f4b4b;
+  	color: white;
+
+
+}
+
+.xbutton:active{
+	grid-area: button;
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: darkred;
+  	color: white;
+
+
+}
+
+
+
+
+
+
+
+.PButton:active{
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: #4f4b4b;
+  	color: white;
+
+
+}
+
+
+
+
+
+
+
+.Mbutton:active{
+	grid-area: button;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: #4f4b4b;
+  	color: white;
+
+
+}
+
+
+
+
+.xbutton2:active{
+	grid-area: button2;
+	height: 20px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: darkred;
+  	color: white;
+
+
+}
+
+
+
+
+
+
+
+.PButton2:active{
+	grid-area: button2;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: #4f4b4b;
+  	color: white;
+
+
+}
+
+
+
+
+
+
+.Mbutton2:active{
+	grid-area: button2;
+	height: 30px;
+	width: 30px;
+	align-self: center;
+	justify-self: center;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	background-color: #4f4b4b;
+  	color: white;
+
+
+}
+
+
+
+
+
 }
 
 
