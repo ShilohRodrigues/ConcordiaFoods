@@ -20,4 +20,13 @@
 
 #catTitle {
   text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #800;
+  font-family: "Bahnschrift light";
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.carousel-inner {
+  padding-top: 2rem ;
 }
