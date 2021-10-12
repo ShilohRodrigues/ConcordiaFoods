@@ -1,27 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="Description" content="Page #7, Product List">
-  <meta name="Author" content="Shiloh Rodrigues">
+  <meta name = "Description" content = "Page #12, Edit an Order">
+  <meta name = "Author" content = "Shiloh Rodrigues"> 
   <meta name="keywords" content="grocery, food, store">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/FontAwesome/css/all.css">
-  <link rel="stylesheet" href="style_Shiloh.css">
-  <title>Concordia Foods</title>
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+  <title>Concordia Foods</title>  
 </head>
 
 <body>
-
+  
   <div class="container-xxl pt-2">
-
+  
     <header id="mainHeader">
       <div id="logo">
-        <a href="/index.html"><img class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods"></a>
+          <a href="/index.html"><img class="img-fluid" src="/images/CFlogo.png" alt="Concordia Foods"></a>
       </div>
       <nav>
         <div class="dropdown">
@@ -37,81 +36,57 @@
           <div class="dropdown-content">
             <a href="Produce_Aisle.html">Fruits & Vegetables</a>
             <a href="MeatAisle.html">Meats</a>
-            <a href="/Pages/FrozenFoods_Aisle.html">Frozen Foods</a>
+            <a href="#">Frozen Foods</a>
             <a href="#">Snacks</a>
             <a href="#">Drinks</a>
-          </div>
+          </div> 
         </div>
-        <a href="/index.html">Home</a>
-      </nav>
+        <a href="/index.html">Home</a>     
+      </nav> 
     </header>
-
+    
     <header id="backendHeader">
-      <h1>Product List</h1>
+      <h1>Edit an Order</h1>
     </header>
-
+    
     <table id="productTable">
       <tr>
         <th>Product</th>
-        <th>Price</th>
-        <th>Inventory</th>
-        <th>Add</th>
-        <th>Edit</th>
+        <th>Quantity</th>
         <th>Delete</th>
       </tr>
       <tr>
         <td>Apples</td>
-        <td>$4.39/kg</td>
-        <td>100</td>
-        <td><button><i class="fas fa-plus-circle"></i></button></td>
-        <td><button><i class="fas fa-edit"></i></button></td>
+        <td><button><i class="fas fa-angle-down"></i></button>5<button><i class="fas fa-angle-up"></i></button></td>
         <td><button><i class="fas fa-times-circle"></i></button></td>
       </tr>
       <tr>
         <td>Bananas</td>
-        <td>$1.57/kg</td>
-        <td>100</td>
-        <td><button><i class="fas fa-plus-circle"></i></button></td>
-        <td><button><i class="fas fa-edit"></i></button></td>
-        <td><button><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Carrots</td>
-        <td>$2.34/kg</td>
-        <td>100</td>
-        <td><button><i class="fas fa-plus-circle"></i></button></td>
-        <td><button><i class="fas fa-edit"></i></button></td>
+        <td><button><i class="fas fa-angle-down"></i></button>5<button><i class="fas fa-angle-up"></i></button></td>
         <td><button><i class="fas fa-times-circle"></i></button></td>
       </tr>
       <tr>
         <td>Cucumbers</td>
-        <td>$1.99/kg</td>
-        <td>100</td>
-        <td><button><i class="fas fa-plus-circle"></i></button></td>
-        <td><button><i class="fas fa-edit"></i></button></td>
+        <td><button><i class="fas fa-angle-down"></i></button>10<button><i class="fas fa-angle-up"></i></button></td>
         <td><button><i class="fas fa-times-circle"></i></button></td>
       </tr>
       <tr>
-        <td>Oranges</td>
-        <td>$3.77/kg</td>
-        <td>100</td>
-        <td><button><i class="fas fa-plus-circle"></i></button></td>
-        <td><button><i class="fas fa-edit"></i></button></td>
+        <td>Ground Beef</td>
+        <td><button><i class="fas fa-angle-down"></i></button>1<button><i class="fas fa-angle-up"></i></button></td>
         <td><button><i class="fas fa-times-circle"></i></button></td>
       </tr>
       <tr>
-        <td>Peach</td>
-        <td>$2.15/kg</td>
-        <td>100</td>
-        <td><button><i class="fas fa-plus-circle"></i></button></td>
-        <td><button><i class="fas fa-edit"></i></button></td>
+        <td>T-Bone Steak</td>
+        <td><button><i class="fas fa-angle-down"></i></button>2<button><i class="fas fa-angle-up"></i></button></td>
         <td><button><i class="fas fa-times-circle"></i></button></td>
       </tr>
     </table>
-
+    
+    <button id="bt_save">Save Changes</button>
+    
     <footer id="mainFooter">
-      <img id="logo" class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods logo">
-      <div class="ftMain">
+      <img id="logo" class="img-fluid" src="/images/CFlogo.png" alt="Concordia Foods logo">
+      <div class="ftMain">   
         <div class="ftList">
           <p>Aisles</p>
           <ul>
@@ -149,13 +124,11 @@
             <li><a href="#">Order List</a></li>
             <li><a href="Order_Edit.html">Edit an Order</a></li>
           </ul>
-        </div>
+        </div>   
       </div>
     </footer>
-
+  
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

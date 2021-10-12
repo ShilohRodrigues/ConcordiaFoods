@@ -399,6 +399,37 @@ h1, h2, h3 {
 
 /*End of CSS for P3*/
 
+/* CSS for Login P5 */
+
+.login{
+	text-align:center;
+	color:black;
+  background-color:#fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.29);
+  flex: 0 0 215px;
+  padding: 1em;
+}.flex-login{
+  display: flex;
+  flex-wrap: wrap;
+}
+.login a{
+	color:black;
+	text-decoration: none;
+}
+.button{
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 5px 32px;
+	text-align: center;
+	text-decoration:none;
+}
+large{
+	color: #800;
+}
+
+/*End of CSS for P5*/
+
 /*CSS for Product List P7*/
 
 #backendHeader {
@@ -457,3 +488,27 @@ h1, h2, h3 {
 }
 
 /*End of CSS for P7*/
+
+/* CSS for User Edit P10 */
+
+.userContainer{
+  background-color:#fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.29);
+  flex: 0 0 215px;
+  padding: 1em;
+  text-align: center;
+}
+.flex-userContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.userContainer button {
+  background-color: black;
+  font-size: 1.2em;
+  color: #fff;
+  width: 100%;
+  padding: 0.3em;
+}
+
+
+/* End of CSS for P10 */
