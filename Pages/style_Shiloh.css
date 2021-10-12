@@ -57,6 +57,7 @@ h1, h2, h3 {
 }
 
 .dropdown .dropdown-content {
+  overflow:visible !important;
   display: none;
   position: absolute;
   background-color: #fff;
