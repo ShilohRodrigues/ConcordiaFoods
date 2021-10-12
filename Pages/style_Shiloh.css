@@ -488,3 +488,27 @@ large{
 }
 
 /*End of CSS for P7*/
+
+/* CSS for User Edit P10 */
+
+.userContainer{
+  background-color:#fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.29);
+  flex: 0 0 215px;
+  padding: 1em;
+  text-align: center;
+}
+.flex-userContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.userContainer button {
+  background-color: black;
+  font-size: 1.2em;
+  color: #fff;
+  width: 100%;
+  padding: 0.3em;
+}
+
+
+/* End of CSS for P10 */
