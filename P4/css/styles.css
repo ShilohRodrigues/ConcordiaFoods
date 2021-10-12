@@ -742,6 +742,8 @@ img{
 	grid-template-areas: 
     "button img name price "
     "button img Quantity price"
+   	"button2 img2 name2 price2 "
+    "button2 img2 Quantity2 price2"
     "line line line line"
     "empty empty updateButton updateButton";
     
