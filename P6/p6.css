@@ -48,7 +48,7 @@ img {
 }
 
 body {
-    background-size: 255px;
+    background-size: 225px;
     background-repeat: repeat;
 }
 
@@ -76,7 +76,13 @@ ul.navbar {
     background-color: crimson;
 }
 
+@media screen and (max-width: 600px) {
 
+    ul.navbar li.right,
+    ul.navbar li {
+        float: none;
+    }
+}
 
 ul.navbar li {
     float: left;
@@ -146,6 +152,19 @@ ul.navbar li a.active {
     background-color: pink;
 }
 
+footer {
+    height: 88px;
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: #26282b;
+    float: left;
+}
+
+footer p {
+    color: white;
+    padding: 20px;
+    font-family: 'Yeseva One', cursive;
+}
 
 .btnsignin {
     font-family: arial;
@@ -171,6 +190,11 @@ ul.navbar li a.active {
 
 .btnlogin {
     margin-top: 8px;
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
 }
 
 #checkbox1 {
@@ -387,7 +411,7 @@ ul.navbar li a.active {
 }
 
 .input10 {
-    margin-right: 11px;
+    margin-right: 46px;
     float: right;
     margin-top: -3px;
     height: 45px;
@@ -610,6 +634,17 @@ h2 {
     margin-left: auto;
 }
 
+@media screen and (max-width: 1024px) {
+    body {
+        margin-bottom: 0;
+    }
+
+    .footer {
+        position: relative;
+    }
+}
+
+html,
 body {
     width: 100%;
     overflow-x: hidden;
