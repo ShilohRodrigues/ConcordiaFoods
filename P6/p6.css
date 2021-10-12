@@ -152,14 +152,6 @@ ul.navbar li a.active {
     background-color: pink;
 }
 
-footer {
-    height: 88px;
-    width: 100%;
-    margin-bottom: 0px;
-    background-color: #26282b;
-    float: left;
-}
-
 footer p {
     color: white;
     padding: 20px;
