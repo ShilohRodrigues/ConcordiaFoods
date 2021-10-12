@@ -1052,8 +1052,8 @@ h1, h2, h3 {
 	grid-area: button;
 	height: 20px;
 	width: 20px;
-	align-self: center;
-	justify-self: center;
+	align-self: center !important;
+	justify-self: center !important;
 	border-radius: 50%;
 	border-color: black;
 	border-width: 1px;
