@@ -461,8 +461,8 @@ h1, h2, h3 {
 }
 .xbutton{
 	grid-area: button;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center !important;
 	justify-self: center !important;
 	border-radius: 50%;
@@ -475,8 +475,8 @@ h1, h2, h3 {
 }
 .xbutton:hover{
 	grid-area: button;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center !important;
 	justify-self: center !important;
 	border-radius: 50%;
@@ -491,8 +491,8 @@ h1, h2, h3 {
 
 .xbutton:active{
 	grid-area: button;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center !important;
 	justify-self: center !important;
 	border-radius: 50%;
@@ -626,8 +626,8 @@ h1, h2, h3 {
 
 .xbutton2{
 	grid-area: button2;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center !important;
 	justify-self: center !important;
 	border-radius: 50%;
@@ -640,8 +640,8 @@ h1, h2, h3 {
 }
 .xbutton2:hover{
 	grid-area: button2;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center !important;
 	justify-self: center !important;
 	border-radius: 50%;
@@ -656,8 +656,8 @@ h1, h2, h3 {
 
 .xbutton2:active{
 	grid-area: button2;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center !important;
 	justify-self: center !important;
 	border-radius: 50%;
@@ -1051,8 +1051,8 @@ h1, h2, h3 {
 
 .xbutton:hover{
 	grid-area: button;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center !important;
 	justify-self: center !important;
 	border-radius: 50%;
@@ -1095,8 +1095,8 @@ h1, h2, h3 {
 
 .xbutton2:hover{
 	grid-area: button2;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center;
 	justify-self: center;
 	border-radius: 50%;
@@ -1152,8 +1152,8 @@ h1, h2, h3 {
 
 .xbutton:active{
 	grid-area: button;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center;
 	justify-self: center;
 	border-radius: 50%;
@@ -1197,8 +1197,8 @@ h1, h2, h3 {
 
 .xbutton2:active{
 	grid-area: button2;
-	height: 20px;
-	width: 20px;
+	height: 25px;
+	width: 25px;
 	align-self: center;
 	justify-self: center;
 	border-radius: 50%;
