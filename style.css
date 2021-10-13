@@ -1820,8 +1820,11 @@ large{
 
 
 .Add{
-	grid-area: add;
-	margin-top: 22px;
+	grid-area: add !important;
+	margin-top: 22px !important;
+	width: 35px !important;
+	height: 35px !important;
+
 }
 .AddingTitle{
 	display: inline-flex;
@@ -1889,10 +1892,10 @@ large{
 }
 
 .delete .edit{
-	width: 25px;
-	height: 25px;
-	padding-left: 10px;
-	padding-top: 10px;
+	width: 25px !important;
+	height: 25px !important;
+	padding-left: 10px !important;
+	padding-top: 10px !important;
 }
 
 .retrunB{
@@ -1910,6 +1913,21 @@ large{
 	padding-left: 10px;
 	padding-top: 10px;
 }
+
+.delete {
+	width: 25px !important;
+	height: 25px !important;
+	padding-left: 10px !important;
+	padding-top: 10px !important;
+}
+
+.edit{
+		width: 25px !important;
+	height: 25px !important;
+	padding-left: 10px !important;
+	padding-top: 10px !important;
+}
+
 
 
 @media (max-width:700px){
@@ -1947,3 +1965,7 @@ large{
 }
 
 /* End of CSS for P10 */
+
+
+
+
