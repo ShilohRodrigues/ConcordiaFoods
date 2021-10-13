@@ -5,6 +5,7 @@ html, body{
   font-family: "Bahnschrift light";
   background-color: #efefef;
   font-size: 16px;
+  min-width: 500px;
 }
 
 a {
