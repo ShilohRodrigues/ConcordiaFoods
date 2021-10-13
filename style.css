@@ -3,7 +3,7 @@
 html, body{
   height: 100%;
   font-family: "Bahnschrift light";
-  background-color: #efefef; 
+  background-color: #efefef;
   font-size: 16px;
 }
 
@@ -119,7 +119,7 @@ h1, h2, h3 {
 #homeHeader {
   width: 100%;
   background-color: #000;
-  margin-top: 2rem; 
+  margin-top: 2rem;
 }
 
 #homeHeader img {
@@ -190,13 +190,13 @@ h1, h2, h3 {
   color: #800;
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
   .ftMain .ftList {
     flex: 50%;
   }
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
   .ftMain .ftList {
     flex: 25%;
   }
@@ -315,7 +315,7 @@ h1, h2, h3 {
 }
 
 @media screen and (min-width: 768px) {
-  #aisleSidebar {   
+  #aisleSidebar {
     float: left;
     width: 20%;
   }
@@ -364,12 +364,12 @@ h1, h2, h3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
 }
 
-#productDescription img {   
+#productDescription img {
   height: 350px;
-  padding: 1em; 
+  padding: 1em;
 }
 
-#productDescription #productInfo { 
+#productDescription #productInfo {
   padding: 1em;
 }
 
@@ -379,7 +379,7 @@ h1, h2, h3 {
   font-size: 1.2em;
   color: #fff;
   width: 100%;
-  padding: 0.3em; 
+  padding: 0.3em;
 }
 
 @media screen and (max-width: 768px) {
@@ -418,7 +418,7 @@ h1, h2, h3 {
 	display: grid;
 	grid-template-columns: 0.75fr 1fr 1fr;
 	grid-template-rows:auto ;
-	grid-template-areas: 
+	grid-template-areas:
     "First Second Third  ";
     padding-top: 80px;
     padding-bottom:80px ;
@@ -462,14 +462,14 @@ h1, h2, h3 {
 	display: grid;
 	grid-template-columns: 0.3fr 1fr 1fr 1fr;
 	grid-template-rows:2 ;
-	grid-template-areas: 
+	grid-template-areas:
     "button img name price "
     "button img Quantity price"
    	"button2 img2 name2 price2 "
     "button2 img2 Quantity2 price2"
     "line line line line"
     "empty empty updateButton updateButton";
-    
+
 }
 .xbutton{
 	grid-area: button;
@@ -851,7 +851,7 @@ h1, h2, h3 {
 	display: grid;
 	grid-template-columns:1fr 1fr 1fr 1fr;
 	grid-template-rows:80px 30px 30px 30px 80px  ;
-	grid-template-areas: 
+	grid-template-areas:
     "total total numberofitems numberofitems "
     "sub sub subamount subamount"
     "qst qst qstamount qstamount"
@@ -966,7 +966,7 @@ h1, h2, h3 {
 	grid-template-columns: auto;
 	grid-template-rows:1fr 1fr 1fr ;
 	margin-top: 0px;
-	grid-template-areas: 
+	grid-template-areas:
     "First "
     "Second "
     "Third  ";
@@ -984,13 +984,13 @@ h1, h2, h3 {
 	display: grid;
 	grid-template-columns: 0.3fr 1fr 1fr 1fr;
 	grid-template-rows:auto ;
-	grid-template-areas: 
+	grid-template-areas:
     "button img name price "
     "button img Quantity price"
    	"button2 img2 name2 price2 "
     "button2 img2 Quantity2 price2"
     "line line line line"
-    "empty empty updateButton updateButton";  
+    "empty empty updateButton updateButton";
 }
 
 .ThirdPart{
@@ -998,7 +998,7 @@ h1, h2, h3 {
 	display: grid;
 	grid-template-columns:1fr 1fr 1fr ;
 	grid-template-rows:80px 30px 30px 30px 80px  ;
-	grid-template-areas: 
+	grid-template-areas:
     "total total numberofitems  "
     "sub sub subamount "
     "qst qst qstamount "
@@ -1051,9 +1051,9 @@ h1, h2, h3 {
 
 
 .backtostore {
-	
+
 	margin-top: 0px;
-	
+
 }
 
 .title{
@@ -1236,7 +1236,7 @@ h1, h2, h3 {
 
 
 }
-  
+
 .Mbutton2:active{
 	grid-area: button2;
 	height: 30px;
@@ -1488,6 +1488,9 @@ large{
 .selectcategory3 {
     margin-left: 20px;
     height: 50px;
+}
+.selectcategory3 large{
+  color: #800
 }
 
 .input6 {
@@ -1771,13 +1774,13 @@ large{
   width: 70%;
 }
 
-#productTable th { 
+#productTable th {
   font-size: 1.5em;
   text-align: center;
   border-bottom: 2px solid #000;
 }
 
-#productTable td { 
+#productTable td {
   font-size: 1.25em;
   text-align: center;
   padding: 0.5em 0;
@@ -1821,7 +1824,7 @@ large{
   position: relative;
   margin-bottom: 3rem;
   background-color:#800
-  
+
 }
 
 .form-group{
@@ -1841,7 +1844,7 @@ large{
 
 #center_bt {
   align-self: center;
-  margin-top: 3rem; 
+  margin-top: 3rem;
 }
 
 /* End of CSS P8 */
@@ -1852,10 +1855,10 @@ large{
 	display: grid;
 	grid-column: 1fr 0.1fr 1fr ;
 	grid-row: 1fr 1fr;
-	
+
 
 	grid-template-areas: "title AddingTitle ";
-	
+
 }
 .P9-title{
 	grid-area: title;
@@ -1935,7 +1938,7 @@ large{
 .Username .Id{
 	font-size: 15px;
 	padding-left: 2%;
-	
+
 }
 
 .delete .edit{
@@ -1946,7 +1949,7 @@ large{
 }
 
 .retrunB{
-	
+
 }
 .retrunBC{
 	display: inline-flex;
@@ -1954,7 +1957,7 @@ large{
 }
 
 .back-arrow-img{
-	padding: 15px 3px 0px 0px; 
+	padding: 15px 3px 0px 0px;
     width: 25px;
 	height: 25px;
 	padding-left: 10px;
@@ -1983,9 +1986,9 @@ large{
 @media (max-width:700px){
 
 .Table{
-	
+
 	margin-left: 5%;
-	margin-right: 5%;	
+	margin-right: 5%;
 
 }
 
@@ -2015,7 +2018,3 @@ large{
 }
 
 /* End of CSS for P10 */
-
-
-
-
