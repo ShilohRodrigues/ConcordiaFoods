@@ -1888,6 +1888,13 @@ large{
 	
 }
 
+.delete .edit{
+	width: 25px;
+	height: 25px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
 .retrunB{
 	
 }
