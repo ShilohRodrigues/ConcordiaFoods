@@ -92,7 +92,7 @@ h1, h2, h3 {
   }
   #mainHeader nav {
     margin: auto;
-    width: 480px;
+    width: 460px;
   }
   #mainHeader nav a, .dropdown {
     float: right;
