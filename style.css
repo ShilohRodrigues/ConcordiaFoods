@@ -408,8 +408,8 @@ h1, h2, h3 {
 	grid-template-rows:auto ;
 	grid-template-areas: 
     "First Second Third  ";
-    margin-top: 80px;
-    margin-bottom:80px ;
+    padding-top: 80px;
+    padding-bottom:80px ;
   background-color: white !important;
 }
 
@@ -463,8 +463,8 @@ h1, h2, h3 {
 	grid-area: button;
 	height: 20px;
 	width: 20px;
-	align-self: center;
-	justify-self: center;
+	align-self: center !important;
+	justify-self: center !important;
 	border-radius: 50%;
 	border-color: black;
 	border-width: 1px;
@@ -477,8 +477,8 @@ h1, h2, h3 {
 	grid-area: button;
 	height: 20px;
 	width: 20px;
-	align-self: center;
-	justify-self: center;
+	align-self: center !important;
+	justify-self: center !important;
 	border-radius: 50%;
 	border-color: black;
 	border-width: 1px;
@@ -493,8 +493,8 @@ h1, h2, h3 {
 	grid-area: button;
 	height: 20px;
 	width: 20px;
-	align-self: center;
-	justify-self: center;
+	align-self: center !important;
+	justify-self: center !important;
 	border-radius: 50%;
 	border-color: black;
 	border-width: 1px;
@@ -628,8 +628,8 @@ h1, h2, h3 {
 	grid-area: button2;
 	height: 20px;
 	width: 20px;
-	align-self: center;
-	justify-self: center;
+	align-self: center !important;
+	justify-self: center !important;
 	border-radius: 50%;
 	border-color: black;
 	border-width: 1px;
@@ -642,8 +642,8 @@ h1, h2, h3 {
 	grid-area: button2;
 	height: 20px;
 	width: 20px;
-	align-self: center;
-	justify-self: center;
+	align-self: center !important;
+	justify-self: center !important;
 	border-radius: 50%;
 	border-color: black;
 	border-width: 1px;
@@ -658,8 +658,8 @@ h1, h2, h3 {
 	grid-area: button2;
 	height: 20px;
 	width: 20px;
-	align-self: center;
-	justify-self: center;
+	align-self: center !important;
+	justify-self: center !important;
 	border-radius: 50%;
 	border-color: black;
 	border-width: 1px;
