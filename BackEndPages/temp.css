@@ -6,12 +6,6 @@
   
 }
 
-
-
-
-
-
-
 .form-group{
   background-color:#fff;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.29);
@@ -19,6 +13,15 @@
   width: 600px;
   margin: 0 auto;
   margin-top: 3rem;
-  margin-bottom: 3rem;
   text-align: center;
+}
+
+#p8 {
+  display: flex;
+  flex-direction: column;
+}
+
+#center_bt {
+  align-self: center;
+  margin-top: 3rem; 
 }
