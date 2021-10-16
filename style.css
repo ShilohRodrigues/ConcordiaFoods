@@ -536,7 +536,7 @@ h1, h2, h3 {
 	grid-area: Quantity;
 	display: inline-flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: center !important;
 	justify-content: space-evenly;
 
 }
@@ -1253,6 +1253,17 @@ h1, h2, h3 {
 
 }
 
+.quantity{
+	margin: 0px;
+}
+
+.quantity2{
+	margin: 0px;
+}
+
+.line{
+	margin-top: 30px;
+}
 /* End of CSS for P4 */
 
 /* CSS for Login P5 */
