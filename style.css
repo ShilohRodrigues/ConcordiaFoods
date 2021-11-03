@@ -375,13 +375,17 @@ h1, h2, h3 {
   padding: 1em;
 }
 
-#productDescription #btSubmit {
+#productDescription #tot-price, #productDescription #tot-price-label {
   margin: 1em 0;
+  display: inline-block;
+}
+
+#productDescription #btSubmit {
   background-color: #800;
   font-size: 1.2em;
   color: #fff;
   width: 100%;
-  padding: 0.3em;
+  padding-top: 0.3em;
 }
 
 @media screen and (max-width: 768px) {
