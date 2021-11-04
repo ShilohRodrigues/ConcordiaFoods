@@ -16,10 +16,10 @@ function updatePrice() {
   //Round to two decimals
   totPrice = Math.round(totPrice*100) / 100;
   document.getElementById("tot-price").innerHTML = "$" + totPrice;
-  function storeQ(){
-    localStorage.setItem("store",document.getElementById("addToCart").value);
-  }
-  function getQ(){
-    document.getElementById("addToCart").value=localStorage.getItem("store");
-  }
+
+}function storeQ(){
+  localStorage.setItem("store",document.getElementById("addToCart").value);
+}
+function getQ(){
+  document.getElementById("addToCart").value=localStorage.getItem("store");
 }
