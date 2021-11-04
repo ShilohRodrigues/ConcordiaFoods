@@ -12,7 +12,7 @@
   <title>Concordia Foods</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body onload="getQ()">
 
 	<div class="container-xxl pt-2">
     <header id="mainHeader">
@@ -55,28 +55,16 @@
       <p>$<span id="cost-per-kg">12.13</span>/kg<br>(Average weight: <span id="weight">0.54</span> kg)</p>
         <form>
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <input type="number" id="addToCart" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"onblur="storeQ()"><br>
           <p id="tot-price-label">Total Price: </p>
           <p id="tot-price">$0</p>
         <script type="text/javascript">
-        function test(){
-        var stored="0";
-        var quantity=getElementById("addtoCart").value;
-        quantity=""+quantity;
-        try{
-          localStorage.setItem("stored",quantity);
-          localStorage.removeItem("stored");
-          return true;
-        }catch(e){
-          return false;
+        function storeQ(){
+          localStorage.setItem("store",document.getElementById("addToCart").value);
         }
-      }if(test==true){
-        console.log("true");
-      }else{
-        console.log("false");
-      }
-
-
+        function getQ(){
+          document.getElementById("addToCart").value=localStorage.getItem("store");
+        }
         </script>
         <input type="submit" id="btSubmit" value="Add to Cart"/>
       </form>
