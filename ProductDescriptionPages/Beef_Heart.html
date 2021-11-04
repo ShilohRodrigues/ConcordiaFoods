@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="../FontAwesome/css/all.css">
   <title>Concordia Foods</title>
   <link rel="stylesheet" href="../style.css">
+
 </head>
 <body onload="getQ()">
-
 	<div class="container-xxl pt-2">
     <header id="mainHeader">
       <div id="logo">
@@ -58,14 +58,7 @@
           <input type="number" id="addToCart" onchange="updatePrice()" name="quantity" value="" min="0" max="100"onblur="storeQ()"><br>
           <p id="tot-price-label">Total Price: </p>
           <p id="tot-price">$0</p>
-        <script type="text/javascript">
-        function storeQ(){
-          localStorage.setItem("store",document.getElementById("addToCart").value);
-        }
-        function getQ(){
-          document.getElementById("addToCart").value=localStorage.getItem("store");
-        }
-        </script>
+          <script type="text/javascript" src="../myScript1.js"></script>
         <input type="submit" id="btSubmit" value="Add to Cart"/>
       </form>
     </div>
