@@ -60,11 +60,13 @@
       <div id="productInfo">
         <h2>Coke</h2>
         <p>Refresh yourself with a coke made by the famous Coca Cola brand. </p>
-        <p class="price">$5.28<br>(12 x 355.0 ml)</p>
+        <p>$<span id="cost-per-kg">5.28</span><br>(12 x 355.0 ml)</p>
         <form>
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" name="quantity" value="0" min="0" max="100"><br>
-          <input type="submit" id="btSubmit" value="Add To Cart">
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <p id="tot-price-label">Total Price: </p>
+          <p id="tot-price">$0</p>
+          <input type="submit" id="btSubmit" value="Add To Cart">     
         </form>
       </div>
     </article>
@@ -115,6 +117,8 @@
 
   </div>
 
+  <script src="../myScript1.js"></script>
+  
 </body>
 
 

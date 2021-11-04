@@ -60,11 +60,13 @@
       <div id="productInfo">
         <h2>Naya water</h2>
         <p> Hydrate yourself with Naya water. Proudly produced from Quebec </p>
-        <p class="price">$4.98<br>(28 x 500.00ml)</p>
+        <p>$<span id=cost-per-kg>3.56</span><br>(28 x 500 mL )</p>
         <form>
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" name="quantity" value="0" min="0" max="100"><br>
-          <input type="submit" id="btSubmit" value="Add To Cart">
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <p id="tot-price-label">Total Price: </p>
+          <p id="tot-price">$0</p>
+          <input type="submit" id="btSubmit" value="Add To Cart">     
         </form>
       </div>
     </article>
@@ -114,6 +116,8 @@
     </footer>
 
   </div>
+  
+  <script src="../myScript1.js"></script>
 
 </body>
 

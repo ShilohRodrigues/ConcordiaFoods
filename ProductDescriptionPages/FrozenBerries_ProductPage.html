@@ -61,12 +61,14 @@
                 <h2>FrozenBerries</h2>
                 <p>With plenty of fiber and antioxidants, frozen berries are a nutrient-rich, low-calorie addition to
                     many foods, such as oatmeal, yogurt, parfaits, smoothies, and even savory meat dishes.</p>
-                <p class="price">$1.99</p>
-                <form>
-                    <label for="quantity">Quantity: </label>
-                    <input type="number" id="quantity" name="quantity" value="0" min="0" max="100"><br>
-                    <input type="submit" id="btSubmit" value="Add To Cart">
-                </form>
+                <p>$<span id="cost-per-kg">1.99</span><br></p>
+        <form>
+          <label for="quantity">Quantity: </label>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <p id="tot-price-label">Total Price: </p>
+          <p id="tot-price">$0</p>
+          <input type="submit" id="btSubmit" value="Add To Cart">     
+        </form>
             </div>
         </article>
         <footer id="mainFooter">
@@ -114,6 +116,8 @@
         </footer>
     </div>
 
+  <script src="../myScript1.js"></script>
+  
 </body>
 
 

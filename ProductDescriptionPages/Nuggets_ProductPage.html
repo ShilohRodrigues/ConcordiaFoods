@@ -60,12 +60,14 @@
             <div id="productInfo">
                 <h2>Nuggets</h2>
                 <p>A variety of cripy Nuggets made up of fresh chicken meat</p>
-                <p class="price">$6</p>
-                <form>
-                    <label for="quantity">Quantity: </label>
-                    <input type="number" id="quantity" name="quantity" value="0" min="0" max="100"><br>
-                    <input type="submit" id="btSubmit" value="Add To Cart">
-                </form>
+                <p>$<span id="cost-per-kg">6</span><br></p>
+        <form>
+          <label for="quantity">Quantity: </label>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <p id="tot-price-label">Total Price: </p>
+          <p id="tot-price">$0</p>
+          <input type="submit" id="btSubmit" value="Add To Cart">     
+        </form>
             </div>
         </article>
 
@@ -115,6 +117,8 @@
 
     </div>
 
+  <script src="../myScript1.js"></script>
+  
 </body>
 
 

@@ -53,12 +53,14 @@
 		<img src="../images/ChickenBreasts.jpg" alt="Chicken Breasts"/>
 		<div id="productInfo">
 			<p>Chicken Breasts from chickens born and raised in Quebec.</p>
-      <class="price"><p>$7.64/kg<br>(535g per package)</p>
-      <form>
-        <label for="quantity">Quantity: </label>
-        <input type="number" id="quality" value="0" min="0" max="100"><br>
-        <input type="submit" id="btSubmit" value="Add to Cart"/>
-      </form>
+      <p>$<span id="cost-per-kg">7.64</span>/kg<br>(Average weight: <span id="weight">0.54</span> kg)</p>
+        <form>
+          <label for="quantity">Quantity: </label>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <p id="tot-price-label">Total Price: </p>
+          <p id="tot-price">$0</p>
+          <input type="submit" id="btSubmit" value="Add To Cart">     
+        </form>
     </div>
 	</article>
   <footer id="mainFooter">
@@ -104,5 +106,7 @@
       </div>
     </div>
   </footer>
+  </div>
+  <script src="../myScript1.js"></script>
 </body>
 </html>
