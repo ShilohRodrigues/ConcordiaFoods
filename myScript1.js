@@ -17,9 +17,10 @@ function updatePrice() {
   totPrice = Math.round(totPrice*100) / 100;
   document.getElementById("tot-price").innerHTML = "$" + totPrice;
 
-}function storeQ(){
-  localStorage.setItem("store",document.getElementById("addToCart").value);
+} 
+function storeQ(){
+  localStorage.setItem("store",document.getElementById("quantity").value);
 }
 function getQ(){
-  document.getElementById("addToCart").value=localStorage.getItem("store");
+  document.getElementById("quantity").value=localStorage.getItem("store");
 }
