@@ -55,7 +55,27 @@
       <class="price"><p>$12.13/kg<br>(535g per package)</p>
       <form>
         <label for="quantity">Quantity: </label>
-        <input type="number" id="quality" value="0" min="0" max="100"><br>
+        <input type="number" id="addtoCart" value="0" min="0" max="100"><br>
+        <script type="text/javascript">
+        function test(){
+        var stored="0";
+        var quantity=getElementById("addtoCart").value;
+        quantity=""+quantity;
+        try{
+          localStorage.setItem("stored",quantity);
+          localStorage.removeItem("stored");
+          return true;
+        }catch(e){
+          return false;
+        }
+      }if(test==true){
+        console.log("true");
+      }else{
+        console.log("false");
+      }
+
+
+        </script>
         <input type="submit" id="btSubmit" value="Add to Cart"/>
       </form>
     </div>
