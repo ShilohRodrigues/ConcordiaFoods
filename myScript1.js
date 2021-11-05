@@ -18,19 +18,20 @@ function updatePrice() {
 
 }
 
-function storeQ(){
-  localStorage.setItem("store",document.getElementById("quantity").value);
+function storeQ(store){
+  localStorage.setItem(store,document.getElementById("quantity").value);
 }
-function getQ(){
-  let value=localStorage.getItem("store");
-  if(localStorage.getItem("store")==""||localStorage.getItem("store")==null){
+function getQ(store){
+  let value=localStorage.getItem(store);
+  if(localStorage.getItem(store)==""||localStorage.getItem(store)==null){
   document.getElementById("quantity").value="0";
   }
   else{
-    document.getElementById('quantity').value=localStorage.getItem("store");
+    document.getElementById('quantity').value=localStorage.getItem(store);
   }
   updatePrice();
 }
-function clearQ(){
+function clearQ(store){
   document.getElementById('quantity').value="0";
+  localStorage.removeItem(store);
 }
