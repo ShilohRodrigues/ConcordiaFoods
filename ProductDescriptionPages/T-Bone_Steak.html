@@ -12,7 +12,7 @@
   <title>Concordia Foods</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body onload="getQ('T-Bones')" onbeforeunload="storeQ('T-Bones')">
 
 	<div class="container-xxl pt-2">
     <header id="mainHeader">
@@ -53,12 +53,12 @@
 		<div id="productInfo">
 			<p>T-Bone Steak made fresh with local Quebec cows.</p>
       <p>$<span id="cost-per-kg">22.57</span>/kg<br>(Average weight: <span id="weight">0.54</span> kg)</p>
-        <form>
+        <form onsubmit="clearQ('T-Bones')">
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
           <p id="tot-price-label">Total Price: </p>
           <p id="tot-price">$0</p>
-          <input type="submit" id="btSubmit" value="Add To Cart">     
+          <input type="submit" id="btSubmit" value="Add To Cart">
         </form>
     </div>
 	</article>
@@ -106,8 +106,8 @@
     </div>
   </footer>
   </div>
-  
+
   <script src="../myScript1.js"></script>
-      
+
 </body>
 </html>
