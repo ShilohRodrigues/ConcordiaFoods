@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body onload="getQ('Nuggets')" onbeforeunload="storeQ('Nuggets')">
 
     <div class="container-xxl pt-2">
 
@@ -61,12 +61,12 @@
                 <h2>Nuggets</h2>
                 <p>A variety of cripy Nuggets made up of fresh chicken meat</p>
                 <p>$<span id="cost-per-kg">6</span><br></p>
-        <form>
+        <form onsubmit="clearQ('Nuggets')">
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
           <p id="tot-price-label">Total Price: </p>
           <p id="tot-price">$0</p>
-          <input type="submit" id="btSubmit" value="Add To Cart">     
+          <input type="submit" id="btSubmit" value="Add To Cart">
         </form>
             </div>
         </article>
@@ -118,7 +118,7 @@
     </div>
 
   <script src="../myScript1.js"></script>
-  
+
 </body>
 
 
