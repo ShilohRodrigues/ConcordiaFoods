@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../style.css">
 
 </head>
-<body>
+<body onload="getQ('ChickenBreasts')" onbeforeunload="storeQ('ChickenBreasts')">
 
 	<div class="container-xxl pt-2">
     <header id="mainHeader">
@@ -54,12 +54,12 @@
 		<div id="productInfo">
 			<p>Chicken Breasts from chickens born and raised in Quebec.</p>
       <p>$<span id="cost-per-kg">7.64</span>/kg<br>(Average weight: <span id="weight">0.54</span> kg)</p>
-        <form>
+        <form onsubmit="clearQ('ChickenBreasts')">
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
           <p id="tot-price-label">Total Price: </p>
           <p id="tot-price">$0</p>
-          <input type="submit" id="btSubmit" value="Add To Cart">     
+          <input type="submit" id="btSubmit" value="Add To Cart">
         </form>
     </div>
 	</article>
