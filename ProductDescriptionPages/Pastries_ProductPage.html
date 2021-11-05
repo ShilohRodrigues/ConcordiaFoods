@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body onload="getQ('Pastries')" onbeforeunload="storeQ('Pastries')">
 
     <div class="container-xxl pt-2">
 
@@ -62,12 +62,12 @@
                 <p>Pastry is a dough of flour, water and shortening (solid fats, including butter or lard) that may be
                     savoury or sweetened.</p>
                 <p>$<span id="cost-per-kg">3.90</span><br></p>
-        <form>
+        <form onsubmit="clearQ('Pastries')">
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="0" min="0" max="100"><br>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
           <p id="tot-price-label">Total Price: </p>
           <p id="tot-price">$0</p>
-          <input type="submit" id="btSubmit" value="Add To Cart">     
+          <input type="submit" id="btSubmit" value="Add To Cart">
         </form>
             </div>
         </article>
@@ -117,7 +117,7 @@
         </footer>
 
     </div>
-  
+
   <script src="../myScript1.js"></script>
 
 </body>
