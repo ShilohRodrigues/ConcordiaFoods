@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../style.css">
 
 </head>
-<body onload="getQ()">
+<body onload="getQ()" onbeforeunload="storeQ()">
 	<div class="container-xxl pt-2">
     <header id="mainHeader">
       <div id="logo">
@@ -55,7 +55,7 @@
       <p>$<span id="cost-per-kg">12.13</span>/kg<br>(Average weight: <span id="weight">0.54</span> kg)</p>
         <form>
           <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"onkeyup="storeQ()"><br>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
           <p id="tot-price-label">Total Price: </p>
           <p id="tot-price">$0</p>
         <input type="submit" id="btSubmit" value="Add to Cart"/>
