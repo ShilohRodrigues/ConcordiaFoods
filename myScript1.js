@@ -16,12 +16,21 @@ function updatePrice() {
   totPrice = Math.round(totPrice*100) / 100;
   document.getElementById("tot-price").innerHTML = "$" + totPrice;
 
-} 
+}
 
 function storeQ(){
   localStorage.setItem("store",document.getElementById("quantity").value);
 }
 function getQ(){
-  document.getElementById("quantity").value=localStorage.getItem("store");
+  let value=localStorage.getItem("store");
+  if(localStorage.getItem("store")==""||localStorage.getItem("store")==null){
+  document.getElementById("quantity").value="0";
+  }
+  else{
+    document.getElementById('quantity').value=localStorage.getItem("store");
+  }
   updatePrice();
+}
+function clearQ(){
+  localStorage.removeItem("store");
 }
