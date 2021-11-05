@@ -32,5 +32,5 @@ function getQ(){
   updatePrice();
 }
 function clearQ(){
-  localStorage.removeItem("store");
+  document.getElementById('quantity').value="0";
 }
