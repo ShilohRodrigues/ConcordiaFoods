@@ -40,84 +40,77 @@
         <a href="../index.html">Home</a>
       </nav>
     </header>
+      
+    <header id="aisleHeader">
+      <h1>Sign Up</h1>
+    </header>
 
-        <!-- the registration form  -->
-        <form action="#">
-            <div class="registerouterbox">
-                <span>Personal Information</span><br><br>
-                <div class="registerouterbox1">
-                    <span class="categories1">TITLE</span><br><br><br>
-                    <select class="selectcategory1">
-                        <option value="">Select your title</option>
-                        <option value="">Mr.</option>
-                        <option value="">Mrs.</option>
-                        <option value="">Miss</option>
-                        <option value="">Ms.</option>
-                    </select><br><br><span class="categories2">FIRST
-                        NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LAST
-                        NAME</span>&nbsp;&nbsp;&nbsp;<br><br>
-                    <input class="input1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input class="input2">
-                </div>
-                <br>
-                <div class="whiteline"></div>
-                <br><span>Contact Information</span><br><br>
-                <div class="registerouterbox2">
-                    <span class="categories1">ADDRESS (NO,STREET)</span><br><br><br>
-                    <input class="input3">
-                    <span class="categories3">APARTMENT</span><br><br><br><br><br>
-                    <input class="input4">
-                    <span
-                        class="categories5">CITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        COUNTRY</span><br><br><br><br><br><br>
+    <form action="#">
+      <div class="signup-wrapper">
+        <div class="personal-info-outer">
+          <h4>Personal Information</h4>
+          <div class="personal-info-inner">
+            <label for="select-title">TITLE</label>
+            <select id="select-title">
+              <option value="">Select Title</option>
+              <option value="">Mr.</option>
+              <option value="">Mrs.</option>
+              <option value="">Miss</option>
+              <option value="">Ms.</option>
+            </select>
+            <label for="tb-first-name">FIRST NAME</label>
+            <input type="text" id="tb-first-name">
+            <label for="tb-last-name">LAST NAME</label>
+            <input type="text" id="tb-last-name">
+          </div>
+        </div>
 
-                    <input
-                        class="input5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select
-                        class="selectcategory2">
-                        <option>Canada</option>
-                    </select>
-                    <span
-                        class="categories5">PROVINCE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POSTAL
-                        CODE</span><br><br><br><br><br>
-                    <select class="selectcategory3">
-                        <option value="">Ontario</option>
-                        <option value="">Alberta</option>
-                        <option value="">British Columbia</option>
-                        <option value="">Manitoba</option>
-                        <option value="">New Brunswick</option>
-                        <option value="">Newfoundland and Labrador</option>
-                        <option value="">Northwest Territories</option>
-                        <option value="">Nova Scotia</option>
-                        <option value="">Nunavut</option>
-                        <option value="">Prince Edward Island</option>
-                        <option value="">Quebec</option>
-                        <option value="">Saskatchewan</option>
-                        <option value="">Yukon</option>
-                    </select><input class="input6"><br>
-                    <span class="categories5">PHONE
-                        NUMBER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOBILE
-                        PHONE</span><br><br><br><br>
-                    <input placeholder="555-555-5555"
-                        class="input7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
-                        placeholder="555-555-5555" class="input8">
-                    <span
-                        class="categories5">EMAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONFIRM
-                        EMAIL</span>
-                    <br><br><br><br><br><br>
-                    <input
-                        class="input9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
-                        class="input10">
-                    <span class="categories4">PASSWORD</span><br><br><br>
-                    <input type="password" class="input11">
-                    <span class="categories5">CONFIRM PASSWORD</span><br><br><br>
-                    <input type="password" class="input12">
-                </div>
-                <div class="whitelinebottom">
-                    <button type="submit" class="createaccountbutton">Create Account</button>
-                    <button type="button" class="resetbutton">Reset</button>
-                </div>
-            </div>
-        </form>
+        <div class="contact-info-outer">
+          <h4>Contact Information</h4>
+          <div class="contact-info-inner">
+            <label for="tb-address">ADDRESS (NO, STREET)</label>
+            <input type="text" id="tb-address">
+            <label for="tb-city">CITY</label>
+            <input id="tb-city">
+            <label for="select-country">Country</label>
+            <select id="select-country">
+              <option>Canada</option>
+            </select>
+            <label for="select-province">Province</label>
+            <select id="select-province">
+              <option value="">Ontario</option>
+              <option value="">Alberta</option>
+              <option value="">British Columbia</option>
+              <option value="">Manitoba</option>
+              <option value="">New Brunswick</option>
+              <option value="">Newfoundland and Labrador</option>
+              <option value="">Northwest Territories</option>
+              <option value="">Nova Scotia</option>
+              <option value="">Nunavut</option>
+              <option value="">Prince Edward Island</option>
+              <option value="">Quebec</option>
+              <option value="">Saskatchewan</option>
+              <option value="">Yukon</option>
+            </select>
+            <label for="tb-phone">PHONE NUMBER</label>
+            <input id="tb-phone">
+            <label for="tb-mobile">MOBILE PHONE</label>
+            <input id="tb-mobile">
+            <label for="tb-email">EMAIL</label>
+            <input id="tb-email">
+            <label for="tb-confirm-email">CONFIRM EMAIL</label>
+            <input id="tb-confirm-email">
+            <label for="tb-password">PASSWORD</label>
+            <input id="tb-password">
+            <label for="tb-confirm-password">CONFIRM PASSWORD</label>
+            <input id="tb-confirm-password">
+          </div>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button type="submit" class="bt-create-account">Create Account</button>
+        <button type="reset" class="bt-reset">Reset</button>
+      </div>
 
         <!-- footer -->
         <footer id="mainFooter">
