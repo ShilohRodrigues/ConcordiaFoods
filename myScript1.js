@@ -40,3 +40,17 @@ function deleteTableRow(r) {
   let i = r.parentNode.parentNode.rowIndex;
   document.getElementById("productTable").deleteRow(i);
 }
+
+function openDescription() {
+  let descr = document.getElementById("txt-more-description");
+  let btn = document.getElementById("bt-more-description")
+  if (descr.style.display == "block") {
+    descr.style.display = "none";
+    btn.innerHTML = "View Description...";   
+  }
+  else {
+    descr.style.display = "block";
+    btn.innerHTML = "See Less...";
+  }
+    
+}

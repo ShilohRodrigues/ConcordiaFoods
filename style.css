@@ -388,6 +388,22 @@ h1, h2, h3 {
   padding-top: 0.3em;
 }
 
+#productDescription #txt-more-description {
+  display: none;
+}
+
+#productDescription #bt-more-description {
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+#productDescription #bt-more-description:hover {
+  color: #800;
+}
+
+
 @media screen and (max-width: 768px) {
   #productDescription {
     margin: 1.25em auto;
