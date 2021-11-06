@@ -35,3 +35,8 @@ function clearQ(store){
   document.getElementById('quantity').value="0";
   localStorage.removeItem(store);
 }
+
+function deleteTableRow(r) {
+  let i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("productTable").deleteRow(i);
+}
