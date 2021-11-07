@@ -59,7 +59,8 @@
       <img src="../images/cucumbers.jpg" alt="Cucumbers" />
       <div id="productInfo">
         <h2>Cucumbers</h2>
-        <p>Cucumbers grown from local farmers.</p>
+        <p id="txt-more-description">Cucumbers grown from local farmers.</p>
+        <button id="bt-more-description" onclick="openDescription()">View Description...</button>
         <p>$<span id="cost-per-kg">1.99</span>/kg<br>(Average weight: <span id="weight">0.25</span> kg)</p>
         <form onsubmit="clearQ('Cucumbers')">
           <label for="quantity">Quantity: </label>
