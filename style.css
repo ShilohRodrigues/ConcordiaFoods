@@ -493,7 +493,7 @@ h1, h2, h3 {
     "empty empty updateButton updateButton";
 
 }
-.xbutton{
+.xbutton1{
 	grid-area: button;
 	height: 25px;
 	width: 25px;
@@ -507,7 +507,7 @@ h1, h2, h3 {
 
 
 }
-.xbutton:hover{
+.xbutton1:hover{
 	grid-area: button;
 	height: 25px;
 	width: 25px;
@@ -523,7 +523,7 @@ h1, h2, h3 {
 }
 
 
-.xbutton:active{
+.xbutton1:active{
 	grid-area: button;
 	height: 25px;
 	width: 25px;
@@ -539,7 +539,7 @@ h1, h2, h3 {
 }
 
 
-.Pimage{
+.Pimage1{
 	grid-area: img;
 	justify-self: center;
 	align-self: center;
@@ -547,13 +547,13 @@ h1, h2, h3 {
 	height: auto;
 }
 
-.Pname{
+.Pname1{
 	grid-area: name;
 	align-self: center;
 	justify-self: center;
 }
 
-.Pquantity{
+.Pquantity1{
 	grid-area: Quantity;
 	display: inline-flex;
 	flex-direction: row;
@@ -562,7 +562,7 @@ h1, h2, h3 {
 
 }
 
-.PButton {
+.PButton1 {
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -575,7 +575,7 @@ h1, h2, h3 {
   	color: black;
 }
 
-.PButton:hover{
+.PButton1:hover{
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -591,7 +591,7 @@ h1, h2, h3 {
 }
 
 
-.PButton:active{
+.PButton1:active{
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -607,7 +607,7 @@ h1, h2, h3 {
 }
 
 
-.Mbutton {
+.Mbutton1 {
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -620,7 +620,7 @@ h1, h2, h3 {
   	color: black;
 }
 
-.Mbutton:hover{
+.Mbutton1:hover{
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -636,7 +636,7 @@ h1, h2, h3 {
 }
 
 
-.Mbutton:active{
+.Mbutton1:active{
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -651,7 +651,7 @@ h1, h2, h3 {
 
 }
 
-.Pprice{
+.Pprice1{
 	grid-area: price;
 	justify-self: center;
 	align-self: center;
@@ -715,8 +715,7 @@ h1, h2, h3 {
 .Pname2{
 	grid-area: name2;
 	align-self: center;
-	justify-self: center;
-	max-width: 10px;
+	justify-self: left;
 }
 
 .Pquantity2{
@@ -1083,7 +1082,7 @@ h1, h2, h3 {
 }
 
 
-.xbutton:hover{
+.xbutton1:hover{
 	grid-area: button;
 	height: 25px;
 	width: 25px;
@@ -1098,7 +1097,7 @@ h1, h2, h3 {
 
 }
 
-.PButton:hover{
+.PButton1:hover{
 		grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -1113,7 +1112,7 @@ h1, h2, h3 {
 
 }
 
-.Mbutton:hover{
+.Mbutton1:hover{
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -1184,7 +1183,7 @@ h1, h2, h3 {
 
 }
 
-.xbutton:active{
+.xbutton1:active{
 	grid-area: button;
 	height: 25px;
 	width: 25px;
@@ -1199,7 +1198,7 @@ h1, h2, h3 {
 
 }
 
-.PButton:active{
+.PButton1:active{
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -1214,7 +1213,7 @@ h1, h2, h3 {
 
 }
 
-.Mbutton:active{
+.Mbutton1:active{
 	grid-area: button;
 	height: 30px;
 	width: 30px;
@@ -1274,7 +1273,7 @@ h1, h2, h3 {
 
 }
 
-.quantity{
+.quantity1{
 	margin: 0px;
 }
 

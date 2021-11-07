@@ -18,9 +18,12 @@ function updatePrice() {
 
 }
 
+
 function storeQ(store){
   localStorage.setItem(store,document.getElementById("quantity").value);
 }
+
+
 function getQ(store){
   let value=localStorage.getItem(store);
   if(localStorage.getItem(store)==""||localStorage.getItem(store)==null){
@@ -31,15 +34,19 @@ function getQ(store){
   }
   updatePrice();
 }
+
+
 function clearQ(store){
   document.getElementById('quantity').value="0";
   localStorage.removeItem(store);
 }
 
+
 function deleteTableRow(r) {
   let i = r.parentNode.parentNode.rowIndex;
   document.getElementById("productTable").deleteRow(i);
 }
+
 
 function openDescription() {
   let descr = document.getElementById("txt-more-description");
@@ -54,3 +61,4 @@ function openDescription() {
   }
     
 }
+
