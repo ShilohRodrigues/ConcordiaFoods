@@ -78,11 +78,11 @@ function Cart_Adjust(calling_element) {
   if (name == "PButton") {
    if (1 < parseInt(Quantity.textContent)) {
          QuantityNumber = parseInt(Quantity.textContent) - 1
-         localStorage.setItem(".Pquantity" + number + " ." + feild , QuantityNumber);
+         //localStorage.setItem(".Pquantity" + number + " ." + feild , QuantityNumber);
          Quantity.innerHTML = QuantityNumber;
          let ItemTotal = document.querySelector(".Pprice" + number);
          ItemTotal.innerHTML = precise(QuantityNumber * PricePerUnit[number-1] )+ " $";
-         localStorage.setItem(".Pprice" + number, precise(QuantityNumber * PricePerUnit[number-1] )+ " $");
+         //localStorage.setItem(".Pprice" + number, precise(QuantityNumber * PricePerUnit[number-1] )+ " $");
 
    }
 
@@ -90,10 +90,10 @@ function Cart_Adjust(calling_element) {
  }else {
          QuantityNumber = parseInt(Quantity.textContent) + 1;
          Quantity.innerHTML = QuantityNumber;
-         localStorage.setItem(".Pquantity" + number + " ." + feild, QuantityNumber);
+         //localStorage.setItem(".Pquantity" + number + " ." + feild, QuantityNumber);
          let ItemTotal = document.querySelector(".Pprice" + number);
          ItemTotal.innerHTML = precise(QuantityNumber * PricePerUnit[number-1] ) + " $";
-         localStorage.setItem(".Pprice" + number, precise(QuantityNumber * PricePerUnit[number-1] )+ " $");
+         //localStorage.setItem(".Pprice" + number, precise(QuantityNumber * PricePerUnit[number-1] )+ " $");
 
 
   }
@@ -109,19 +109,19 @@ function Cart_Adjust(calling_element) {
      n++;
    }
  console.log(subtotal);
- localStorage.setItem("Amounttext", subtotal);
+ //localStorage.setItem("Amounttext", subtotal);
  document.querySelector(".Amounttext").innerHTML = Number.parseFloat(subtotal).toPrecision(4) + " $";
  let QST = subtotal * 0.09975;
  document.querySelector(".QSTamount").innerHTML = Number.parseFloat(QST).toPrecision(4) + " $";
- localStorage.setItem("QSTamount",   QST);
+ //localStorage.setItem("QSTamount",   QST);
 
  let GST = subtotal * 0.05;
   document.querySelector(".GSTamount").innerHTML = Number.parseFloat(GST).toPrecision(4) + " $";
- localStorage.setItem("GSTamount", GST);
+ //localStorage.setItem("GSTamount", GST);
 
  let total = subtotal + QST + GST;
  document.querySelector(".totalamount").innerHTML = Number.parseFloat(total).toPrecision(4) + " $";
- localStorage.setItem("totalamount", total);
+ //localStorage.setItem("totalamount", total);
 
 
 
@@ -130,7 +130,7 @@ function precise(x) {
   return Number.parseFloat(x).toPrecision(4);
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+/*document.addEventListener("DOMContentLoaded", function(event) {
   
   document.querySelector(".Pquantity1 .quantity1").innerHTML = localStorage.getItem(".Pquantity1 .quantity1");
   document.querySelector(".Pquantity2 .quantity2").innerHTML = localStorage.getItem(".Pquantity2 .quantity2");
@@ -142,4 +142,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.querySelector(".GSTamount").innerHTML = Number.parseFloat(localStorage.getItem("GSTamount")).toPrecision(4) + " $";
   document.querySelector(".totalamount").innerHTML = Number.parseFloat(localStorage.getItem("totalamount")).toPrecision(4) + " $";
   
-});
+});*/
