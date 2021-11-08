@@ -14,7 +14,16 @@
 
 </head>
 <body>
-
+<script>
+function delete_user(calling_element){
+    let ClassName = calling_element.id;
+    let number = ClassName.match(/\d+/)[0];
+    document.querySelector("#user" + number).style.display = 'none'; 
+    document.querySelector("#Id" + number).style.display = 'none'; 
+    document.querySelector("#EButton" + number).style.display = 'none'; 
+    document.querySelector("#DButton" + number).style.display = 'none'; 
+};
+</script>
 
 	<header id="mainHeader">
       <div id="logo">
@@ -69,20 +78,20 @@
 		<p class="EditTitle">Edit:</p>
 		<p class="DeleteTitle">Delete:</p>
 
-		<p class="Username">AdamF</p>
-		<p class="Id">40558899</p>
-		<div><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
-		<div><a href=""><img src="../images/delete.png" class="delete"></a></div>
+		<p class="Username" id="user1">AdamF</p>
+		<p class="Id"  id="Id1">40558899</p>
+		<div id="EButton1"><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
+		<div id="DButton1" onclick="delete_user(this)"><img src="../images/delete.png" class="delete"></div>
 
-		<p class="Username">Shiloh</p>
-		<p class="Id">40771122</p>
-		<div><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
-		<div><a href=""><img src="../images/delete.png" class="delete"></a></div>
+		<p class="Username" id="user2">Shiloh</p>
+		<p class="Id" id="Id2">40771122</p>
+		<div id="EButton2"><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
+		<div id="DButton2" onclick="delete_user(this)"><img src="../images/delete.png" class="delete"></div>
 
-		<p class="Username">Ravish</p>
-		<p class="Id">40112233</p>
-		<div><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
-		<div><a href=""><img src="../images/delete.png" class="delete"></a></div>
+		<p class="Username" id="user3">Ravish</p>
+		<p class="Id"  id="Id3">40112233</p>
+		<div id="EButton3"><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
+		<div id="DButton3" onclick="delete_user(this)"><img src="../images/delete.png" class="delete"></div>
 
 	</div>
 
