@@ -1,6 +1,13 @@
 [
   {
+    "First_Name"="Admin",
+    "Last_Name"="Admin",
     "StudentID"="Admin",
     "Password"="Admin",
+    "E-mail"="admin@concordiaf.ca",
+    "P_Number"="555-555-5555",
+    "M_Number"="666-666-6666",
+    "Address"="117,John Street"
+    "Postal_Code"="HC1 4B5"
   },
 ]
