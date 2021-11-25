@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Apples",
+    "description": "Wide variety of fresh apples including Granny Smith, Red Delicious, and Golden Delicious.",
+    "price": 4.39,
+    "weight": 0.2,
+    "inventory": 100
+  },
+  {
+    "name": "Bananas",
+    "description": "South american bananas of any desired ripeness.",
+    "price": 1.57,
+    "weight": 0.3,
+    "inventory": 100
+  },
+  {
+    "name": "Carrots",
+    "description": "Carrots from local farmers.",
+    "price": 2.34,
+    "weight": 0.2,
+    "inventory": 100
+  }
+]

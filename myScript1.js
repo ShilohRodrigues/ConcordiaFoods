@@ -59,7 +59,7 @@ function openDescription() {
     descr.style.display = "block";
     btn.innerHTML = "See Less...";
   }
-    
+  
 }
 
 
