@@ -5,11 +5,12 @@ $check=false;
 
 foreach($users_a as $value){
     if($_POST['StudentID']==$value["StudentID"] and $_POST['Password']==$value["Password"]){
-      echo "You are logged in! Welcome!";
+      $_SESSION['StudentID']=$_POST ['StudentID'];
+      header("location:../index.html");
       $check=true;
-      break;
     }
 }if(!$check){
-  echo"StudentID and/or Password is incorrect";
+  $_SESSION["error"]="Username and/or Password is incorrect"
+  header("location:login.php");
 }
 ?>
