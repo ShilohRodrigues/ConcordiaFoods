@@ -1,17 +1,17 @@
 <?php
-if (isset($_POST['fname'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // $server = "localhost";
     // $username = "root";
     // $password = "";
     // $database = "users";
-
     /*$conn =  mysqli_connect($server, $username, $password, $database);
     if ($conn) {
         echo "success! you connected with the database";
     } else {
         die("Error" . mysqli_connect_error());
     }*/
+
     $studentID = $_POST['studentID'];
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -23,6 +23,12 @@ if (isset($_POST['fname'])) {
     $city = $_POST['city'];
     $address = $_POST['address'];
     // $postalcode = $_POST['postal'];
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> new user has been signedup successfully!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>';
 
 
 

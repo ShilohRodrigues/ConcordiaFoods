@@ -18,10 +18,6 @@ include_once("_dbconnect.php");
 
 <body>
 
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>New User SignedUp!</strong> Your account has been created
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
     <div class="container-xxl pt-2">
         <!-- Header-->
         <header id="mainHeader">
