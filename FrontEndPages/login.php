@@ -61,7 +61,7 @@ session_start();
 				<?php
 					if(isset($_SESSION["error"])){
 						$error=$_SESSION["error"];
-						echo"<span>$error</span>";
+						echo"<span id='error'>$error</span><br>";
 					}
 				 ?>
 			<a href="#forgot-pw" class="forgot-pw"><large>F</large>orgot <large>P</large>assword</a>
@@ -112,5 +112,5 @@ session_start();
 </body>
 </html>
 <?php
-	unset($_SESSION["error"]));
+	unset($_SESSION["error"]);
  ?>
