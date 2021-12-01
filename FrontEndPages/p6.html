@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
   <div class="container-xxl pt-2">
     <!-- Header-->
     <header id="mainHeader">
@@ -23,10 +24,10 @@
           <button class="dropbtn">Account</button>
           <div class="dropdown-content">
             <a href="../FrontEndPages/login.html">Login</a>
-            <a href="../FrontEndPages/p6.html">Sign Up</a>
+            <a href="signupsystem/signup.php">Sign Up</a>
           </div>
         </div>
-        <a href="../FrontEndPages/Cart_P4.html">View Cart</a>
+        <a href=" ../FrontEndPages/Cart_P4.html">View Cart</a>
         <div class="dropdown">
           <button class="dropbtn active">Products</button>
           <div class="dropdown-content">
@@ -45,7 +46,7 @@
       <h1>Sign Up</h1>
     </header>
 
-    <form action="#">
+    <form action="/ConcordiaFoods/signupsystem/_dbconnect.php" method="post">
       <div class="signup-wrapper">
         <div class="personal-info-outer">
           <h4>Personal Information</h4>
@@ -62,8 +63,8 @@
             <input type="text" id="tb-first-name">
             <label for="tb-last-name">LAST NAME</label>
             <input type="text" id="tb-last-name">
-            <label for="tb-last-name">Student-ID</label>
-            <input type="text" id="tb-last-name">
+            <label for="tb-last-name">STUDENT-ID</label>
+            <input type="text" id="tb-last name" name="studentID">
           </div>
         </div>
 
@@ -71,7 +72,7 @@
           <h4>Contact Information</h4>
           <div class="contact-info-inner">
             <label for="tb-address">ADDRESS (NO, STREET)</label>
-            <input type="text" id="tb-address">
+            <input type="text" id="tb-address" name="address">
             <label for="tb-city">CITY</label>
             <input id="tb-city">
             <label for="select-country">Country</label>
