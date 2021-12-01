@@ -81,9 +81,9 @@ include_once("_dbconnect.php");
                     <h4>Contact Information</h4>
                     <div class="contact-info-inner">
                         <label for="tb-address">ADDRESS (NO, STREET)</label>
-                        <input type="text" id="tb-address" name "adress">
+                        <input type="text" id="tb-address" name="address">
                         <label for="tb-city">CITY</label>
-                        <input id="tb-city" name="city">
+                        <input id="tb-city" name="city" name="postal">
                         <label for="select-country">Country</label>
                         <select id="select-country">
                             <option>Canada</option>
@@ -105,17 +105,17 @@ include_once("_dbconnect.php");
                             <option value="">Yukon</option>
                         </select>
                         <label for="tb-phone">PHONE NUMBER</label>
-                        <input id="tb-phone">
+                        <input id="tb-phone" name="phone">
                         <label for="tb-mobile">MOBILE PHONE</label>
                         <input id="tb-mobile" name="mobile">
                         <label for="tb-email">EMAIL</label>
                         <input id="tb-email" name="email">
                         <label for="tb-confirm-email">CONFIRM EMAIL</label>
-                        <input id="tb-confirm-email">
+                        <input id="tb-confirm-email" name="cemail">
                         <label for="tb-password">PASSWORD</label>
                         <input id="tb-password" name="password">
                         <label for="tb-confirm-password">CONFIRM PASSWORD</label>
-                        <input id="tb-confirm-password">
+                        <input id="tb-confirm-password" name="cpassword">
                     </div>
                 </div>
             </div>
