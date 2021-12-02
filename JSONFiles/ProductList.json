@@ -1,7 +1,9 @@
 [
   {
     "name": "Apples",
+    "aisle": "Fruit & Vegetables",
     "description": "Wide variety of fresh apples including Granny Smith, Red Delicious, and Golden Delicious.",
+    "img": "../images/apples.jpg",
     "price": 4.39,
     "weight": 0.2,
     "inventory": 100
@@ -9,6 +11,8 @@
   {
     "name": "Bananas",
     "description": "South american bananas of any desired ripeness.",
+    "aisle": "Fruit & Vegetables",
+    "img": "../images/bananas.jpg",
     "price": 1.57,
     "weight": 0.3,
     "inventory": 100
@@ -16,6 +20,8 @@
   {
     "name": "Carrots",
     "description": "Carrots from local farmers.",
+    "aisle": "Fruit & Vegetables",
+    "img": "../images/carrots.jpg",
     "price": 2.34,
     "weight": 0.2,
     "inventory": 100
