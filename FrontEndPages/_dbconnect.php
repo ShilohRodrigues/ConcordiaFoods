@@ -82,6 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $json_obj->mobile = $mobile;
     $json_obj->password = $password;
     */
+
+    $data_results = file_get_contents("users.json");
+    $tempArray = json_decode($data_results);
+
     if (isset($_POST['submit'])) {
         $file = "users.json";
         $arr = array(
@@ -95,7 +99,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'Address' => $_POST['address']
         );
     }
-    $json_data = json_encode($arr);
+
+    $tempArray[] = $arr;
+    $json_data = json_encode($tempArray);
     file_put_contents($file, $json_data);
 
 

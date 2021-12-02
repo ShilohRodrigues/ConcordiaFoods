@@ -1,5 +1,5 @@
 <?php
-include_once("_dbconnect.php");
+include("_dbconnect.php");
 ?>
 
 
