@@ -4,26 +4,17 @@
 	<meta charset="utf-8">
 	<title>Users List</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" href="../FontAwesome/css/all.css">
   <link rel="stylesheet" type="text/css" href="../style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="../images/CFlogoShort.png" />
 
 
 </head>
 <body>
-<script>
-function delete_user(calling_element){
-    let ClassName = calling_element.id;
-    let number = ClassName.match(/\d+/)[0];
-    document.querySelector("#user" + number).style.display = 'none'; 
-    document.querySelector("#Id" + number).style.display = 'none'; 
-    document.querySelector("#EButton" + number).style.display = 'none'; 
-    document.querySelector("#DButton" + number).style.display = 'none'; 
-};
-</script>
 
 	<header id="mainHeader">
       <div id="logo">
@@ -53,47 +44,38 @@ function delete_user(calling_element){
     </header>
 
     
-	<a href="">
-				<div class="retrunBC">
-				<img src="../images/Cart-left Arrow.png" class="back-arrow-img" >
-				<p class ="retrunB">Return</p>
-				</div>
-	</a>
+    <header id="backendHeader">
+      <h1>User List</h1>
+    </header>
 
-	<div class="titlecontainer">
-		<h1 class="P9-title">Users List:</h1>
-		<a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html">
-			<div class="AddingTitle" >
-				<img src="../images/add.png" class="Add">
-				<p >Add new user</p>
-			</div>
-		</a>
-		
-
-	</div>
-
-	<div class="Table">
-		<p class="NameTitle">Username:</p>
-		<p class="id">ID:</p>
-		<p class="EditTitle">Edit:</p>
-		<p class="DeleteTitle">Delete:</p>
-
-		<p class="Username" id="user1">AdamF</p>
-		<p class="Id"  id="Id1">40558899</p>
-		<div id="EButton1"><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
-		<div id="DButton1" onclick="delete_user(this)"><img src="../images/delete.png" class="delete"></div>
-
-		<p class="Username" id="user2">Shiloh</p>
-		<p class="Id" id="Id2">40771122</p>
-		<div id="EButton2"><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
-		<div id="DButton2" onclick="delete_user(this)"><img src="../images/delete.png" class="delete"></div>
-
-		<p class="Username" id="user3">Ravish</p>
-		<p class="Id"  id="Id3">40112233</p>
-		<div id="EButton3"><a href="https://shilohrodrigues.github.io/ConcordiaFoods/BackEndPages/User_Edit.html"><img src="../images/editing.png" class="edit"></a></div>
-		<div id="DButton3" onclick="delete_user(this)"><img src="../images/delete.png" class="delete"></div>
-
-	</div>
+    <table id="productTable">
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr>
+        <td>Shiloh</td>
+        <td>12345</td>
+        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
+        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+      </tr>
+      <tr>
+        <td>Amrit</td>
+        <td>45678</td>
+        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
+        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+      </tr>
+      <tr>
+        <td>Ravish</td>
+        <td>123345</td>
+        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
+        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+      </tr>
+    </table>
+    
+    <button id="btnProdAdd" onClick="location.href='User_Edit.html'"><i class="fas fa-plus-circle"></i> Add a User</button>
 
 	
 <footer id="mainFooter">
@@ -141,12 +123,8 @@ function delete_user(calling_element){
     </footer>
 
 
-
-
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../myScript1.js"></script>
 
 </body>
 </html>
