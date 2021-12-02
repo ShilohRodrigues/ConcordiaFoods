@@ -66,10 +66,13 @@ include_once("_dbconnect.php");
                         </select>
                         <label for="tb-first-name">FIRST NAME</label>
                         <input type="text" id="tb-first-name" name="fname">
+                        <span class="error"> <?php echo $studentErr; ?></span>
                         <label for="tb-last-name">LAST NAME</label>
                         <input type="text" id="tb-last-name" name="lname">
+                        <span class="error"> <?php echo $nameErr; ?></span>
                         <label for="tb-last-name">STUDENT-ID</label>
                         <input type="text" id="tb-last name" name="studentID">
+                        <span class="error"> <?php echo $nameErr; ?></span>
                     </div>
                 </div>
 
@@ -105,7 +108,8 @@ include_once("_dbconnect.php");
                         <label for="tb-mobile">MOBILE PHONE</label>
                         <input id="tb-mobile" name="mobile">
                         <label for="tb-email">EMAIL</label>
-                        <input id="tb-email" name="email">
+                        <input id="tb-email" name="email"><span class="error"> <?php echo $emailErr; ?></span>
+
                         <label for="tb-confirm-email">CONFIRM EMAIL</label>
                         <input id="tb-confirm-email" name="cemail">
                         <label for="tb-password">PASSWORD</label>

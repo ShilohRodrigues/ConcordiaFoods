@@ -1,4 +1,5 @@
 <?php
+$nameErr = $emailErr = $genderErr = $websiteErr = $studentErr = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // $server = "localhost";
@@ -12,12 +13,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Error" . mysqli_connect_error());
     }*/
 
+    //validating StudentID
     $studentID = $_POST['studentID'];
+    if (empty($_POST['studentID'])) {
+        // echo "</script>alert('StudentID is required')</script>";
+        $studentErr = "StudentID is required";
+    }
+
+    //validating First Name
     $fname = $_POST['fname'];
+    if (empty($_POST['fname'])) {
+        // echo "</script>alert('Name is required')</script>";
+        $nameErr = "Name is required";
+    }
+    if (!preg_match("/^[a-zA-Z-' ]*$/", $fname)) {
+        $nameErr = "Only letters and white space allowed";
+    }
+
+    //validating Last Name
     $lname = $_POST['lname'];
+    if (empty($_POST['lname'])) {
+        // echo "<script>alert('Name is required')</script>";
+        $nameErr = "Name is required";
+    }
+    if (!preg_match("/^[a-zA-Z-' ]*$/", $lname)) {
+        $nameErr = "Only letters and white space allowed";
+    }
+
+    // validating Password
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
+    if ($cpassword != $password) {
+        echo "<script>alert('Passwords do not match')</script>";
+    }
+
+    //validating Email
     $email = $_POST['email'];
+    if (empty($_POST['email'])) {
+        $emailErr = "Email is required";
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format";
+    }
     $phone = $_POST['phone'];
     $mobile = $_POST['mobile'];
     $city = $_POST['city'];
@@ -50,6 +87,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     file_put_contents("../FrontEndPages/users.json", $json_data);
 
 
+    // function test_input($data)
+    // {
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return $data;
+    // }
     // $sql = "INSERT INTO `users`.`users` (`firstname`, `lastname`, `studentID`,`address`, `city`, `mobile`, `email`, `password`, `dt`) VALUES ('$fname', '$lname', '$studentID','$address', '$city', '$mobile', '$email', '$password',currenttimestamp())";
     // echo $sql;
 
