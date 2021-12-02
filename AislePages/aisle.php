@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+    //Get the aisle from the url
+    $aisle = $_GET['aisle'];
+    $jsonFile = file_get_contents("http://localhost/ConcordiaFoods/JSONFiles/ProductList.json");
+    $jsonFileDecoded = json_decode($jsonFile, true);
+?>
+
 <head>
   <meta charset="utf-8">
   <meta name="Description" content="Page #2, Aisles">
@@ -34,11 +41,11 @@
         <div class="dropdown">
           <button class="dropbtn active">Products</button>
           <div class="dropdown-content">
-            <a href="Produce_Aisle.html">Fruits & Vegetables</a>
-            <a href="MeatAisle.html">Meats</a>
-            <a href="FrozenFoods_Aisle.html">Frozen Foods</a>
-            <a href="Snacks_Aisle.html">Snacks</a>
-            <a href="drinksAisle.html">Drinks</a>
+            <a href="aisle.php?aisle=Fruits and Vegetables">Fruits & Vegetables</a>
+            <a href="aisle.php?aisle=Meats">Meats</a>
+            <a href="aisle.php?aisle=Frozen Foods">Frozen Foods</a>
+            <a href="aisle.php?aisle=Snacks">Snacks</a>
+            <a href="aisle.php?aisle=Drinks">Drinks</a>
           </div>
         </div>
         <a href="../index.html">Home</a>
@@ -46,18 +53,18 @@
     </header>
 
     <header id="aisleHeader">
-      <h1>Aisle Name</h1>
+      <?php echo '<h1>' . $aisle . '</h1>' ?>
     </header>
 
     <aside id="aisleSidebar">
       <h2>Aisles</h2>
       <nav>
         <ul>
-          <li><a class="active" href="Produce_Aisle.html">Fruits & Vegetables</a></li>
-          <li><a href="MeatAisle.html">Meats</a></li>
-          <li><a href="FrozenFoods_Aisle.html">Frozen Foods</a></li>
-          <li><a href="Snacks_Aisle.html">Snacks</a></li>
-          <li><a href="drinksAisle.html">Drinks</a></li>
+          <li><a href="aisle.php?aisle=Fruits and Vegetables">Fruits & Vegetables</a></li>
+          <li><a href="aisle.php?aisle=Meats">Meats</a></li>
+          <li><a href="aisle.php?aisle=Frozen Foods">Frozen Foods</a></li>
+          <li><a href="aisle.php?aisle=Snacks">Snacks</a></li>
+          <li><a href="aisle.php?aisle=Drinks">Drinks</a></li>
         </ul>
       </nav>
     </aside>
@@ -65,42 +72,21 @@
     <article id="aisleProducts">
       <h2>Our Products</h2>
       <div class="flex-productContainer">
-        <div class="productContainer">
-          <img class="img-fluid" src="../images/apples.jpg" alt="apple" />
-          <h3>Apples</h3>
-          <p class="price">$4.39/kg</p>
-          <button type="button" onclick="window.location.href = '../ProductDescriptionPages/Apples.html'">View Details</button>
-        </div>
-        <div class="productContainer">
-          <img class="img-fluid" src="../images/bananas.jpg" alt="banana" />
-          <h3>Bananas</h3>
-          <p class="price">$1.57/kg</p>
-          <button type="button" onclick="window.location.href = '../ProductDescriptionPages/Bananas.html'">View Details</button>
-        </div>
-        <div class="productContainer">
-          <img class="img-fluid" src="../images/carrots.jpg" alt="carrot" />
-          <h3>Carrots</h3>
-          <p class="price">$2.34/kg</p>
-          <button type="button" onclick="window.location.href = '../ProductDescriptionPages/Carrots.html'">View Details</button>
-        </div>
-        <div class="productContainer">
-          <img class="img-fluid" src="../images/cucumbers.jpg" alt="cucumber" />
-          <h3>Cucumbers</h3>
-          <p class="price">$1.99/kg</p>
-          <button type="button" onclick="window.location.href = '../ProductDescriptionPages/Cucumbers.html'">View Details</button>
-        </div>
-        <div class="productContainer">
-          <img class="img-fluid" src="../images/oranges.jpg" alt="oranges" />
-          <h3>Oranges</h3>
-          <p class="price">$3.77/kg</p>
-          <button type="button" onclick="window.location.href = '../ProductDescriptionPages/Oranges.html'">View Details</button>
-        </div>
-        <div class="productContainer">
-          <img class="img-fluid" src="../images/peaches.jpg" alt="peaches" />
-          <h3>Peach</h3>
-          <p class="price">$2.15/kg</p>
-          <button type="button" onclick="window.location.href = '../ProductDescriptionPages/Peach.html'">View Details</button>
-        </div>
+        <?php
+          //Loop through each product in the product json
+          foreach ($jsonFileDecoded as $product) {
+            //Check if the product belongs to the correct category
+            if (strcmp($product['aisle'], $aisle) == 0) {
+              echo 
+              '<div class="productContainer">
+                <img class="img-fluid" src="' . $product['img'] . '" alt="' . $product['name'] . '" />
+                <h3>' . $product['name'] . '</h3>
+                <p class="price">$' . $product['price'] . '/kg</p>
+                <button type="button" onclick="window.location.href = \'../FrontEndPages/ProdDesc.php?prod=' . $product['name'] . '\'">View Details</button>
+              </div>';
+            }
+          }
+        ?>
       </div>
     </article>
 
@@ -110,11 +96,11 @@
         <div class="ftList">
           <p>Aisles</p>
           <ul>
-            <li><a href="Produce_Aisle.html">Fruits & Vegetables</a></li>
-            <li><a href="MeatAisle.html">Meats</a></li>
-            <li><a href="FrozenFoods_Aisle.html">Frozen Foods</a></li>
-            <li><a href="Snacks_Aisle.html">Snacks</a></li>
-            <li><a href="drinksAisle.html">Drinks</a></li>
+            <li><a href="aisle.php?aisle=Fruits and Vegetables">Fruits & Vegetables</a></li>
+            <li><a href="aisle.php?aisle=Meats">Meats</a></li>
+            <li><a href="aisle.php?aisle=Frozen Foods">Frozen Foods</a></li>
+            <li><a href="aisle.php?aisle=Snacks">Snacks</a></li>
+            <li><a href="aisle.php?aisle=Drinks">Drinks</a></li>
           </ul>
         </div>
         <div class="ftList">

@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+    //Get the aisle from the url
+    $prod = $_GET['prod'];
+    $jsonFile = file_get_contents("http://localhost/ConcordiaFoods/JSONFiles/ProductList.json");
+    $jsonFileDecoded = json_decode($jsonFile, true);
+    $currentProduct;
+    //Loop through each product in the product json
+    foreach ($jsonFileDecoded as $product) {
+      //Check if the product belongs to the correct category
+      if (strcmp($product['name'], $prod) == 0) {
+        $currentProduct = $product;
+      }
+    }
+?>
+
 <head>
   <meta charset="utf-8">
   <meta name="Description" content="Page #3, Product Description Page">
@@ -15,7 +30,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<body onload="getQ('Apples')" onbeforeunload="storeQ('Apples')">
+<body onload="getQ('<?php echo $prod ?>')" onbeforeunload="storeQ('<?php echo $prod ?>')">
 
   <div class="container-xxl pt-2">
 
@@ -35,11 +50,11 @@
         <div class="dropdown">
           <button class="dropbtn active">Products</button>
           <div class="dropdown-content">
-            <a href="../AislePages/Produce_Aisle.html">Fruits & Vegetables</a>
-            <a href="../AislePages/MeatAisle.html">Meats</a>
-            <a href="../AislePages/FrozenFoods_Aisle.html">Frozen Foods</a>
-            <a href="../AislePages/Snacks_Aisle.html">Snacks</a>
-            <a href="../AislePages/drinksAisle.html">Drinks</a>
+            <a href="../AislePages/aisle.php?aisle=Fruits and Vegetables">Fruits & Vegetables</a>
+            <a href="../AislePages/aisle.php?aisle=Meats">Meats</a>
+            <a href="../AislePages/aisle.php?aisle=Frozen Foods">Frozen Foods</a>
+            <a href="../AislePages/aisle.php?aisle=Snacks">Snacks</a>
+            <a href="../AislePages/aisle.php?aisle=Drinks">Drinks</a>
           </div>
         </div>
         <a href="../index.html">Home</a>
@@ -50,25 +65,28 @@
       <h1>Product Description</h1>
     </header>
 
-    <div id="backButton" onclick="window.location.href = '../AislePages/Produce_Aisle.html'">
+    <div id="backButton" onclick="window.location.href = '../AislePages/aisle.php?aisle=<?php echo $currentProduct['aisle']?>'">
       <i class="fas fa-angle-left"></i>
       <p>Return</p>
     </div>
 
     <article id="productDescription">
-      <img src="../images/apples.jpg" alt="Apples" />
+      <?php echo '<img src="' . $currentProduct['img'] . '" alt="' . $currentProduct['name'] . '" />' ?>
       <div id="productInfo">
-        <h2>Product Name</h2>
-        <p id="txt-more-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo numquam veniam dolorum quas qui possimus libero sed hic, magni amet, nisi exercitationem blanditiis debitis enim doloremque, architecto at nobis. Minima.</p>
-        <button id="bt-more-description" onclick="openDescription()">View Description...</button>
-        <p>$<span id="cost-per-kg">4.39</span>/kg<br>(Average weight: <span id="weight">0.2</span> kg)</p>
-        <form onsubmit="clearQ('Apples')">
-          <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
-          <p id="tot-price-label">Total Price: </p>
-          <p id="tot-price">$0</p>
-          <input type="submit" id="btSubmit" value="Add To Cart">
-        </form>
+        <?php
+          echo 
+          '<h2>' . $currentProduct['name'] . '</h2>
+          <p id="txt-more-description">' . $currentProduct['description'] . '</p>
+          <button id="bt-more-description" onclick="openDescription()">View Description...</button>
+          <p>$<span id="cost-per-kg">' . $currentProduct['price'] . '</span>/kg<br>(Average weight: <span id="weight">' . $currentProduct['weight'] . '</span> kg)</p>
+          <form onsubmit="clearQ(\'' . $currentProduct['name'] . '\')">
+            <label for="quantity">Quantity: </label>
+            <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="' . $currentProduct['inventory'] . '"><br>
+            <p id="tot-price-label">Total Price: </p>
+            <p id="tot-price">$0</p>
+            <input type="submit" id="btSubmit" value="Add To Cart">
+          </form>';
+          ?>
       </div>
     </article>
 
@@ -78,11 +96,11 @@
         <div class="ftList">
           <p>Aisles</p>
           <ul>
-            <li><a href="../AislePages/Produce_Aisle.html">Fruits & Vegetables</a></li>
-            <li><a href="../AislePages/MeatAisle.html">Meats</a></li>
-            <li><a href="../AislePages/FrozenFoods_Aisle.html">Frozen Foods</a></li>
-            <li><a href="../AislePages/Snacks_Aisle.html">Snacks</a></li>
-            <li><a href="../AislePages/drinksAisle.html">Drinks</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Fruits and Vegetables">Fruits & Vegetables</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Meats">Meats</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Frozen Foods">Frozen Foods</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Snacks">Snacks</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Drinks">Drinks</a></li>
           </ul>
         </div>
         <div class="ftList">
