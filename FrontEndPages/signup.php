@@ -120,7 +120,7 @@ include_once("_dbconnect.php");
                 </div>
             </div>
             <div class="button-wrapper">
-                <button type="submit" class="bt-create-account">Create Account</button>
+                <button type="submit" class="bt-create-account" name="submit">Create Account</button>
                 <button type="reset" class="bt-reset">Reset</button>
             </div>
 

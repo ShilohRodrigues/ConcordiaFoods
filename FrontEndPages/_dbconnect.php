@@ -75,16 +75,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //json_encode("users.json") to place new member inside json file correctly
     //Might have to use file_put_contents(). Ask TA!
     // $json_a=array("studentID"=$_POST['studentID']);
-    $json_obj->fname = $fname;
+
+    /* $json_obj->fname = $fname;
     $json_obj->lname = $lname;
     $json_obj->studentID = $studentID;
     $json_obj->mobile = $mobile;
     $json_obj->password = $password;
-
-
-
-    $json_data = json_encode($json_obj);
-    file_put_contents("../FrontEndPages/users.json", $json_data);
+    */
+    if (isset($_POST['submit'])) {
+        $file = "users.json";
+        $arr = array(
+            'StudentID' => $_POST['studentID'],
+            'First_name' => $_POST['fname'],
+            'Last_name' => $_POST['fname'],
+            'Password' => $_POST['password'],
+            'E-mail' => $_POST['email'],
+            'P_Number' => $_POST['phone'],
+            'M_Number' => $_POST['mobile'],
+            'Address' => $_POST['address']
+        );
+    }
+    $json_data = json_encode($arr);
+    file_put_contents($file, $json_data);
 
 
     // function test_input($data)
