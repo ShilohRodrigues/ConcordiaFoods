@@ -242,8 +242,6 @@ function delete_user(calling_element){
   console.log("d");
 }
 
-
-
 ////////////////////////////////////////////////////////////
 
 }

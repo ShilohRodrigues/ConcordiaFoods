@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Users List</title>
+<html lang="en">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<head>
+  <meta charset="utf-8">
+  <meta name="Description" content="Page #3, Product Description Page">
+  <meta name="Author" content="Shiloh Rodrigues">
+  <meta name="keywords" content="grocery, food, store, apple">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="shortcut icon" href="../images/favicon.ico" />
   <link rel="stylesheet" href="../FontAwesome/css/all.css">
-  <link rel="stylesheet" type="text/css" href="../style.css">
-	<link rel="shortcut icon" type="image/x-icon" href="../images/CFlogoShort.png" />
-
-
+  <title>Concordia Foods</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
-<body>
 
-	<header id="mainHeader">
+<body onload="getQ('Apples')" onbeforeunload="storeQ('Apples')">
+
+  <div class="container-xxl pt-2">
+
+    <header id="mainHeader">
       <div id="logo">
-        <a href="../index.html"><img class="img-fluidxx" src="../images/CFlogo.png" alt="Concordia Foods"></a>
+        <a href="../index.html"><img class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods"></a>
       </div>
       <nav>
         <div class="dropdown">
@@ -30,7 +33,7 @@
         </div>
         <a href="../FrontEndPages/Cart_P4.html">View Cart</a>
         <div class="dropdown">
-          <button class="dropbtn">Products</button>
+          <button class="dropbtn active">Products</button>
           <div class="dropdown-content">
             <a href="../AislePages/Produce_Aisle.html">Fruits & Vegetables</a>
             <a href="../AislePages/MeatAisle.html">Meats</a>
@@ -43,42 +46,33 @@
       </nav>
     </header>
 
-    
-    <header id="backendHeader">
-      <h1>User List</h1>
+    <header id="aisleHeader">
+      <h1>Product Description</h1>
     </header>
 
-    <table id="productTable">
-      <tr>
-        <th>Name</th>
-        <th>ID</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-      <tr>
-        <td>Shiloh</td>
-        <td>12345</td>
-        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Amrit</td>
-        <td>45678</td>
-        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Ravish</td>
-        <td>123345</td>
-        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-    </table>
-    
-    <button id="btnProdAdd" onClick="location.href='User_Edit.html'"><i class="fas fa-plus-circle"></i> Add a User</button>
+    <div id="backButton" onclick="window.location.href = '../AislePages/Produce_Aisle.html'">
+      <i class="fas fa-angle-left"></i>
+      <p>Return</p>
+    </div>
 
-	
-<footer id="mainFooter">
+    <article id="productDescription">
+      <img src="../images/apples.jpg" alt="Apples" />
+      <div id="productInfo">
+        <h2>Product Name</h2>
+        <p id="txt-more-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo numquam veniam dolorum quas qui possimus libero sed hic, magni amet, nisi exercitationem blanditiis debitis enim doloremque, architecto at nobis. Minima.</p>
+        <button id="bt-more-description" onclick="openDescription()">View Description...</button>
+        <p>$<span id="cost-per-kg">4.39</span>/kg<br>(Average weight: <span id="weight">0.2</span> kg)</p>
+        <form onsubmit="clearQ('Apples')">
+          <label for="quantity">Quantity: </label>
+          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
+          <p id="tot-price-label">Total Price: </p>
+          <p id="tot-price">$0</p>
+          <input type="submit" id="btSubmit" value="Add To Cart">
+        </form>
+      </div>
+    </article>
+
+    <footer id="mainFooter">
       <img id="logo" class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods logo">
       <div class="ftMain">
         <div class="ftList">
@@ -111,20 +105,21 @@
         <div class="ftList">
           <p>Backend Functions</p>
           <ul>
-            <li><a href="ProductList.html">Product List</a></li>
-            <li><a href="p8.html">Edit a Product</a></li>
-            <li><a href="UsersList.html">User List</a></li>
-            <li><a href="User_Edit.html">Edit a User</a></li>
-            <li><a href="p11.html">Order List</a></li>
-            <li><a href="Order_Edit.html">Edit an Order</a></li>
+            <li><a href="../BackEndPages/ProductList.html">Product List</a></li>
+            <li><a href="../BackEndPages/p8.html">Edit a Product</a></li>
+            <li><a href="../BackEndPages/UsersList.html">User List</a></li>
+            <li><a href="../BackEndPages/User_Edit.html">Edit a User</a></li>
+            <li><a href="../BackEndPages/p11.html">Order List</a></li>
+            <li><a href="../BackEndPages/Order_Edit.html">Edit an Order</a></li>
           </ul>
         </div>
       </div>
     </footer>
 
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../myScript1.js"></script>
 
 </body>
+
 </html>
