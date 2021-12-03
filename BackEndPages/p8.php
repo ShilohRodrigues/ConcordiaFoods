@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 
 <?php 
-    $prod = $_GET['prod'];
-    $file = "../BackEndPages/Databases/ProductList.json";
-    $jsonFile = file_get_contents("$file");
-    $jsonFileDecoded = json_decode($jsonFile, true);
-    $currentProduct;
-    //Loop through each product in the product json
-    //Check if it is a new product, and make the current prod equal to the blank data
-    if (strcmp($prod, 'new') == 0) {
-      $currentProduct = $jsonFileDecoded[0];
+
+  $prod = $_GET['prod'];
+  $file = "../BackEndPages/Databases/ProductList.json";
+  $jsonFile = file_get_contents("$file");
+  $jsonFileDecoded = json_decode($jsonFile, true);
+  $currentProduct;
+  //Loop through each product in the product json
+  //Check if it is a new product, and make the current prod equal to the blank data
+  if (strcmp($prod, 'new') == 0) {
+    $currentProduct = $jsonFileDecoded[0];
+  }
+  else {
+    foreach ($jsonFileDecoded as $product) {
+      //Check if the product belongs to the correct category
+      if (strcmp($product['name'], $prod) == 0) {
+        $currentProduct = $product;
+      }
     }
-    else {
-      foreach ($jsonFileDecoded as $product) {
-        //Check if the product belongs to the correct category
-        if (strcmp($product['name'], $prod) == 0) {
-          $currentProduct = $product;
-        }
+  }
+
+  /*
+  *
+  * Doesnt work yet
+  * TO DO: delete the array element of the product being added and add the new one.
+  *
+  */
+  //When the form is submitted
+  if(isset($_POST['submit'])) {
+
+    //Delete old product before creating new one
+    if (!strcmp($prod, 'new') == 0) {
+      //Loop through products to find product with matching name to delete
+      $j = count($jsonFileDecoded);
+      for($i=0; $i<$j-1; $i++) {
+        if (strcmp($jsonFileDecoded[$i]['name'], $_POST['name'])) {
+          unset($jsonFileDecoded[$i]);
+        }       
       }
     }
 
-    //When the form is submitted
-    if(isset($_POST['submit'])) {
-      $arr = array(
-        'name' => $_POST['name'],
-        'aisle' => $_POST['aisle'],
-        'description' => $_POST['description'],
-        'img' => $_POST['img'],
-        'price' => $_POST['price'],
-        'weight' => $_POST['weight'],
-        'inventory' => $_POST['inventory']
-      );
-      $json_string = json_encode($arr);
-      file_put_contents($file, $json_string);
-      echo $json_string;
-    } 
+    $jsonFileDecoded[] = array(
+      'name' => $_POST['name'],
+      'aisle' => $_POST['aisle'],
+      'description' => $_POST['description'],
+      'img' => $_POST['img'],
+      'price' => $_POST['price'],
+      'weight' => $_POST['weight'],
+      'inventory' => $_POST['inventory']
+    );
+    $json_string = json_encode($jsonFileDecoded);
+    file_put_contents($file, $json_string);
+        
+  } 
 
 ?>
 

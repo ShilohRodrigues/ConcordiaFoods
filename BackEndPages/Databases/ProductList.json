@@ -277,5 +277,14 @@
     "price": 3.28,
     "weight": null,
     "inventory": 100
+  },
+  {
+    "name":"Test",
+    "aisle":"Fruits and Vegetables",
+    "description":"testing",
+    "img":"https:\/\/miro.medium.com\/max\/1200\/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+    "price":"5",
+    "weight":"",
+    "inventory":"56"
   }
 ]
