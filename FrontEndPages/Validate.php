@@ -8,7 +8,8 @@ foreach($users_a as $value){
     if($_POST['StudentID']==$value["StudentID"] and $_POST['Password']==$value["Password"]){
 
       $_SESSION['StudentID']=$_POST ['StudentID'];
-      header("location: ../index.html");
+        if($_SESSION['StudentID']=='Admin'){header("location: ../BackEndPages/UserList.php");}
+        else{header("location: ../index.html");}
       $check=true;
     }
 }if(!$check){
