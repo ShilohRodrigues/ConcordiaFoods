@@ -22,7 +22,8 @@ session_start();
 		    </div>
 		    <nav>
 		      <div class="dropdown">
-		        <button class="dropbtn active">Account</button>
+		        <button class="dropbtn active"><<?php if(isset($_SESSION['StudentID'])){echo "<button class='dropbtn active'>".$_SESSION['StudentID']."</button>";}
+                    else{echo "<button class='dropbtn active'>Account</button>";}?>
 		        <div class="dropdown-content">
 		          <a href="../FrontEndPages/login.html">Login</a>
 		          <a href="../FrontEndPages/p6.html">Sign Up</a>
