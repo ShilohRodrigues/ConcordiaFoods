@@ -1,6 +1,12 @@
  <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+  //Get the product list from the json
+  $jsonFile = file_get_contents("http://localhost/ConcordiaFoods/JSONFiles/ProductList.json");
+  $jsonFileDecoded = json_decode($jsonFile, true);
+?>
+
 <head>
   <meta charset="utf-8">
   <meta name="Description" content="Page #7, Product List">
@@ -47,61 +53,38 @@
     </header>
 
     <header id="backendHeader">
-      <h1>Product List</h1>
+      <h1>Product</h1>
     </header>
 
-    <table id="productTable">
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Inventory</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-      <tr>
-        <td>Apples</td>
-        <td>$4.39/kg</td>
-        <td>100</td>
-        <td><a href="p8.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Bananas</td>
-        <td>$1.57/kg</td>
-        <td>100</td>
-        <td><a href="p8.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Carrots</td>
-        <td>$2.34/kg</td>
-        <td>100</td>
-        <td><a href="p8.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Cucumbers</td>
-        <td>$1.99/kg</td>
-        <td>100</td>
-        <td><a href="p8.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Oranges</td>
-        <td>$3.77/kg</td>
-        <td>100</td>
-        <td><a href="p8.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Peach</td>
-        <td>$2.15/kg</td>
-        <td>100</td>
-        <td><a href="p8.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-    </table>
-    
+    <div class="fixTableHead">
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price ($)</th>
+            <th>Inventory</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            //Loop for every product
+            foreach($jsonFileDecoded as $product) {
+              echo 
+              '<tr>
+                <td>' . $product['name'] . '</td>
+                <td>' . $product['price'] . '</td>
+                <td>' . $product['inventory'] . '</td>
+                <td><a href="p8.php?prod=' . $product['name'] . '"><i class="fas fa-edit"></i></a></td>
+                <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+              </tr>';
+            }
+          ?>
+        </tbody>
+      </table>
+    </div>
+
     <button id="btnProdAdd" onClick="location.href='p8.html'"><i class="fas fa-plus-circle"></i> Add a Product</button>
 
     <footer id="mainFooter">
