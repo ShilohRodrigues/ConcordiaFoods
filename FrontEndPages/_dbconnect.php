@@ -85,9 +85,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $data_results = file_get_contents("users.json");
     $tempArray = json_decode($data_results);
-
+    $file = "users.json";
     if (isset($_POST['submit'])) {
-        $file = "users.json";
+
         $arr = array(
             'StudentID' => $_POST['studentID'],
             'First_name' => $_POST['fname'],
