@@ -1,5 +1,14 @@
 [
   {
+    "name": "",
+    "aisle": "",
+    "description": "",
+    "img": "",
+    "price": "",
+    "weight": "",
+    "inventory": ""
+  },
+  {
     "name": "Apples",
     "aisle": "Fruits and Vegetables",
     "description": "Wide variety of fresh apples including Granny Smith, Red Delicious, and Golden Delicious.",

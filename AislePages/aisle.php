@@ -4,7 +4,7 @@
 <?php 
     //Get the aisle from the url
     $aisle = $_GET['aisle'];
-    $jsonFile = file_get_contents("http://localhost/ConcordiaFoods/JSONFiles/ProductList.json");
+    $jsonFile = file_get_contents("../BackEndPages/Databases/ProductList.json");
     $jsonFileDecoded = json_decode($jsonFile, true);
 ?>
 
@@ -77,11 +77,16 @@
           foreach ($jsonFileDecoded as $product) {
             //Check if the product belongs to the correct category
             if (strcmp($product['aisle'], $aisle) == 0) {
+              //Check if there is a weight stored to show the per kg
+              $weight = '';
+              if(!strcmp($product['weight'], '') == 0) {
+              $weight = '/kg';
+              }
               echo 
               '<div class="productContainer">
                 <img class="img-fluid" src="' . $product['img'] . '" alt="' . $product['name'] . '" />
                 <h3>' . $product['name'] . '</h3>
-                <p class="price">$' . $product['price'] . '/kg</p>
+                <p class="price">$' . $product['price'] . $weight . '</p>
                 <button type="button" onclick="window.location.href = \'../FrontEndPages/ProdDesc.php?prod=' . $product['name'] . '\'">View Details</button>
               </div>';
             }
@@ -123,8 +128,8 @@
         <div class="ftList">
           <p>Backend Functions</p>
           <ul>
-            <li><a href="../BackEndPages/ProductList.html">Product List</a></li>
-            <li><a href="../BackEndPages/p8.html">Edit a Product</a></li>
+            <li><a href="../BackEndPages/ProductList.php">Product List</a></li>
+            <li><a href="../BackEndPages/p8.php?prod=new">Edit a Product</a></li>
             <li><a href="../BackEndPages/UsersList.html">User List</a></li>
             <li><a href="../BackEndPages/User_Edit.html">Edit a User</a></li>
             <li><a href="../BackEndPages/p11.html">Order List</a></li>

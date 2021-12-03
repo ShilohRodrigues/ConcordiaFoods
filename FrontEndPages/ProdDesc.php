@@ -4,7 +4,7 @@
 <?php 
     //Get the aisle from the url
     $prod = $_GET['prod'];
-    $jsonFile = file_get_contents("http://localhost/ConcordiaFoods/JSONFiles/ProductList.json");
+    $jsonFile = file_get_contents("../BackEndPages/Databases/ProductList.json");
     $jsonFileDecoded = json_decode($jsonFile, true);
     $currentProduct;
     //Loop through each product in the product json
@@ -74,11 +74,17 @@
       <?php echo '<img src="' . $currentProduct['img'] . '" alt="' . $currentProduct['name'] . '" />' ?>
       <div id="productInfo">
         <?php
+          //Check if there is a weight stored
+          $weight = '';
+          if(!strcmp($currentProduct['weight'], '') == 0) {
+            $weight = '/kg<br>(Average weight: <span id="weight">' . $currentProduct['weight'] . '</span> kg)';
+          }
           echo 
           '<h2>' . $currentProduct['name'] . '</h2>
           <p id="txt-more-description">' . $currentProduct['description'] . '</p>
           <button id="bt-more-description" onclick="openDescription()">View Description...</button>
-          <p>$<span id="cost-per-kg">' . $currentProduct['price'] . '</span>/kg<br>(Average weight: <span id="weight">' . $currentProduct['weight'] . '</span> kg)</p>
+          <p>$<span id="cost-per-kg">' . $currentProduct['price'] . '</span>
+          ' . $weight . '</p>
           <form onsubmit="clearQ(\'' . $currentProduct['name'] . '\')">
             <label for="quantity">Quantity: </label>
             <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="' . $currentProduct['inventory'] . '"><br>
@@ -123,8 +129,8 @@
         <div class="ftList">
           <p>Backend Functions</p>
           <ul>
-            <li><a href="../BackEndPages/ProductList.html">Product List</a></li>
-            <li><a href="../BackEndPages/p8.html">Edit a Product</a></li>
+            <li><a href="../BackEndPages/ProductList.php">Product List</a></li>
+            <li><a href="../BackEndPages/p8.php?prod=new">Edit a Product</a></li>
             <li><a href="../BackEndPages/UsersList.html">User List</a></li>
             <li><a href="../BackEndPages/User_Edit.html">Edit a User</a></li>
             <li><a href="../BackEndPages/p11.html">Order List</a></li>
