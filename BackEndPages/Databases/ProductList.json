@@ -1,290 +1,281 @@
 [
-  {
-    "name": "",
-    "aisle": "",
-    "description": "",
-    "img": "",
-    "price": "",
-    "weight": "",
-    "inventory": ""
-  },
-  {
-    "name": "Apples",
-    "aisle": "Fruits and Vegetables",
-    "description": "Wide variety of fresh apples including Granny Smith, Red Delicious, and Golden Delicious.",
-    "img": "../images/apples.jpg",
-    "price": 4.39,
-    "weight": 0.2,
-    "inventory": 100
-  },
-  {
-    "name": "Bananas",
-    "description": "South american bananas of any desired ripeness.",
-    "aisle": "Fruits and Vegetables",
-    "img": "../images/bananas.jpg",
-    "price": 1.57,
-    "weight": 0.3,
-    "inventory": 100
-  },
-  {
-    "name": "Carrots",
-    "description": "Carrots from local farmers.",
-    "aisle": "Fruits and Vegetables",
-    "img": "../images/carrots.jpg",
-    "price": 2.34,
-    "weight": 0.2,
-    "inventory": 100
-  },
-  {
-    "name": "Beef Hearts",
-    "description": "Beef Heart from cows born and raised in Quebec.",
-    "aisle": "Meats",
-    "img": "../images/BeefHeart.jpg",
-    "price": 11.57,
-    "weight": 0.54,
-    "inventory": 100
-  },
-  {
-    "name": "Chicken Breasts",
-    "description": "Chicken Breasts from chickens born and raised in Quebec.",
-    "aisle": "Meats",
-    "img": "../images/ChickenBreasts.jpg",
-    "price": 8.90,
-    "weight": 0.54,
-    "inventory": 100
-  },
-  {
-    "name": "Chicken Hearts",
-    "description": "Chicken hearts from chickens born and raised in Quebec.",
-    "aisle": "Meats",
-    "img": "../images/ChickenHeart.jpg",
-    "price": 7.90,
-    "weight": 0.54,
-    "inventory": 100
-  },
-  {
-    "name": "Chicken Thighs",
-    "description": "Chicken thighs from chickens born and raised in Quebec.",
-    "aisle": "Meats",
-    "img": "../images/ChickenThighs.jpg",
-    "price": 13.90,
-    "weight": 0.54,
-    "inventory": 100
-  },
-  {
-    "name": "Coke",
-    "description": "Refresh yourself with a coke made by the famous Coca Cola brand. (12 x 355.0 ml)",
-    "aisle": "Drinks",
-    "img": "../images/cokeOrg.png",
-    "price": 5.20,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Diet Coke",
-    "description": "The original Zero calorie Coca Cola. (12 x 355.0 ml)",
-    "aisle": "Drinks",
-    "img": "../images/dietcoke.png",
-    "price": 5.20,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Coke Zero",
-    "description": "Great Coca-Cola Taste with Zero Sugar and Zero Calories. Enjoy with meals, on the go, or to share. Serve ice cold for maximum refreshment. (12 x 355.0 ml)",
-    "aisle": "Drinks",
-    "img": "../images/cokeZero (2).png",
-    "price": 5.20,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Cookies",
-    "description": "Delicious cookies made by experts to be as fresh as homemade cookies.",
-    "aisle": "Snacks",
-    "img": "../images/cookies.jpg",
-    "price": 3.20,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Cucumbers",
-    "description": "Cucumbers grown from local farmers",
-    "aisle": "Fruits and Vegetables",
-    "img": "../images/cucumbers.jpg",
-    "price": 1.39,
-    "weight": 0.25,
-    "inventory": 100
-  },
-  {
-    "name": "Donuts",
-    "description": "Gluten-free, Sweet, and healthy snack made by your local bakery.",
-    "aisle": "Snacks",
-    "img": "../images/dounats.jpg",
-    "price": 4.36,
-    "weight": 0.4,
-    "inventory": 100
-  },
-  {
-    "name": "Frozen Berries",
-    "description": "With plenty of fiber and antioxidants, frozen berries are a nutrient-rich, low-calorie addition to many foods.",
-    "aisle": "Frozen Foods",
-    "img": "../images/FrozenBerries.png",
-    "price": 1.56,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Frozen Vegetables",
-    "description": "Frozen vegetables are vegetables that have had their temperature reduced and maintained to below their freezing point for the purpose of storage and transportation",
-    "aisle": "Frozen Foods",
-    "img": "../images/FrozenVegetables.png",
-    "price": 3.77,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Granola-Musli Bar",
-    "description": "Organic low sugar granola/musli bar from The Organic Crave Company. Simply #cravemore! Eat snacks on the go or wherever you are without bad conscious! A movement has begun.",
-    "aisle": "Snacks",
-    "img": "../images/granola-musli bar.jpg",
-    "price": 2.10,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Ground Beef",
-    "description": "Ground Beef made fresh with local Quebec cows.",
-    "aisle": "Meats",
-    "img": "../images/GroundBeef.jpg",
-    "price": 11.10,
-    "weight": 0.54,
-    "inventory": 100
-  },
-  {
-    "name": "Ice Cream",
-    "description": "a soft frozen food made with sweetened and flavored milk fat.",
-    "aisle": "Frozen Foods",
-    "img": "../images/icecream.png",
-    "price": 4.10,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Nuggets",
-    "description": "A variety of cripy Nuggets made up of fresh chicken meat",
-    "aisle": "Frozen Foods",
-    "img": "../images/nuggets.jpeg",
-    "price": 6.00,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Oranges",
-    "description": "Large and juicy oranges.",
-    "aisle": "Fruits and Vegetables",
-    "img": "../images/oranges.jpg",
-    "price": 3.77,
-    "weight": 0.4,
-    "inventory": 100
-  },
-  {
-    "name": "Peaches",
-    "description": "Large and juicy peaches.",
-    "aisle": "Fruits and Vegetables",
-    "img": "../images/peaches.jpg",
-    "price": 3.20,
-    "weight": 0.4,
-    "inventory": 100
-  },
-  {
-    "name": "Oreos",
-    "description": "Classic creme-filled biscuits with the original taste that Oreo always delivers.",
-    "aisle": "Snacks",
-    "img": "../images/Oreo.jpg",
-    "price": 3.50,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Pastries",
-    "description": "Pastry is a dough of flour, water and shortening (solid fats, including butter or lard) that may be savoury or sweetened.",
-    "aisle": "Frozen Foods",
-    "img": "../images/pastries.jpeg",
-    "price": 3.90,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Pepsi",
-    "description": "The bold, refreshing, robust cola. Perfect for parties, meals, and celebrations big and small. (6 x 1.00 L )",
-    "aisle": "Drinks",
-    "img": "../images/pepsi.png",
-    "price": 4.28,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Perrier",
-    "description": "Perfect for your alcoholic beverages (6 x 1.00 L )",
-    "aisle": "Drinks",
-    "img": "../images/perrier.png",
-    "price": 6.28,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Pistaccio",
-    "description": "Pistaccio, a healthy snack that is cholesterol-free, a source of fiber, and minerals-rich.",
-    "aisle": "Snacks",
-    "img": "../images/Pistaccio.jpg",
-    "price": 4.50,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Pizza",
-    "description": "Crust of the Pizza bakes quickly and super tasty option for the dinner",
-    "aisle": "Frozen Foods",
-    "img": "../images/pizza.png",
-    "price": 5.90,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "Popcorn",
-    "description": "Popcorn, a variety of corn (maize). After minutes in the microwave, your favorite snack is ready!",
-    "aisle": "Snacks",
-    "img": "../images/Popcorn.jpg",
-    "price": 1.50,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name": "T-Bone Steak",
-    "description": "T-Bone Steak made fresh with local Quebec cows.",
-    "aisle": "Meats",
-    "img": "../images/TBone.jpg",
-    "price": 22.50,
-    "weight": 0.54,
-    "inventory": 100
-  },
-  {
-    "name": "Water",
-    "description": "Hydrate yourself with Naya water. Proudly produced from Quebec (6 x 1.00 L )",
-    "aisle": "Drinks",
-    "img": "../images/naya.png",
-    "price": 3.28,
-    "weight": null,
-    "inventory": 100
-  },
-  {
-    "name":"Test",
-    "aisle":"Fruits and Vegetables",
-    "description":"testing",
-    "img":"https:\/\/miro.medium.com\/max\/1200\/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
-    "price":"5",
-    "weight":"",
-    "inventory":"56"
-  }
+    {
+        "name": "",
+        "aisle": "",
+        "description": "",
+        "img": "",
+        "price": "",
+        "weight": "",
+        "inventory": ""
+    },
+    {
+        "name": "Apples",
+        "aisle": "Fruits and Vegetables",
+        "description": "Wide variety of fresh apples including Granny Smith, Red Delicious, and Golden Delicious.",
+        "img": "..\/images\/apples.jpg",
+        "price": "4.39",
+        "weight": "0.2",
+        "inventory": "100"
+    },
+    {
+        "name": "Bananas",
+        "aisle": "Fruits and Vegetables",
+        "description": "South american bananas of any desired ripeness.",
+        "img": "..\/images\/bananas.jpg",
+        "price": "1.57",
+        "weight": "0.3",
+        "inventory": "100"
+    },
+    {
+        "name": "Carrots",
+        "description": "Carrots from local farmers.",
+        "aisle": "Fruits and Vegetables",
+        "img": "..\/images\/carrots.jpg",
+        "price": 2.34,
+        "weight": 0.2,
+        "inventory": 100
+    },
+    {
+        "name": "Beef Hearts",
+        "description": "Beef Heart from cows born and raised in Quebec.",
+        "aisle": "Meats",
+        "img": "..\/images\/BeefHeart.jpg",
+        "price": 11.57,
+        "weight": 0.54,
+        "inventory": 100
+    },
+    {
+        "name": "Chicken Breasts",
+        "description": "Chicken Breasts from chickens born and raised in Quebec.",
+        "aisle": "Meats",
+        "img": "..\/images\/ChickenBreasts.jpg",
+        "price": 8.9,
+        "weight": 0.54,
+        "inventory": 100
+    },
+    {
+        "name": "Chicken Hearts",
+        "description": "Chicken hearts from chickens born and raised in Quebec.",
+        "aisle": "Meats",
+        "img": "..\/images\/ChickenHeart.jpg",
+        "price": 7.9,
+        "weight": 0.54,
+        "inventory": 100
+    },
+    {
+        "name": "Chicken Thighs",
+        "description": "Chicken thighs from chickens born and raised in Quebec.",
+        "aisle": "Meats",
+        "img": "..\/images\/ChickenThighs.jpg",
+        "price": 13.9,
+        "weight": 0.54,
+        "inventory": 100
+    },
+    {
+        "name": "Coke",
+        "description": "Refresh yourself with a coke made by the famous Coca Cola brand. (12 x 355.0 ml)",
+        "aisle": "Drinks",
+        "img": "..\/images\/cokeOrg.png",
+        "price": 5.2,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Diet Coke",
+        "description": "The original Zero calorie Coca Cola. (12 x 355.0 ml)",
+        "aisle": "Drinks",
+        "img": "..\/images\/dietcoke.png",
+        "price": 5.2,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Coke Zero",
+        "description": "Great Coca-Cola Taste with Zero Sugar and Zero Calories. Enjoy with meals, on the go, or to share. Serve ice cold for maximum refreshment. (12 x 355.0 ml)",
+        "aisle": "Drinks",
+        "img": "..\/images\/cokeZero (2).png",
+        "price": 5.2,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Cookies",
+        "description": "Delicious cookies made by experts to be as fresh as homemade cookies.",
+        "aisle": "Snacks",
+        "img": "..\/images\/cookies.jpg",
+        "price": 3.2,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Cucumbers",
+        "description": "Cucumbers grown from local farmers",
+        "aisle": "Fruits and Vegetables",
+        "img": "..\/images\/cucumbers.jpg",
+        "price": 1.39,
+        "weight": 0.25,
+        "inventory": 100
+    },
+    {
+        "name": "Donuts",
+        "description": "Gluten-free, Sweet, and healthy snack made by your local bakery.",
+        "aisle": "Snacks",
+        "img": "..\/images\/dounats.jpg",
+        "price": 4.36,
+        "weight": 0.4,
+        "inventory": 100
+    },
+    {
+        "name": "Frozen Berries",
+        "description": "With plenty of fiber and antioxidants, frozen berries are a nutrient-rich, low-calorie addition to many foods.",
+        "aisle": "Frozen Foods",
+        "img": "..\/images\/FrozenBerries.png",
+        "price": 1.56,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Frozen Vegetables",
+        "description": "Frozen vegetables are vegetables that have had their temperature reduced and maintained to below their freezing point for the purpose of storage and transportation",
+        "aisle": "Frozen Foods",
+        "img": "..\/images\/FrozenVegetables.png",
+        "price": 3.77,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Granola-Musli Bar",
+        "description": "Organic low sugar granola\/musli bar from The Organic Crave Company. Simply #cravemore! Eat snacks on the go or wherever you are without bad conscious! A movement has begun.",
+        "aisle": "Snacks",
+        "img": "..\/images\/granola-musli bar.jpg",
+        "price": 2.1,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Ground Beef",
+        "description": "Ground Beef made fresh with local Quebec cows.",
+        "aisle": "Meats",
+        "img": "..\/images\/GroundBeef.jpg",
+        "price": 11.1,
+        "weight": 0.54,
+        "inventory": 100
+    },
+    {
+        "name": "Ice Cream",
+        "description": "a soft frozen food made with sweetened and flavored milk fat.",
+        "aisle": "Frozen Foods",
+        "img": "..\/images\/icecream.png",
+        "price": 4.1,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Nuggets",
+        "description": "A variety of cripy Nuggets made up of fresh chicken meat",
+        "aisle": "Frozen Foods",
+        "img": "..\/images\/nuggets.jpeg",
+        "price": 6,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Oranges",
+        "description": "Large and juicy oranges.",
+        "aisle": "Fruits and Vegetables",
+        "img": "..\/images\/oranges.jpg",
+        "price": 3.77,
+        "weight": 0.4,
+        "inventory": 100
+    },
+    {
+        "name": "Peaches",
+        "description": "Large and juicy peaches.",
+        "aisle": "Fruits and Vegetables",
+        "img": "..\/images\/peaches.jpg",
+        "price": 3.2,
+        "weight": 0.4,
+        "inventory": 100
+    },
+    {
+        "name": "Oreos",
+        "description": "Classic creme-filled biscuits with the original taste that Oreo always delivers.",
+        "aisle": "Snacks",
+        "img": "..\/images\/Oreo.jpg",
+        "price": 3.5,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Pastries",
+        "description": "Pastry is a dough of flour, water and shortening (solid fats, including butter or lard) that may be savoury or sweetened.",
+        "aisle": "Frozen Foods",
+        "img": "..\/images\/pastries.jpeg",
+        "price": 3.9,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Pepsi",
+        "description": "The bold, refreshing, robust cola. Perfect for parties, meals, and celebrations big and small. (6 x 1.00 L )",
+        "aisle": "Drinks",
+        "img": "..\/images\/pepsi.png",
+        "price": 4.28,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Perrier",
+        "description": "Perfect for your alcoholic beverages (6 x 1.00 L )",
+        "aisle": "Drinks",
+        "img": "..\/images\/perrier.png",
+        "price": 6.28,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Pistaccio",
+        "description": "Pistaccio, a healthy snack that is cholesterol-free, a source of fiber, and minerals-rich.",
+        "aisle": "Snacks",
+        "img": "..\/images\/Pistaccio.jpg",
+        "price": 4.5,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Pizza",
+        "description": "Crust of the Pizza bakes quickly and super tasty option for the dinner",
+        "aisle": "Frozen Foods",
+        "img": "..\/images\/pizza.png",
+        "price": 5.9,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "Popcorn",
+        "description": "Popcorn, a variety of corn (maize). After minutes in the microwave, your favorite snack is ready!",
+        "aisle": "Snacks",
+        "img": "..\/images\/Popcorn.jpg",
+        "price": 1.5,
+        "weight": null,
+        "inventory": 100
+    },
+    {
+        "name": "T-Bone Steak",
+        "description": "T-Bone Steak made fresh with local Quebec cows.",
+        "aisle": "Meats",
+        "img": "..\/images\/TBone.jpg",
+        "price": 22.5,
+        "weight": 0.54,
+        "inventory": 100
+    },
+    {
+        "name": "Water",
+        "description": "Hydrate yourself with Naya water. Proudly produced from Quebec (6 x 1.00 L )",
+        "aisle": "Drinks",
+        "img": "..\/images\/naya.png",
+        "price": 3.28,
+        "weight": null,
+        "inventory": 100
+    }
 ]

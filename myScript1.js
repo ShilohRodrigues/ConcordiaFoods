@@ -41,10 +41,22 @@ function clearQ(store){
   localStorage.removeItem(store);
 }
 
+//Delete the table row when the x button is clicked
+//Call php function using AJAX to delete product from json 
+function deleteProductTableRow(r) {
 
-function deleteTableRow(r) {
+  let table = document.getElementById("productTable");
   let i = r.parentNode.parentNode.rowIndex;
-  document.getElementById("productTable").deleteRow(i);
+  let name = table.rows[i].cells[0].innerHTML;
+  console.log(name);
+  $.ajax({
+    url:"http://localhost/ConcordiaFoods/BackEndPages/ProductList.php",
+    type: "post",
+    data: {"prodName": name}
+  });
+
+  table.deleteRow(i);
+
 }
 
 

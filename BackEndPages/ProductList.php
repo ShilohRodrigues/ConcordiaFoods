@@ -2,9 +2,35 @@
 <html lang="en">
 
 <?php 
+
   //Get the product list from the json
-  $jsonFile = file_get_contents("../BackEndPages/Databases/ProductList.json");
+  $file = "../BackEndPages/Databases/ProductList.json";
+  $jsonFile = file_get_contents("$file");
   $jsonFileDecoded = json_decode($jsonFile, true);
+
+  //Executed when a table row is deleted, from ajax call in myScript.js
+  if (isset($_POST['prodName'])) { 
+
+    //Loop through to find if there is a product with the same name to replace
+    $j = count($jsonFileDecoded);
+    for($i=0; $i<($j); $i++) {
+      if (strcmp($jsonFileDecoded[$i]['name'], $_POST['prodName']) == 0) {
+        unset($jsonFileDecoded[$i]);
+      }
+    }
+
+    //Rebase the array, since unset changes the format
+    $jsonFileDecoded = array_values($jsonFileDecoded);
+
+    //Reencode the json string and save it in the file
+    $json_string = json_encode($jsonFileDecoded, JSON_PRETTY_PRINT);
+    file_put_contents($file, $json_string);
+
+    //Prevent data leaks... close the json file
+    unset($file);
+
+  }
+
 ?>
 
 <head>
@@ -78,7 +104,7 @@
                   <td>' . $product['price'] . '</td>
                   <td>' . $product['inventory'] . '</td>
                   <td><a href="p8.php?prod=' . $product['name'] . '"><i class="fas fa-edit"></i></a></td>
-                  <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+                  <td><button onclick="deleteProductTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
                 </tr>';
               }     
             }
@@ -136,6 +162,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="../myScript1.js"></script>
 
 </body>

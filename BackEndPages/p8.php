@@ -21,27 +21,11 @@
     }
   }
 
-  /*
-  *
-  * Doesnt work yet
-  * TO DO: delete the array element of the product being added and add the new one.
-  *
-  */
-  //When the form is submitted
+  //Excecutes when the form  is submitted
   if(isset($_POST['submit'])) {
-
-    //Delete old product before creating new one
-    if (!strcmp($prod, 'new') == 0) {
-      //Loop through products to find product with matching name to delete
-      $j = count($jsonFileDecoded);
-      for($i=0; $i<$j-1; $i++) {
-        if (strcmp($jsonFileDecoded[$i]['name'], $_POST['name'])) {
-          unset($jsonFileDecoded[$i]);
-        }       
-      }
-    }
-
-    $jsonFileDecoded[] = array(
+    
+    //Product to add based on form values
+    $newArray = array(
       'name' => $_POST['name'],
       'aisle' => $_POST['aisle'],
       'description' => $_POST['description'],
@@ -50,10 +34,47 @@
       'weight' => $_POST['weight'],
       'inventory' => $_POST['inventory']
     );
-    $json_string = json_encode($jsonFileDecoded);
+
+    //Loop through to find if there is a product with the same name to replace
+    $j = count($jsonFileDecoded);
+    $flag = false;
+    for($i=0; $i<($j); $i++) {
+      //If the product isnt entered as a new product replace the old one based on name from url
+      if (!(strcmp($prod, 'new') == 0)) {
+      
+        if (strcmp($jsonFileDecoded[$i]['name'], $prod) == 0) {
+          $flag = true;
+          $jsonFileDecoded[$i] = $newArray;
+        }  
+
+      }
+      //If the product is entered as a new product replace based on the new name
+      else {
+
+        if (strcmp($jsonFileDecoded[$i]['name'], $_POST['name']) == 0) {
+          $flag = true;
+          $jsonFileDecoded[$i] = $newArray;
+        }  
+
+      }     
+    }
+    //Create new entry if none were matching
+    if($flag == false) {
+      //Append new product to json array    
+      $jsonFileDecoded[] = $newArray;
+    }
+    
+    //Reencode the json string and save it in the file
+    $json_string = json_encode($jsonFileDecoded, JSON_PRETTY_PRINT);
     file_put_contents($file, $json_string);
-        
-  } 
+
+    //Prevent data leaks... close the json file
+    unset($file);
+
+    //Send the user back to the product list page
+    header("Location: ProductList.php");
+
+  }
 
 ?>
 
