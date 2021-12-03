@@ -18,7 +18,7 @@
 
 	<header id="mainHeader">
       <div id="logo">
-        <a href="../index.html"><img class="img-fluidxx" src="../images/CFlogo.png" alt="Concordia Foods"></a>
+        <a href="../index.html"><img class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods"></a>
       </div>
       <nav>
         <div class="dropdown">
@@ -48,33 +48,38 @@
       <h1>User List</h1>
     </header>
 
-    <table id="productTable">
-      <tr>
-        <th>Name</th>
-        <th>ID</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-      <tr>
-        <td>Shiloh</td>
-        <td>12345</td>
-        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Amrit</td>
-        <td>45678</td>
-        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-      <tr>
-        <td>Ravish</td>
-        <td>123345</td>
-        <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-        <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-      </tr>
-    </table>
-    
+    <div class="fixTableHead">
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shiloh</td>
+            <td>12345</td>
+            <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
+            <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+          </tr>
+          <tr>
+            <td>Amrit</td>
+            <td>45678</td>
+            <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
+            <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+          </tr>
+          <tr>
+            <td>Ravish</td>
+            <td>123345</td>
+            <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
+            <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <button id="btnProdAdd" onClick="location.href='User_Edit.html'"><i class="fas fa-plus-circle"></i> Add a User</button>
 
 	

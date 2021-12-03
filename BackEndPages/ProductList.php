@@ -1,21 +1,27 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
+
+<?php 
+  //Get the product list from the json
+  $jsonFile = file_get_contents("http://localhost/ConcordiaFoods/JSONFiles/ProductList.json");
+  $jsonFileDecoded = json_decode($jsonFile, true);
+?>
 
 <head>
   <meta charset="utf-8">
-  <meta name="Description" content="Page #3, Apple Product Page">
+  <meta name="Description" content="Page #7, Product List">
   <meta name="Author" content="Shiloh Rodrigues">
-  <meta name="keywords" content="grocery, food, store, apple">
+  <meta name="keywords" content="grocery, food, store">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="shortcut icon" href="../images/favicon.ico" />
   <link rel="stylesheet" href="../FontAwesome/css/all.css">
-  <title>Concordia Foods</title>
   <link rel="stylesheet" href="../style.css">
+  <title>Concordia Foods</title>
 </head>
 
-<body onload="getQ('Granola')" onbeforeunload="storeQ('Granola')">
+<body>
 
   <div class="container-xxl pt-2">
 
@@ -33,7 +39,7 @@
         </div>
         <a href="../FrontEndPages/Cart_P4.html">View Cart</a>
         <div class="dropdown">
-          <button class="dropbtn active">Products</button>
+          <button class="dropbtn">Products</button>
           <div class="dropdown-content">
             <a href="../AislePages/Produce_Aisle.html">Fruits & Vegetables</a>
             <a href="../AislePages/MeatAisle.html">Meats</a>
@@ -46,31 +52,40 @@
       </nav>
     </header>
 
-    <header id="aisleHeader">
-      <h1>Product Description</h1>
+    <header id="backendHeader">
+      <h1>Product</h1>
     </header>
 
-    <div id="backButton" onclick="window.location.href = 'https://shilohrodrigues.github.io/ConcordiaFoods/AislePages/Snacks_Aisle.html'">
-      <i class="fas fa-angle-left"></i>
-      <p>Return</p>
+    <div class="fixTableHead">
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price ($)</th>
+            <th>Inventory</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            //Loop for every product
+            foreach($jsonFileDecoded as $product) {
+              echo 
+              '<tr>
+                <td>' . $product['name'] . '</td>
+                <td>' . $product['price'] . '</td>
+                <td>' . $product['inventory'] . '</td>
+                <td><a href="p8.php?prod=' . $product['name'] . '"><i class="fas fa-edit"></i></a></td>
+                <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+              </tr>';
+            }
+          ?>
+        </tbody>
+      </table>
     </div>
 
-    <article id="productDescription">
-      <img src="../images/granola-musli bar.jpg" alt="Apples" />
-      <div id="productInfo">
-        <h2>Granola-musli bar</h2>
-          <p id="txt-more-description" >Organic low sugar granola/musli bar from The Organic Crave Company. Simply #cravemore! Eat snacks on the go or wherever you are without bad conscious! A movement has begun.</p>
-            <button id="bt-more-description" onclick="openDescription()">View Description...</button>
-        <p>$<span id="cost-per-kg">2.10</span><br></p>
-        <form onsubmit="clearQ('Granola')">
-          <label for="quantity">Quantity: </label>
-          <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="100"><br>
-          <p id="tot-price-label">Total Price: </p>
-          <p id="tot-price">$0</p>
-          <input type="submit" id="btSubmit" value="Add To Cart">
-        </form>
-      </div>
-    </article>
+    <button id="btnProdAdd" onClick="location.href='p8.html'"><i class="fas fa-plus-circle"></i> Add a Product</button>
 
     <footer id="mainFooter">
       <img id="logo" class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods logo">
@@ -105,12 +120,12 @@
         <div class="ftList">
           <p>Backend Functions</p>
           <ul>
-            <li><a href="../BackEndPages/ProductList.html">Product List</a></li>
-            <li><a href="../BackEndPages/p8.html">Edit a Product</a></li>
-            <li><a href="../BackEndPages/UsersList.html">User List</a></li>
-            <li><a href="../BackEndPages/User_Edit.html">Edit a User</a></li>
-            <li><a href="../BackEndPages/p11.html">Order List</a></li>
-            <li><a href="../BackEndPages/Order_Edit.html">Edit an Order</a></li>
+            <li><a href="ProductList.html">Product List</a></li>
+            <li><a href="p8.html">Edit a Product</a></li>
+            <li><a href="UsersList.html">User List</a></li>
+            <li><a href="User_Edit.html">Edit a User</a></li>
+            <li><a href="p11.html">Order List</a></li>
+            <li><a href="Order_Edit.html">Edit an Order</a></li>
           </ul>
         </div>
       </div>
@@ -118,9 +133,9 @@
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../myScript1.js"></script>
 
 </body>
-
 
 </html>
