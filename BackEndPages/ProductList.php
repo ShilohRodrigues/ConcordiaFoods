@@ -11,7 +11,7 @@
   //Executed when a table row is deleted, from ajax call in myScript.js
   if (isset($_POST['prodName'])) { 
 
-    //Loop through to find if there is a product with the same name to replace
+    //Loop through to find if there is a product with the same name to delete
     $j = count($jsonFileDecoded);
     for($i=0; $i<($j); $i++) {
       if (strcmp($jsonFileDecoded[$i]['name'], $_POST['prodName']) == 0) {

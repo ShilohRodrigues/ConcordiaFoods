@@ -59,6 +59,25 @@ function deleteProductTableRow(r) {
 
 }
 
+function addToTable(r) {
+
+  let table = document.getElementById("productTable");
+  let i = r.parentNode.parentNode.rowIndex;
+  let name = table.rows[i].cells[0].innerHTML;
+  
+  let orderTable = document.getElementById("orderTable");
+  let row = orderTable.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  cell1.innerHTML = name;
+  cell2.innerHTML = '<input type="number" id="order-quantity" min="0" max="100" value="1">';
+  cell3.innerHTML = '<button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button>';
+  console.log(cell1.innerHTML);
+  console.log(cell2.innerHTML);
+  console.log(cell3.innerHTML);
+}
+
 
 function openDescription() {
   let descr = document.getElementById("txt-more-description");

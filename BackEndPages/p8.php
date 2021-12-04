@@ -194,8 +194,8 @@
             <li><a href="p8.php?prod=new">Edit a Product</a></li>
             <li><a href="UsersList.html">User List</a></li>
             <li><a href="User_Edit.html">Edit a User</a></li>
-            <li><a href="p11.html">Order List</a></li>
-            <li><a href="Order_Edit.html">Edit an Order</a></li>
+            <li><a href="p11.php">Order List</a></li>
+            <li><a href="Order_Edit.php?order=new">Edit an Order</a></li>
           </ul>
         </div>
       </div>

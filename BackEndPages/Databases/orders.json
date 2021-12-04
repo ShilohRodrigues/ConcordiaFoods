@@ -1,0 +1,49 @@
+[
+  {
+      "orderNum": "",
+      "studentId": "",
+      "totPrice": "",
+      "products": [
+        {
+          "name": "Add Products",
+          "quantity": "1" 
+        }
+      ]
+  },
+  {
+    "orderNum": "1",
+    "studentId": "123456",
+    "totPrice": "50$",
+    "products": [
+      {
+        "name": "Apples",
+        "quantity": "5" 
+      },
+      {
+        "name": "Bananas",
+        "quantity": "5" 
+      },
+      {
+        "name": "Oranges",
+        "quantity": "5" 
+      },
+      {
+        "name": "Carrots",
+        "quantity": "5" 
+      },
+      {
+        "name": "Chicken Breasts",
+        "quantity": "10" 
+      },
+      {
+        "name": "Chicken Hearts",
+        "quantity": "8" 
+      },
+      {
+        "name": "Coke",
+        "quantity": "3" 
+      }
+    ]
+  }
+  
+]

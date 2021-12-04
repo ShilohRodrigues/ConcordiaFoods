@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+
+  //Get the product list from the json
+  $file = "../BackEndPages/Databases/orders.json";
+  $jsonFile = file_get_contents("$file");
+  $jsonFileDecoded = json_decode($jsonFile, true);
+
+  //Executed when a table row is deleted, from ajax call in myScript.js
+  if (isset($_POST['orderNum'])) { 
+
+    //Loop through to find if there is a product with the same name to delete
+    $j = count($jsonFileDecoded);
+    for($i=0; $i<($j); $i++) {
+      if (strcmp($jsonFileDecoded[$i]['name'], $_POST['orderNum']) == 0) {
+        unset($jsonFileDecoded[$i]);
+      }
+    }
+
+    //Rebase the array, since unset changes the format
+    $jsonFileDecoded = array_values($jsonFileDecoded);
+
+    //Reencode the json string and save it in the file
+    $json_string = json_encode($jsonFileDecoded, JSON_PRETTY_PRINT);
+    file_put_contents($file, $json_string);
+
+    //Prevent data leaks... close the json file
+    unset($file);
+
+  }
+
+?>
+
 <head>
     <meta charset="utf-8">
     <meta name="Description" content="Page #7, Product List">
@@ -34,11 +66,11 @@
         <div class="dropdown">
           <button class="dropbtn">Products</button>
           <div class="dropdown-content">
-            <a href="../AislePages/Produce_Aisle.html">Fruits & Vegetables</a>
-            <a href="../AislePages/MeatAisle.html">Meats</a>
-            <a href="../AislePages/FrozenFoods_Aisle.html">Frozen Foods</a>
-            <a href="../AislePages/Snacks_Aisle.html">Snacks</a>
-            <a href="../AislePages/drinksAisle.html">Drinks</a>
+            <a href="../AislePages/aisle.php?aisle=Fruits and Vegetables">Fruits & Vegetables</a>
+            <a href="../AislePages/aisle.php?aisle=Meats">Meats</a>
+            <a href="../AislePages/aisle.php?aisle=Frozen Foods">Frozen Foods</a>
+            <a href="../AislePages/aisle.php?aisle=Snacks">Snacks</a>
+            <a href="../AislePages/aisle.php?aisle=Drinks">Drinks</a>
           </div>
         </div>
         <a href="../index.html">Home</a>
@@ -54,65 +86,45 @@
             <thead>
               <tr>
                   <th>Order #</th>
+                  <th>Student ID</th>
                   <th>Total Price</th>
                   <th>Edit</th>
                   <th>Delete</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                  <td>Order1</td>
-                  <td>20$</td>
-                  <td><a href="Order_Edit.html"><i class="fas fa-edit"></i></a></td>
-                  <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-              </tr>
-              <tr>
-                  <td>Order2</td>
-                  <td>50$</td>
-                  <td><a href="Order_Edit.html"><i class="fas fa-edit"></i></a></td>
-                  <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-              </tr>
-              <tr>
-                  <td>Order3</td>
-                  <td>80$</td>
-                  <td><a href="Order_Edit.html"><i class="fas fa-edit"></i></a></td>
-                  <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-              </tr>
-              <tr>
-                  <td>Order4</td>
-                  <td>60$</td>
-                  <td><a href="Order_Edit.html"><i class="fas fa-edit"></i></a></td>
-                  <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-              </tr>
-              <tr>
-                  <td>Order5</td>
-                  <td>30$</td>
-                  <td><a href="Order_Edit.html"><i class="fas fa-edit"></i></a></td>
-                  <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-              </tr>
-              <tr>
-                  <td>Order6</td>
-                  <td>70$</td>
-                  <td><a href="Order_Edit.html"><i class="fas fa-edit"></i></a></td>
-                  <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
-              </tr>
+              <?php
+              //Loop for every product
+              foreach($jsonFileDecoded as $product) {
+                if (!strcmp($product['orderNum'], '') == 0) {
+                  echo 
+                  '<tr>
+                    <td>' . $product['orderNum'] . '</td>
+                    <td>' . $product['studentId'] . '</td>
+                    <td>' . $product['totPrice'] . '</td>
+                    <td><a href="Order_Edit.php?order=' . $product['orderNum'] . '"><i class="fas fa-edit"></i></a></td>
+                    <td><button onclick="deleteProductTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+                  </tr>';
+                }     
+              }
+              ?>
             </tbody>
           </table>
         </div>
       
-      <button id="btnProdAdd" onclick="location.href='Order_Edit.html'"><i class="fas fa-plus-circle"></i> Add an Order</button>
+      <button id="btnProdAdd" onclick="location.href='Order_Edit.php?order=new'"><i class="fas fa-plus-circle"></i> Add an Order</button>
 
-        <footer id="mainFooter">
+      <footer id="mainFooter">
       <img id="logo" class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods logo">
       <div class="ftMain">
         <div class="ftList">
           <p>Aisles</p>
           <ul>
-            <li><a href="../AislePages/Produce_Aisle.html">Fruits & Vegetables</a></li>
-            <li><a href="../AislePages/MeatAisle.html">Meats</a></li>
-            <li><a href="../AislePages/FrozenFoods_Aisle.html">Frozen Foods</a></li>
-            <li><a href="../AislePages/Snacks_Aisle.html">Snacks</a></li>
-            <li><a href="../AislePages/drinksAisle.html">Drinks</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Fruits and Vegetables">Fruits & Vegetables</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Meats">Meats</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Frozen Foods">Frozen Foods</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Snacks">Snacks</a></li>
+            <li><a href="../AislePages/aisle.php?aisle=Drinks">Drinks</a></li>
           </ul>
         </div>
         <div class="ftList">
@@ -135,12 +147,12 @@
         <div class="ftList">
           <p>Backend Functions</p>
           <ul>
-            <li><a href="ProductList.html">Product List</a></li>
-            <li><a href="p8.html">Edit a Product</a></li>
+            <li><a href="ProductList.php">Product List</a></li>
+            <li><a href="p8.php?prod=new">Edit a Product</a></li>
             <li><a href="UsersList.html">User List</a></li>
             <li><a href="User_Edit.html">Edit a User</a></li>
-            <li><a href="p11.html">Order List</a></li>
-            <li><a href="Order_Edit.html">Edit an Order</a></li>
+            <li><a href="p11.php">Order List</a></li>
+            <li><a href="Order_Edit.php?order=new">Edit an Order</a></li>
           </ul>
         </div>
       </div>

@@ -1374,6 +1374,7 @@ large{
 
 .fixTableHead {
 	width: 70%;
+	min-width: 450px;
 	margin: 4em auto 2em auto;
 	overflow-y: auto;
 	height: 300px;
@@ -1405,6 +1406,7 @@ large{
 
 #productTable a:hover, #productTable button:hover {
   color: #800;
+	cursor: pointer;
 }
 
 #productTable button {
@@ -1504,3 +1506,81 @@ large{
 }
 
 /* End of CSS for P10 */
+
+/* CSS for P12 */
+
+#form-p12 {
+	width: 100%;
+}
+
+form .order-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	margin: 2em auto;
+}
+
+form .order-info > input {
+	text-align: center;
+	font-size: 1.1em;
+}
+
+form .order-info > label {
+	font-size: 1.1em;
+	margin-top: 1em;
+}
+
+.mini-prod-table {
+	margin: auto;
+	width: 40%;
+	min-width: 500px;
+}
+
+#orderTable {
+	width: 100%;
+  border-collapse: collapse;
+}
+
+#orderTable th {
+  font-size: 1.5em;
+  text-align: center;
+	background-color: #efefef;
+  border-bottom: 2px solid #000;
+	position: sticky;
+  top: 0;
+}
+
+#orderTable td {
+  font-size: 1.25em;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+#orderTable #order-quantity {
+  text-align: center;
+}
+
+#orderTable a:hover, #orderTable button:hover {
+	cursor: pointer;
+  color: #800;
+}
+
+#orderTable button {
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  #orderTable th {
+    min-width: 3em;
+  }
+  #orderTable td {
+    min-width: 3em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #orderTable td {
+    min-width: 5em;
+  }
+}
