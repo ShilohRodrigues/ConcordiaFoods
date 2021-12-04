@@ -107,7 +107,7 @@ $users = json_decode($jsonAccess, true);
         <tbody>
             <?php
             foreach($users as $user) {
-              if (!strcmp($user['First Name'], '') == 0) {
+              if (!strcmp($user['First_Name'], '') == 0) {
                 echo
                 '<tr>
                   <td>' . $user['First_Name']. $user['Last_Name'] . '</td>
