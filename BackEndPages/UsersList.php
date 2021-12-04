@@ -110,9 +110,9 @@ $users = json_decode($jsonAccess, true);
               if (!strcmp($user['First Name'], '') == 0) {
                 echo
                 '<tr>
-                  <td>' . $user['First Name'] . '</td>
-                  <td>' . $user['Last Name'] . '</td>
-                  <td>' . $user['Age'] . '</td>
+                  <td>' . $user['First_Name']. $user['Last_Name'] . '</td>
+                  <td>' . $user['StuedentID'] . '</td>
+                  <td>' . $user['Password'] . '</td>
                 </tr>';
               }
             }
