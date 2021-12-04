@@ -5,12 +5,21 @@
     <meta name = "Description" content = "Page #9, User List">
     <meta name="keywords" content="grocery, food, store">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../FontAwesome/css/all.css">
     <link rel="shortcut icon" href="../images/favicon.ico"../>
-    <title>Concordia Foods</title>  
+    <title>Concordia Foods</title>
   </head>
+<?php
+$jsonLocation = "../BackEndPages/Databases/users.json";
+$jsonAccess = file_get_contents("$jsonLocation");
+$users;
+$users = json_decode($jsonAccess, true);
+
+?>
+
+
 <body>
 
   <div class="container-xxl pt-2">
@@ -41,7 +50,7 @@
       </nav>
     </header>
 
-    
+
     <header id="backendHeader">
       <h1>User List</h1>
     </header>
@@ -78,9 +87,43 @@
         </tbody>
       </table>
     </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="fixTableHead">
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <?php
+            foreach($users as $user) {
+              if (!strcmp($user['First Name'], '') == 0) {
+                echo
+                '<tr>
+                  <td>' . $user['First Name'] . '</td>
+                  <td>' . $user['Last Name'] . '</td>
+                  <td>' . $user['Age'] . '</td>
+                </tr>';
+              }
+            }
+            ?>
+        </tbody>
+      </table>
+    </div>
+
     <button id="btnProdAdd" onClick="location.href='User_Edit.html'"><i class="fas fa-plus-circle"></i> Add a User</button>
 
-	
+
 <footer id="mainFooter">
       <img id="logo" class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods logo">
       <div class="ftMain">
