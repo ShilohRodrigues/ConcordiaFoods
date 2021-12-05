@@ -1,5 +1,16 @@
 [
   {
+    "StudentID" : " ",
+    "First_Name":" ",
+    "Last_Name":" ",
+    "Password":" ",
+    "E-mail":" ",
+    "P_Number":" ",
+    "M_Number":" ",
+    "Address":" ",
+    "Postal_Code":" "
+  },
+  {
     "StudentID" : "Admin",
     "First_Name":"Admin",
     "Last_Name":"Admin",

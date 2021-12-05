@@ -114,6 +114,7 @@ $users = json_decode($jsonAccess, true);
                   <td>' . $user['First_Name']. $user['Last_Name'] . '</td>
                   <td>' . $user['StudentID'] . '</td>
                   <td>' . $user['Password'] . '</td>
+                  <td><a href="p8.php?prod=' . $product['name'] . '"><i class="fas fa-edit"></i></a></td>
                   <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
                 </tr>';
               }
