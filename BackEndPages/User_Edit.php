@@ -1,4 +1,5 @@
 <?php
+session_start();
 $user = $_GET['user'];
 $file = "../BackEndPages/Databases/users.json";
 $jsonFile = file_get_contents("$file");
@@ -42,9 +43,13 @@ else {
         </div>
         <nav>
           <div class="dropdown">
-            <button class="dropbtn">Account</button>
-            <div class="dropdown-content">
-              <a href="../FrontEndPages/login.html">Login</a>
+            <<?php if(isset($_SESSION['StudentID'])){echo "<button class='dropbtn active'>".$_SESSION['StudentID']."</button>";}
+                    else{echo "<button class='dropbtn active'>Account</button>";}?>
+		        <div class="dropdown-content">
+		          <?php
+              if(isset($_SESSION['StudentID'])){echo'<a href="Logout.php">Logout</a>';}
+              else{echo'<a href="../FrontEndPages/login.php">Login</a>';}
+              ?>
               <a href="../FrontEndPages/p6.html">Sign Up</a>
             </div>
           </div>
@@ -69,7 +74,7 @@ else {
 
       <article>
         <div class="userContainer">
-          <form>
+          <form action="UserUpdate.php" method='post'>
           <label for="fName"><large>F</large>irst <large>N</large>ame</label><br>
             <input type="text" id="fName" name="fName" value="<?php echo $currentUser['First_Name'];?>"><br><br>
           <label for="lName"><large>L</large>ast <large>N</large>ame</label><br>
@@ -78,7 +83,7 @@ else {
           <input type="text"  id="sID" name="sID" value="<?php echo $currentUser['StudentID'];?>"><br><br>
           <label for="email"><large>E</large>-mail</label><br>
           <input type="text"  id="email" name="email" value="<?php echo $currentUser['E-mail'];?>"><br><br>
-          <label for="Pnumber"><large>P</large>hone <large>N</large>umber</label><br>
+          <label for="Phone Number"><large>P</large>hone <large>N</large>umber</label><br>
           <input type="text"  id="Pnumber" name="Phone Number" value="<?php echo $currentUser['P_Number'];?>"><br><br>
           <label for="mobile"><large>M</large>obile</label><br>
           <input type="text"  id="mobile" name="mobile" value="<?php echo $currentUser['M_Number'];?>"><br><br>
@@ -106,7 +111,7 @@ else {
           <input type="password" id="Password" name="Password" value="<?php echo $currentUser['Password'];?>"><br><br>
           <label for="confirmpassword"><large>C</large>onfirm <large>P</large>assword</label><br>
           <input type="password" id="cPassword" name="CPassword"><br><br>
-          <button type="submit">Save</button>
+          <button type="submit" name=<?php if($currentUser['StudentID']==""){echo 'add';} else{echo 'edit';}?>>Save</button>
           </form>
         </div>
       </article>
