@@ -80,6 +80,22 @@ function deleteOrderTableRow(r) {
 
 }
 
+function deleteUserRow(r) {
+
+  let table = document.getElementById("productTable");
+  let i = r.parentNode.parentNode.rowIndex;
+  let id = table.rows[i].cells[1].innerHTML;
+  console.log(id);
+  $.ajax({
+    url:"http://localhost/ConcordiaFoods/BackEndPages/UserList.php",
+    type: "post",
+    data: {"StudentID": id}
+  });
+
+  table.deleteRow(i);
+
+}
+
 function addToTable(r) {
 
   let table = document.getElementById("productTable");
@@ -292,24 +308,5 @@ function delete_user(calling_element){
 }
 
 ////////////////////////////////////////////////////////////
-
-}
-
-
-////// Amrit /////
-
-function deleteUserRow(r) {
-
-  let table = document.getElementById("productTable");
-  let i = r.parentNode.parentNode.rowIndex;
-  let num = table.rows[i].cells[0].innerHTML;
-  console.log(num);
-  $.ajax({
-    url:"http://localhost/ConcordiaFoods/BackEndPages/UserList.php",
-    type: "post",
-    data: {"StudentID": id}
-  });
-
-  table.deleteRow(i);
 
 }

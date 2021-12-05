@@ -1,3 +1,29 @@
+<?php
+$user = $_GET['user'];
+$file = "../BackEndPages/Databases/users.json";
+$jsonFile = file_get_contents("$file");
+$jsonFileDecoded = json_decode($jsonFile, true);
+$currentUser;
+
+
+
+//Loop through each product in the product json
+//Check if it is a new product, and make the current prod equal to the blank data
+if (strcmp($user, 'new') == 0) {
+  $currentUser = $jsonFileDecoded[0];
+}
+else {
+  foreach ($jsonFileDecoded as $usr) {
+    //Check if the product belongs to the correct category
+    if (strcmp($usr['StudentID'], $user) == 0) {
+      $currentUser = $usr;
+    }
+  }
+}
+
+
+ ?>
+
 <doctype html>
   <html>
     <head>
@@ -38,30 +64,30 @@
           <a href="../index.html">Home</a>
         </nav>
       </header>
-      
+
       <header id="backendHeader">
         <h1>Edit User</h1>
       </header>
-      
+
       <article>
         <div class="userContainer">
           <form>
           <label for="fName"><large>F</large>irst <large>N</large>ame</label><br>
-            <input type="text" id="fName" name="fName" value="John"><br><br>
+            <input type="text" id="fName" name="fName" value="<?php echo $currentUser['First_Name'];?>"><br><br>
           <label for="lName"><large>L</large>ast <large>N</large>ame</label><br>
-          <input type="lName" id="lName" name="lName" value="Doe"><br><br>
+          <input type="lName" id="lName" name="lName" value="<?php echo $currentUser['Last_Name'];?>"><br><br>
             <label for="sID"><large>S</large>tudentID</label><br>
-          <input type="text"  id="sID" name="sID" value="40627976"><br><br>
+          <input type="text"  id="sID" name="sID" value="<?php echo $currentUser['StudentID'];?>"><br><br>
           <label for="email"><large>E</large>-mail</label><br>
-          <input type="text"  id="email" name="email" value="someemail@concordia.ca"><br><br>
+          <input type="text"  id="email" name="email" value="<?php echo $currentUser['E-mail'];?>"><br><br>
           <label for="Pnumber"><large>P</large>hone <large>N</large>umber</label><br>
-          <input type="text"  id="Pnumber" name="Phone Number" value="555-555-5555"><br><br>
+          <input type="text"  id="Pnumber" name="Phone Number" value="<?php echo $currentUser['P_Number'];?>"><br><br>
           <label for="mobile"><large>M</large>obile</label><br>
-          <input type="text"  id="mobile" name="mobile" value="555-555-5555"><br><br>
+          <input type="text"  id="mobile" name="mobile" value="<?php echo $currentUser['M_Number'];?>"><br><br>
           <label for="pCode"><large>A</large>ddress</label><br>
-          <input type="text"  id="Postal" name="Postal" value="HC1 4B5"><br><br>
+          <input type="text"  id="Postal" name="Postal" value="<?php echo $currentUser['Postal_Code'];?>"><br><br>
           <label for="Address"><large>P</large>ostal <large>C</large>ode</label><br>
-          <input type="text"  id="Address" name="Address" value="117,John Street"><br><br>
+          <input type="text"  id="Address" name="Address" value="<?php echo $currentUser['Address'];?>"><br><br>
           <label for="PROVINCE"><large>P</large>rovince</label><br>
           <select class="selectcategory3">
               <option value="">Ontario</option>
@@ -79,14 +105,14 @@
               <option value="">Y>ukon</option>
           </select><br><br>
           <label for="password"><large>P</large>assword</label><br>
-          <input type="password" id="Password" name="Password" value="John117"><br><br>
+          <input type="password" id="Password" name="Password" value="<?php echo $currentUser['Password'];?>"><br><br>
           <label for="confirmpassword"><large>C</large>onfirm <large>P</large>assword</label><br>
           <input type="password" id="cPassword" name="CPassword"><br><br>
           <button type="submit">Save</button>
           </form>
         </div>
       </article>
-      
+
       <footer id="mainFooter">
         <img id="logo" class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods logo">
         <div class="ftMain">
@@ -132,4 +158,3 @@
       </footer>
       </div>
     </body>
-  </html>

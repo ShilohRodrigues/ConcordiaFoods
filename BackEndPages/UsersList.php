@@ -18,6 +18,28 @@ $jsonAccess = file_get_contents("$jsonLocation");
 $users;
 $users = json_decode($jsonAccess, true);
 
+
+if (isset($_POST['StudentID'])) {
+
+  //Loop through to find if there is a product with the same name to delete
+  $j = count($jsonAccess);
+  for($i=0; $i<($j); $i++) {
+    if (strcmp($jsonAccess[$i]['StudentID'], $_POST['StudentID']) == 0) {
+      unset($jsonAccess[$i]);
+    }
+  }
+
+  //Rebase the array, since unset changes the format
+  $jsonAccess = array_values($jsonAccess);
+
+  //Reencode the json string and save it in the file
+  $json_string = json_encode($jsonAccess, JSON_PRETTY_PRINT);
+  file_put_contents($jsonLocation, $json_string);
+
+  //Prevent data leaks... close the json file
+  unset($jsonLocation);
+
+}
 ?>
 
 
@@ -56,44 +78,6 @@ $users = json_decode($jsonAccess, true);
       <h1>User List</h1>
     </header>
 
-    <div class="fixTableHead">
-      <table id="productTable">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>ID</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Shiloh</td>
-            <td>12345</td>
-            <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-            <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
-          </tr>
-          <tr>
-            <td>Amrit</td>
-            <td>45678</td>
-            <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-            <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
-          </tr>
-          <tr>
-            <td>Ravish</td>
-            <td>123345</td>
-            <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-            <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <div class="fixTableHead">
       <table id="productTable">
@@ -170,7 +154,8 @@ $users = json_decode($jsonAccess, true);
       </div>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="../myScript1.js"></script>
 
 </body>
-</html>
