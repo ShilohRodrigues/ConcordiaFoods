@@ -27,7 +27,7 @@ function storeQ(store){
 function getQ(store){
   let value=localStorage.getItem(store);
   if(localStorage.getItem(store)==""||localStorage.getItem(store)==null){
-  document.getElementById("quantity").value="0";
+    document.getElementById("quantity").value="0";
   }
   else{
     document.getElementById('quantity').value=localStorage.getItem(store);
@@ -70,8 +70,8 @@ function addToTable(r) {
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
-  cell1.innerHTML = name;
-  cell2.innerHTML = '<input type="number" id="order-quantity" min="0" max="100" value="1">';
+  cell1.innerHTML = '<input type="text" name="products[]" readonly value="' + name + '">';
+  cell2.innerHTML = '<input type="number" name="quantities[]" id="order-quantity" min="0" max="100" value="1">';
   cell3.innerHTML = '<button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button>';
   console.log(cell1.innerHTML);
   console.log(cell2.innerHTML);

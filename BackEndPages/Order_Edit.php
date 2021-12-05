@@ -9,7 +9,7 @@
    * Delete row with AJAX
    * Update price with JS
    */
-  $ord = $_GET['order'];
+  $ord = $_GET['orderNumber'];
   $file = "../BackEndPages/Databases/orders.json";
   $jsonFile = file_get_contents("$file");
   $jsonFileDecoded = json_decode($jsonFile, true);
@@ -25,9 +25,9 @@
   }
   else {
     foreach ($jsonFileDecoded as $order) {
-      //Check if the product belongs to the correct category
       if ($order['orderNum'] == $ord) {
         $currentOrder = $order;
+        $orderNum = $order['orderNum'];
       }
     }
   }
@@ -38,59 +38,52 @@
   $jsonProdFileDecoded = json_decode($jsonProdFile, true);
 
   //Excecutes when the form  is submitted
-  // if(isset($_POST['submit'])) {
+  if(isset($_POST['submit'])) {
     
-  //   //Product to add based on form values
-  //   $newArray = array(
-  //     'name' => $_POST['name'],
-  //     'aisle' => $_POST['aisle'],
-  //     'description' => $_POST['description'],
-  //     'img' => $_POST['img'],
-  //     'price' => $_POST['price'],
-  //     'weight' => $_POST['weight'],
-  //     'inventory' => $_POST['inventory']
-  //   );
+    $prodArray;
+    $j = count($_POST['products']);
+    //Create array of products in the order
+    for($i=0; $i<($j); $i++) {
+      $prodArray[] = array(
+        'name' => $_POST['products'][$i],
+        'quantity' => $_POST['quantities'][$i]
+      );
+    }
 
-  //   //Loop through to find if there is a product with the same name to replace
-  //   $j = count($jsonFileDecoded);
-  //   $flag = false;
-  //   for($i=0; $i<($j); $i++) {
-  //     //If the product isnt entered as a new product replace the old one based on name from url
-  //     if (!(strcmp($prod, 'new') == 0)) {
-      
-  //       if (strcmp($jsonFileDecoded[$i]['name'], $prod) == 0) {
-  //         $flag = true;
-  //         $jsonFileDecoded[$i] = $newArray;
-  //       }  
+    //Order to add based on form input
+    $newArray = array(
+      'orderNum' => $_POST['orderNum'],
+      'studentId' => $_POST['studentId'],
+      'totPrice' => $_POST['totPrice'],
+      'products' => $prodArray
+    );
 
-  //     }
-  //     //If the product is entered as a new product replace based on the new name
-  //     else {
+    //Check if we are adding a new order or editing an existing one 
+    if(strcmp($ord, 'new') == 0) {
+      echo 'new';
+      $jsonFileDecoded[] = $newArray;
+    }
+    else {
+      $j = count($jsonFileDecoded);
+      for($i=0; $i<($j); $i++) {
+        if ($jsonFileDecoded[$i]['orderNum'] == $_POST['orderNum']) {
+          $jsonFileDecoded[$i] = $newArray;
+        }
+      }
+    }
 
-  //       if (strcmp($jsonFileDecoded[$i]['name'], $_POST['name']) == 0) {
-  //         $flag = true;
-  //         $jsonFileDecoded[$i] = $newArray;
-  //       }  
+    //Reencode the json string and save it in the file
+    $json_string = json_encode($jsonFileDecoded, JSON_PRETTY_PRINT);
+    file_put_contents($file, $json_string);
 
-  //     }     
-  //   }
-  //   //Create new entry if none were matching
-  //   if($flag == false) {
-  //     //Append new product to json array    
-  //     $jsonFileDecoded[] = $newArray;
-  //   }
-    
-  //   //Reencode the json string and save it in the file
-  //   $json_string = json_encode($jsonFileDecoded, JSON_PRETTY_PRINT);
-  //   file_put_contents($file, $json_string);
+    //Prevent data leaks... close the json file
+    unset($file);
+    unset($prodFile);
 
-  //   //Prevent data leaks... close the json file
-  //   unset($file);
+    //Send the user back to the product list page
+    header("Location: p11.php");
 
-  //   //Send the user back to the product list page
-  //   header("Location: ProductList.php");
-
-  // }
+  }
 
 ?>
 
@@ -142,15 +135,15 @@
       <h1>Edit an Order</h1>
     </header>
     
-    <form id="form-p12">
+    <form id="form-p12" method="post" action="">
 
       <div class="order-info">
         <label>Order Number:</label>
-        <input name="orderNum" type="text" class="form-control" disabled value="<?php echo $orderNum;?>">
+        <input name="orderNum" type="text" class="form-control" readonly value="<?php echo $orderNum;?>">
         <label>Student ID:</label>
         <input name="studentId" type="text" class="form-control" placeholder="Student ID of the student" value="<?php echo $currentOrder['studentId'];?>">
-        <label>Total Price:</label>
-        <input name="studentId" type="text" class="form-control" disabled value="<?php echo $currentOrder['totPrice'];?>">
+        <label>Total Price ($):</label>
+        <input name="totPrice" type="text" class="form-control" readonly value="<?php echo $currentOrder['totPrice'];?>">
       </div>
 
       <div class="mini-prod-table">
@@ -195,8 +188,8 @@
                 foreach($currentOrder['products'] as $prod) {
                   echo
                   '<tr>
-                    <td>' . $prod['name'] . '</td>
-                    <td><input type="number" id="order-quantity" min="0" max="100" value="' . $prod['quantity'] . '"></td>
+                    <td><input type="text" name="products[]" readonly value="' . $prod['name'] . '"></td>
+                    <td><input type="number" name="quantities[]" id="order-quantity" min="0" max="100" value="' . $prod['quantity'] . '"></td>
                     <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
                   ';
                 }

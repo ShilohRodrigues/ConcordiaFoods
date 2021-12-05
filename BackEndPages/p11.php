@@ -102,7 +102,7 @@
                     <td>' . $product['orderNum'] . '</td>
                     <td>' . $product['studentId'] . '</td>
                     <td>' . $product['totPrice'] . '</td>
-                    <td><a href="Order_Edit.php?order=' . $product['orderNum'] . '"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="Order_Edit.php?orderNumber=' . $product['orderNum'] . '"><i class="fas fa-edit"></i></a></td>
                     <td><button onclick="deleteProductTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
                   </tr>';
                 }     
@@ -112,7 +112,7 @@
           </table>
         </div>
       
-      <button id="btnProdAdd" onclick="location.href='Order_Edit.php?order=new'"><i class="fas fa-plus-circle"></i> Add an Order</button>
+      <button id="btnProdAdd" onclick="location.href='Order_Edit.php?orderNumber=new'"><i class="fas fa-plus-circle"></i> Add an Order</button>
 
       <footer id="mainFooter">
       <img id="logo" class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods logo">
@@ -152,7 +152,7 @@
             <li><a href="UsersList.html">User List</a></li>
             <li><a href="User_Edit.html">Edit a User</a></li>
             <li><a href="p11.php">Order List</a></li>
-            <li><a href="Order_Edit.php?order=new">Edit an Order</a></li>
+            <li><a href="Order_Edit.php?orderNumber=new">Edit an Order</a></li>
           </ul>
         </div>
       </div>
