@@ -108,12 +108,11 @@ $users = json_decode($jsonAccess, true);
         <tbody>
             <?php
             foreach($users as $user) {
-              if (!strcmp($user['First_Name'], '') == 0) {
+              if (!strcmp($user['StudentID'], '') == 0) {
                 echo
                 '<tr>
-                  <td>' . $user['First_Name']. $user['Last_Name'] . '</td>
+                  <td>' . $user['First_Name']. " " .$user["Last_Name"] . '</td>
                   <td>' . $user['StudentID'] . '</td>
-                  <td>' . $user['Password'] . '</td>
                   <td><a href="User_Edit.php?user=' . $user['StudentID'] . '"><i class="fas fa-edit"></i></a></td>
                   <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
                 </tr>';
