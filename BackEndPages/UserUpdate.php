@@ -12,6 +12,6 @@
             'M_Number' => $_POST['mobile'],
             'Address' => $_POST['Address']);
       $userArray[] = $arr;
-      $json_data=json_encode($userArray);
+      $json_data=json_encode($userArray,JSON_PRETTY_PRINT);
       file_put_contents('Databases/users.json',$json_data);
  ?>
