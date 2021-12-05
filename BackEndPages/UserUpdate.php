@@ -8,7 +8,7 @@
             'Last_name' => $_POST['lName'],
             'Password' => $_POST['Password'],
             'E-mail' => $_POST['email'],
-            'P_Number' => $_POST['Phone Number'],
+            'P_Number' => $_POST['Pnumber'],
             'M_Number' => $_POST['mobile'],
             'Address' => $_POST['Address']);
       $newUser[]=$arr;

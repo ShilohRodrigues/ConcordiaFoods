@@ -84,7 +84,7 @@ else {
           <label for="email"><large>E</large>-mail</label><br>
           <input type="text"  id="email" name="email" value="<?php echo $currentUser['E-mail'];?>"><br><br>
           <label for="Phone Number"><large>P</large>hone <large>N</large>umber</label><br>
-          <input type="text"  id="Pnumber" name="Phone Number" value="<?php echo $currentUser['P_Number'];?>"><br><br>
+          <input type="text"  id="Pnumber" name="Pnumber" value="<?php echo $currentUser['P_Number'];?>"><br><br>
           <label for="mobile"><large>M</large>obile</label><br>
           <input type="text"  id="mobile" name="mobile" value="<?php echo $currentUser['M_Number'];?>"><br><br>
           <label for="pCode"><large>A</large>ddress</label><br>
