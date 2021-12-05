@@ -11,8 +11,7 @@
             'P_Number' => $_POST['Phone Number'],
             'M_Number' => $_POST['mobile'],
             'Address' => $_POST['Address']);
-      $newUser[]=$arr;
-      array_push($userArray,$newUser);
+      $userArray[] = $arr;
       $json_data=json_encode($userArray);
       file_put_contents('Databases/users.json',$json_data);
  ?>
