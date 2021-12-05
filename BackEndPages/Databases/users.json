@@ -1,14 +1,14 @@
 [
   {
-    "StudentID" : " ",
-    "First_Name":" ",
-    "Last_Name":" ",
-    "Password":" ",
-    "E-mail":" ",
-    "P_Number":" ",
-    "M_Number":" ",
-    "Address":" ",
-    "Postal_Code":" "
+    "StudentID" : "",
+    "First_Name":"",
+    "Last_Name":"",
+    "Password":"",
+    "E-mail":"",
+    "P_Number":"",
+    "M_Number":"",
+    "Address":"",
+    "Postal_Code":""
   },
   {
     "StudentID" : "Admin",

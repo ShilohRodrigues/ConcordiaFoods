@@ -22,18 +22,18 @@ $users = json_decode($jsonAccess, true);
 if (isset($_POST['StudentID'])) {
 
   //Loop through to find if there is a product with the same name to delete
-  $j = count($jsonAccess);
+  $j = count($users);
   for($i=0; $i<($j); $i++) {
-    if (strcmp($jsonAccess[$i]['StudentID'], $_POST['StudentID']) == 0) {
-      unset($jsonAccess[$i]);
+    if (strcmp($users[$i]['StudentID'], $_POST['StudentID']) == 0) {
+      unset($users[$i]);
     }
   }
 
   //Rebase the array, since unset changes the format
-  $jsonAccess = array_values($jsonAccess);
+  $users = array_values($users);
 
   //Reencode the json string and save it in the file
-  $json_string = json_encode($jsonAccess, JSON_PRETTY_PRINT);
+  $json_string = json_encode($users, JSON_PRETTY_PRINT);
   file_put_contents($jsonLocation, $json_string);
 
   //Prevent data leaks... close the json file

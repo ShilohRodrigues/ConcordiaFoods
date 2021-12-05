@@ -87,7 +87,7 @@ function deleteUserRow(r) {
   let id = table.rows[i].cells[1].innerHTML;
   console.log(id);
   $.ajax({
-    url:"http://localhost/ConcordiaFoods/BackEndPages/UserList.php",
+    url:"http://localhost/ConcordiaFoods/BackEndPages/UsersList.php",
     type: "post",
     data: {"StudentID": id}
   });
