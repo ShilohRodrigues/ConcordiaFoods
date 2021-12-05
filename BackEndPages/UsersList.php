@@ -12,6 +12,7 @@
     <title>Concordia Foods</title>
   </head>
 <?php
+$post = $_POST[""]
 $jsonLocation = "../BackEndPages/Databases/users.json";
 $jsonAccess = file_get_contents("$jsonLocation");
 $users;
@@ -70,19 +71,19 @@ $users = json_decode($jsonAccess, true);
             <td>Shiloh</td>
             <td>12345</td>
             <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-            <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+            <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
           </tr>
           <tr>
             <td>Amrit</td>
             <td>45678</td>
             <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-            <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+            <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
           </tr>
           <tr>
             <td>Ravish</td>
             <td>123345</td>
             <td><a href="User_Edit.html"><i class="fas fa-edit"></i></a></td>
-            <td><button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+            <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
           </tr>
         </tbody>
       </table>
@@ -111,8 +112,9 @@ $users = json_decode($jsonAccess, true);
                 echo
                 '<tr>
                   <td>' . $user['First_Name']. $user['Last_Name'] . '</td>
-                  <td>' . $user['StuedentID'] . '</td>
+                  <td>' . $user['StudentID'] . '</td>
                   <td>' . $user['Password'] . '</td>
+                  <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
                 </tr>';
               }
             }

@@ -48,7 +48,7 @@ function deleteTableRow(r) {
 }
 
 //Delete the table row when the x button is clicked
-//Call php function using AJAX to delete product from json 
+//Call php function using AJAX to delete product from json
 function deleteProductTableRow(r) {
 
   let table = document.getElementById("productTable");
@@ -85,7 +85,7 @@ function addToTable(r) {
   let table = document.getElementById("productTable");
   let i = r.parentNode.parentNode.rowIndex;
   let name = table.rows[i].cells[0].innerHTML;
-  
+
   let orderTable = document.getElementById("orderTable");
   let row = orderTable.insertRow(1);
   var cell1 = row.insertCell(0);
@@ -102,13 +102,13 @@ function openDescription() {
   let btn = document.getElementById("bt-more-description")
   if (descr.style.display == "block") {
     descr.style.display = "none";
-    btn.innerHTML = "View Description...";   
+    btn.innerHTML = "View Description...";
   }
   else {
     descr.style.display = "block";
     btn.innerHTML = "See Less...";
   }
-  
+
 }
 
 
@@ -119,7 +119,7 @@ let i1 = 0;
 let i2 = 0;
 function Cart_Adjust(calling_element) {
 
-  
+
   let ClassName = calling_element.className;
   let subtotal = 0;
   let name = ClassName.match(/\D+/)[0];
@@ -153,9 +153,9 @@ function Cart_Adjust(calling_element) {
 
 
 
- 
 
- 
+
+
  let n = 1;
   while (document.querySelector(".Pquantity" + n + " ." + "quantity" + n)!= null) {
 
@@ -172,9 +172,9 @@ function Cart_Adjust(calling_element) {
       subtotal = subtotal + document.querySelector(".Pquantity" + n + " ." + "quantity" + n).textContent* PricePerUnit[n-1];
      n++;
     }
-     
+
     }
-    
+
    }
  console.log(subtotal);
  //localStorage.setItem("Amounttext", subtotal);
@@ -199,7 +199,7 @@ function precise(x) {
 }
 
 /*document.addEventListener("DOMContentLoaded", function(event) {
-  
+
   document.querySelector(".Pquantity1 .quantity1").innerHTML = localStorage.getItem(".Pquantity1 .quantity1");
   document.querySelector(".Pquantity2 .quantity2").innerHTML = localStorage.getItem(".Pquantity2 .quantity2");
   document.querySelector(".Pprice1").innerHTML = localStorage.getItem(".Pprice1");
@@ -209,7 +209,7 @@ function precise(x) {
   document.querySelector(".QSTamount").innerHTML = Number.parseFloat(localStorage.getItem("QSTamount")).toPrecision(4) + " $";
   document.querySelector(".GSTamount").innerHTML = Number.parseFloat(localStorage.getItem("GSTamount")).toPrecision(4) + " $";
   document.querySelector(".totalamount").innerHTML = Number.parseFloat(localStorage.getItem("totalamount")).toPrecision(4) + " $";
-  
+
 });*/
 
 
@@ -232,16 +232,16 @@ function Cart_X(calling_element) {
 
   removed_element_array.push(number);
   console.log(number);
-  document.querySelector(".Pquantity" + number).style.display = 'none'; 
-  document.querySelector(".Pimage" + number).style.display = 'none'; 
-  document.querySelector(".Pname" + number).style.display = 'none'; 
-  document.querySelector(".Pprice" + number).style.display = 'none'; 
-  document.querySelector(".xbutton" + number).style.display = 'none'; 
- 
- 
- 
+  document.querySelector(".Pquantity" + number).style.display = 'none';
+  document.querySelector(".Pimage" + number).style.display = 'none';
+  document.querySelector(".Pname" + number).style.display = 'none';
+  document.querySelector(".Pprice" + number).style.display = 'none';
+  document.querySelector(".xbutton" + number).style.display = 'none';
+
+
+
   //let n = 1;
-    
+
     if (i1 == 1) {
        subtotal =  document.querySelector(".Pquantity" + 2 + " ." + "quantity" + 2).textContent* PricePerUnit[1];
        console.log(subtotal);
@@ -257,7 +257,7 @@ console.log(subtotal);
     if (i1 == 1 && i2 == 1) {
       subtotal=0;
       console.log(subtotal);
-      var div = document.querySelector('.line');    
+      var div = document.querySelector('.line');
       p = document.createElement("p");
     p.innerHTML = 'Empty cart';
     div.appendChild(p);
@@ -265,8 +265,8 @@ console.log(subtotal);
        div.innerHTML = '0 Item'
 
     }
-     
-   
+
+
 
 
 
@@ -292,5 +292,24 @@ function delete_user(calling_element){
 }
 
 ////////////////////////////////////////////////////////////
+
+}
+
+
+////// Amrit /////
+
+function deleteUserRow(r) {
+
+  let table = document.getElementById("productTable");
+  let i = r.parentNode.parentNode.rowIndex;
+  let num = table.rows[i].cells[0].innerHTML;
+  console.log(num);
+  $.ajax({
+    url:"http://localhost/ConcordiaFoods/BackEndPages/UserList.php",
+    type: "post",
+    data: {"StudentID": id}
+  });
+
+  table.deleteRow(i);
 
 }
