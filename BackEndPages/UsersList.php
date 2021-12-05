@@ -12,7 +12,7 @@
     <title>Concordia Foods</title>
   </head>
 <?php
-$post = $_POST[""]
+
 $jsonLocation = "../BackEndPages/Databases/users.json";
 $jsonAccess = file_get_contents("$jsonLocation");
 $users;
@@ -114,7 +114,7 @@ $users = json_decode($jsonAccess, true);
                   <td>' . $user['First_Name']. $user['Last_Name'] . '</td>
                   <td>' . $user['StudentID'] . '</td>
                   <td>' . $user['Password'] . '</td>
-                  <td><a href="p8.php?prod=' . $product['name'] . '"><i class="fas fa-edit"></i></a></td>
+                  <td><a href="User_Edit.php?user=' . $user['StudentID'] . '"><i class="fas fa-edit"></i></a></td>
                   <td><button onclick="deleteUserRow(this)"><i class="fas fa-times-circle"></i></button></td>
                 </tr>';
               }
@@ -124,7 +124,7 @@ $users = json_decode($jsonAccess, true);
       </table>
     </div>
 
-    <button id="btnProdAdd" onClick="location.href='User_Edit.html'"><i class="fas fa-plus-circle"></i> Add a User</button>
+    <button id="btnProdAdd" onClick="location.href='User_Edit.php?user=new'"><i class="fas fa-plus-circle"></i> Add a User</button>
 
 
 <footer id="mainFooter">
