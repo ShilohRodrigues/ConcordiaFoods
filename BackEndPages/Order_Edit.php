@@ -3,12 +3,6 @@
 
 <?php 
 
-  /**
-   * TO DO
-   * Save order (i.e. submit form and change json)
-   * Delete row with AJAX
-   * Update price with JS
-   */
   $ord = $_GET['orderNumber'];
   $file = "../BackEndPages/Databases/orders.json";
   $jsonFile = file_get_contents("$file");

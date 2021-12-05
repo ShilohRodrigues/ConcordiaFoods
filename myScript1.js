@@ -41,6 +41,12 @@ function clearQ(store){
   localStorage.removeItem(store);
 }
 
+//Function for deleting table row without json associated to the table
+function deleteTableRow(r) {
+  let i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("orderTable").deleteRow(i);
+}
+
 //Delete the table row when the x button is clicked
 //Call php function using AJAX to delete product from json 
 function deleteProductTableRow(r) {
@@ -53,6 +59,21 @@ function deleteProductTableRow(r) {
     url:"http://localhost/ConcordiaFoods/BackEndPages/ProductList.php",
     type: "post",
     data: {"prodName": name}
+  });
+
+  table.deleteRow(i);
+
+}
+function deleteOrderTableRow(r) {
+
+  let table = document.getElementById("productTable");
+  let i = r.parentNode.parentNode.rowIndex;
+  let num = table.rows[i].cells[0].innerHTML;
+  console.log(num);
+  $.ajax({
+    url:"http://localhost/ConcordiaFoods/BackEndPages/p11.php",
+    type: "post",
+    data: {"orderNum": num}
   });
 
   table.deleteRow(i);
@@ -71,13 +92,10 @@ function addToTable(r) {
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
   cell1.innerHTML = '<input type="text" name="products[]" readonly value="' + name + '">';
-  cell2.innerHTML = '<input type="number" name="quantities[]" id="order-quantity" min="0" max="100" value="1">';
+  cell2.innerHTML = '<input type="number" onchange="updateTotPrice()" name="quantities[]" id="order-quantity" min="0" max="100" value="1">';
   cell3.innerHTML = '<button onclick="deleteTableRow(this)"><i class="fas fa-times-circle"></i></button>';
-  console.log(cell1.innerHTML);
-  console.log(cell2.innerHTML);
-  console.log(cell3.innerHTML);
-}
 
+}
 
 function openDescription() {
   let descr = document.getElementById("txt-more-description");

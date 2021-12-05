@@ -16,10 +16,6 @@
         "totPrice": "50",
         "products": [
             {
-                "name": "Apples",
-                "quantity": "3"
-            },
-            {
                 "name": "Frozen Vegetables",
                 "quantity": "5"
             },
@@ -48,12 +44,19 @@
                 "quantity": "3"
             },
             {
-                "name": "Chicken Hearts",
-                "quantity": ""
-            },
-            {
                 "name": "Coke",
-                "quantity": ""
+                "quantity": "8"
+            }
+        ]
+    },
+    {
+        "orderNum": "2",
+        "studentId": "891234",
+        "totPrice": "",
+        "products": [
+            {
+                "name": "Bananas",
+                "quantity": "5"
             }
         ]
     }

@@ -14,7 +14,7 @@
     //Loop through to find if there is a product with the same name to delete
     $j = count($jsonFileDecoded);
     for($i=0; $i<($j); $i++) {
-      if (strcmp($jsonFileDecoded[$i]['name'], $_POST['orderNum']) == 0) {
+      if (strcmp($jsonFileDecoded[$i]['orderNum'], $_POST['orderNum']) == 0) {
         unset($jsonFileDecoded[$i]);
       }
     }
@@ -103,7 +103,7 @@
                     <td>' . $product['studentId'] . '</td>
                     <td>' . $product['totPrice'] . '</td>
                     <td><a href="Order_Edit.php?orderNumber=' . $product['orderNum'] . '"><i class="fas fa-edit"></i></a></td>
-                    <td><button onclick="deleteProductTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
+                    <td><button onclick="deleteOrderTableRow(this)"><i class="fas fa-times-circle"></i></button></td>
                   </tr>';
                 }     
               }
@@ -160,6 +160,7 @@
 
     </div>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../myScript1.js"></script>
 
