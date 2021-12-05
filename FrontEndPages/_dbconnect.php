@@ -20,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     else{
         $fname = $_POST['fname'];
-        if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {  
+        if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
             echo "<script>alert('Invalid fname')</script>";
-            $nameErr = "Only alphabets and white space are allowed";  
-        }  
+            $nameErr = "Only alphabets and white space are allowed";
+        }
     }
     // if (!preg_match("/^[a-zA-Z-' ]*$/", $fname)) {
     //     $nameErr = "Only letters and white space allowed";
@@ -37,10 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     else{
         $lname = $_POST['lname'];
-        if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {  
+        if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
             echo "<script>alert('Invalid lname')</script>";
-            $nameErr = "Only alphabets and white space are allowed";  
-        }  
+            $nameErr = "Only alphabets and white space are allowed";
+        }
     }
 
     // validating Password
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<script>alert('Invalid email format')</script>";
         }
     }
-    
+
     $phone = $_POST['phone'];
     $mobile = $_POST['mobile'];
     $city = $_POST['city'];
@@ -103,12 +103,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // $json_a=array("studentID"=$_POST['studentID']);
 
 
-    $data_results = file_get_contents("users.json");
+    $data_results = file_get_contents("../BackEndPages/Databases/users.json");
     $tempArray = json_decode($data_results);
     $file = "users.json";
     if (isset($_POST['submit'])) {
         if($nameErr =="" &&  $emailErr == "" &&$genderErr == "" && $websiteErr == "" && $studentErr == "" && $passerr== "" && $passerragain== "")
-        
+
         {
             $arr = array(
             'StudentID' => $_POST['studentID'],
@@ -132,8 +132,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         else{
-            echo "<h3> <b>You didn't filled up the form correctly.</b> </h3>";  
-            
+            echo "<h3> <b>You didn't filled up the form correctly.</b> </h3>";
+
         }
     }
 
