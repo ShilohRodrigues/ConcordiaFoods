@@ -44,11 +44,31 @@
       );
     }
 
+    //Calculate the new total price
+    $price = 0;
+    foreach($prodArray as $product) {
+      //Find the selected product in product json
+      foreach($jsonProdFileDecoded as $prodJson) {
+        if (strcmp($product['name'], $prodJson['name']) == 0) {
+          //Check if the product is sold by weight or by unit
+          if($prodJson['weight'] == null) {
+            //calc price qt * price
+            $price = $price + ($product['quantity'] * $prodJson['price']);
+          }
+          else {
+            //calc price qt * price * weight
+            $price = $price + ($product['quantity'] * $prodJson['price'] * $prodJson['weight']);
+          }
+        }
+      }
+    }
+    $price = round($price, 2);
+
     //Order to add based on form input
     $newArray = array(
       'orderNum' => $_POST['orderNum'],
       'studentId' => $_POST['studentId'],
-      'totPrice' => $_POST['totPrice'],
+      'totPrice' => $price,
       'products' => $prodArray
     );
 
@@ -138,6 +158,7 @@
         <input name="studentId" type="text" class="form-control" placeholder="Student ID of the student" value="<?php echo $currentOrder['studentId'];?>">
         <label>Total Price ($):</label>
         <input name="totPrice" type="text" class="form-control" readonly value="<?php echo $currentOrder['totPrice'];?>">
+        <label style="font-size:0.9em; text-align:center;">(The price will be updated when the changes are saved)</label>
       </div>
 
       <div class="mini-prod-table">

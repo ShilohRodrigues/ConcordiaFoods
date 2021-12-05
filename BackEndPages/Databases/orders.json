@@ -13,7 +13,7 @@
     {
         "orderNum": "1",
         "studentId": "123457",
-        "totPrice": "50",
+        "totPrice": 109.16,
         "products": [
             {
                 "name": "Frozen Vegetables",
@@ -52,7 +52,7 @@
     {
         "orderNum": "2",
         "studentId": "891234",
-        "totPrice": "",
+        "totPrice": 2.36,
         "products": [
             {
                 "name": "Bananas",
