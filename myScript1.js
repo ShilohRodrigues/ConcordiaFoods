@@ -39,6 +39,7 @@ function getQ(store){
 function clearQ(store){
   document.getElementById('quantity').value="0";
   localStorage.removeItem(store);
+  updatePrice();
 }
 
 //Function for deleting table row without json associated to the table

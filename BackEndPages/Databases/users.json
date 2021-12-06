@@ -22,19 +22,8 @@
         "Postal_Code": "HC1 4B5"
     },
     {
-        "StudentID": "User",
-        "First_Name": "User",
-        "Last_Name": "User",
-        "Password": "User",
-        "E-mail": "user@concordiaf.ca",
-        "P_Number": "555-555-5555",
-        "M_Number": "666-666-6666",
-        "Address": "117,John Street",
-        "Postal_Code": "HC1 4B5"
-    },
-    {
         "StudentID": "40156605",
-        "First_Name": "ShilohEdited",
+        "First_Name": "Shiloh",
         "Last_Name": "Rodrigues",
         "Password": "test",
         "E-mail": "shilohrodrigues@hotmail.com",

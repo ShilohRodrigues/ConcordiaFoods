@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -16,17 +18,21 @@
     <!-- Header-->
     <header id="mainHeader">
       <div id="logo">
-        <a href="index.html"><img class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods"></a>
+        <a href="index.php"><img class="img-fluid" src="images/CFlogo.png" alt="Concordia Foods"></a>
       </div>
       <nav>
         <div class="dropdown">
-          <button class="dropbtn">Account</button>
+          <?php if(isset($_SESSION['StudentID'])){echo "<button class='dropbtn'>".$_SESSION['StudentID']."</button>";}
+                  else{echo "<button class='dropbtn'>Account</button>";}?>
           <div class="dropdown-content">
-            <a href="FrontEndPages/login.php">Login</a>
-            <a href="FrontEndPages/signup.php">Sign Up</a>
+            <?php
+            if(isset($_SESSION['StudentID'])){echo'<a href="FrontEndPages/Logout.php">Logout</a>';}
+            else{echo'<a href="FrontEndPages/login.php">Login</a>';}
+            ?>
+            <?php if(!(isset($_SESSION['StudentID']))) {echo '<a href="FrontEndPages/signup.php">Sign Up</a>';} ?>
           </div>
         </div>
-        <a href="FrontEndPages/Cart_P4.html">View Cart</a>
+        <a href="FrontEndPages/Cart_P4.php">View Cart</a>
         <div class="dropdown">
           <button class="dropbtn">Products</button>
           <div class="dropdown-content">
@@ -37,7 +43,7 @@
             <a href="AislePages/aisle.php?aisle=Drinks">Drinks</a>
           </div>
         </div>
-        <a class="active" href="index.html">Home</a>
+        <a href="index.php" class="active">Home</a>
       </nav>
     </header>
 
@@ -170,17 +176,22 @@
             <li>Brahim Hamid</li>
           </ul>
         </div>
-        <div class="ftList">
-          <p>Backend Functions</p>
-          <ul>
-            <li><a href="BackEndPages/ProductList.php">Product List</a></li>
-            <li><a href="BackEndPages/p8.php?prod=new">Edit a Product</a></li>
-            <li><a href="BackEndPages/UsersList.php">User List</a></li>
-            <li><a href="BackEndPages/User_Edit.html">Edit a User</a></li>
-            <li><a href="BackEndPages/p11.php">Order List</a></li>
-            <li><a href="BackEndPages/Order_Edit.php">Edit an Order</a></li>
-          </ul>
-        </div>
+        <?php if(isset($_SESSION['StudentID'])) {
+              if(strcmp($_SESSION['StudentID'], 'Admin') == 0) {
+                echo '
+                <div class="ftList">
+                <p>Backend Functions</p>
+                <ul>
+                  <li><a href="BackEndPages/ProductList.php">Product List</a></li>
+                  <li><a href="BackEndPages/p8.php?prod=new">Edit a Product</a></li>
+                  <li><a href="BackEndPages/UsersList.php">User List</a></li>
+                  <li><a href="BackEndPages/User_Edit.php?user=new">Edit a User</a></li>
+                  <li><a href="BackEndPages/p11.php">Order List</a></li>
+                  <li><a href="BackEndPages/Order_Edit.php?orderNumber=new">Edit an Order</a></li>
+                </ul>
+              </div>';
+              }
+            } ?>    
       </div>
     </footer>
   </div>

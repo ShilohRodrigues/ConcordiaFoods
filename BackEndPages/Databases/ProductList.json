@@ -277,5 +277,14 @@
         "price": 3.28,
         "weight": null,
         "inventory": 100
+    },
+    {
+        "name": "Baby Yoda",
+        "aisle": "Fruits and Vegetables",
+        "description": "",
+        "img": "https:\/\/miro.medium.com\/max\/1200\/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+        "price": "5",
+        "weight": "5",
+        "inventory": "56"
     }
 ]

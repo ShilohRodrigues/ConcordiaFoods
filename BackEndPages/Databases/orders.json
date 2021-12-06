@@ -56,8 +56,12 @@
     {
         "orderNum": "2",
         "studentId": "891234",
-        "totPrice": 2.36,
+        "totPrice": 10.04,
         "products": [
+            {
+                "name": "Peaches",
+                "quantity": "6"
+            },
             {
                 "name": "Bananas",
                 "quantity": "5"

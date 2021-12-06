@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 unset($_SESSION['StudentID']);
-header("location: ../index.html");
+header("location: ../index.php");
  ?>

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php 
+    session_start();
     //Get the aisle from the url
     $prod = $_GET['prod'];
     $jsonFile = file_get_contents("../BackEndPages/Databases/ProductList.json");
@@ -34,19 +35,23 @@
 
   <div class="container-xxl pt-2">
 
-    <header id="mainHeader">
+  <header id="mainHeader">
       <div id="logo">
-        <a href="../index.html"><img class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods"></a>
+        <a href="../index.php"><img class="img-fluid" src="../images/CFlogo.png" alt="Concordia Foods"></a>
       </div>
       <nav>
         <div class="dropdown">
-          <button class="dropbtn">Account</button>
+          <?php if(isset($_SESSION['StudentID'])){echo "<button class='dropbtn'>".$_SESSION['StudentID']."</button>";}
+                  else{echo "<button class='dropbtn'>Account</button>";}?>
           <div class="dropdown-content">
-            <a href="../FrontEndPages/login.html">Login</a>
-            <a href="../FrontEndPages/p6.html">Sign Up</a>
+            <?php
+            if(isset($_SESSION['StudentID'])){echo'<a href="Logout.php">Logout</a>';}
+            else{echo'<a href="login.php">Login</a>';}
+            ?>
+            <?php if(!(isset($_SESSION['StudentID']))) {echo '<a href="signup.php">Sign Up</a>';} ?>
           </div>
         </div>
-        <a href="../FrontEndPages/Cart_P4.html">View Cart</a>
+        <a href="Cart_P4.php">View Cart</a>
         <div class="dropdown">
           <button class="dropbtn active">Products</button>
           <div class="dropdown-content">
@@ -57,7 +62,7 @@
             <a href="../AislePages/aisle.php?aisle=Drinks">Drinks</a>
           </div>
         </div>
-        <a href="../index.html">Home</a>
+        <a href="../index.php">Home</a>
       </nav>
     </header>
 
@@ -85,12 +90,12 @@
           <button id="bt-more-description" onclick="openDescription()">View Description...</button>
           <p>$<span id="cost-per-kg">' . $currentProduct['price'] . '</span>
           ' . $weight . '</p>
-          <form onsubmit="clearQ(\'' . $currentProduct['name'] . '\')">
+          <form>
             <label for="quantity">Quantity: </label>
             <input type="number" id="quantity" onchange="updatePrice()" name="quantity" value="" min="0" max="' . $currentProduct['inventory'] . '"><br>
             <p id="tot-price-label">Total Price: </p>
             <p id="tot-price">$0</p>
-            <input type="submit" id="btSubmit" value="Add To Cart">
+            <input onclick="clearQ(\'' . $currentProduct['name'] . '\')" type="button" id="btSubmit" value="Add To Cart">
           </form>';
           ?>
       </div>
@@ -112,8 +117,8 @@
         <div class="ftList">
           <p>Login/Sign Up</p>
           <ul>
-            <li><a href="../FrontEndPages/login.html">Login</a></li>
-            <li><a href="../FrontEndPages/p6.html">Sign Up</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="signup.php">Sign Up</a></li>
           </ul>
         </div>
         <div class="ftList">
@@ -126,17 +131,22 @@
             <li>Brahim Hamid</li>
           </ul>
         </div>
-        <div class="ftList">
-          <p>Backend Functions</p>
-          <ul>
-            <li><a href="../BackEndPages/ProductList.php">Product List</a></li>
-            <li><a href="../BackEndPages/p8.php?prod=new">Edit a Product</a></li>
-            <li><a href="../BackEndPages/UsersList.html">User List</a></li>
-            <li><a href="../BackEndPages/User_Edit.html">Edit a User</a></li>
-            <li><a href="../BackEndPages/p11.html">Order List</a></li>
-            <li><a href="../BackEndPages/Order_Edit.html">Edit an Order</a></li>
-          </ul>
-        </div>
+        <?php if(isset($_SESSION['StudentID'])) {
+              if(strcmp($_SESSION['StudentID'], 'Admin') == 0) {
+                echo '
+                <div class="ftList">
+                <p>Backend Functions</p>
+                <ul>
+                  <li><a href="../BackEndPages/ProductList.php">Product List</a></li>
+                  <li><a href="../BackEndPages/p8.php?prod=new">Edit a Product</a></li>
+                  <li><a href="../BackEndPages/UsersList.php">User List</a></li>
+                  <li><a href="../BackEndPages/User_Edit.php?user=new">Edit a User</a></li>
+                  <li><a href="../BackEndPages/p11.php">Order List</a></li>
+                  <li><a href="../BackEndPages/Order_Edit.php?orderNumber=new">Edit an Order</a></li>
+                </ul>
+              </div>';
+              }
+            } ?>    
       </div>
     </footer>
 

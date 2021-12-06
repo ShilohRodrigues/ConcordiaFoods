@@ -1,4 +1,5 @@
 <?php
+session_start();
 $nameErr = $emailErr = $genderErr = $websiteErr = $studentErr = $passerr= $passerragain= "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -105,23 +106,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $data_results = file_get_contents("../BackEndPages/Databases/users.json");
     $tempArray = json_decode($data_results);
-    $file = "users.json";
+    $file = "../BackEndPages/Databases/users.json";
     if (isset($_POST['submit'])) {
         if($nameErr =="" &&  $emailErr == "" &&$genderErr == "" && $websiteErr == "" && $studentErr == "" && $passerr== "" && $passerragain== "")
 
         {
             $arr = array(
-            'StudentID' => $_POST['studentID'],
-            'First_name' => $_POST['fname'],
-            'Last_name' => $_POST['fname'],
-            'Password' => $_POST['password'],
-            'E-mail' => $_POST['email'],
-            'P_Number' => $_POST['phone'],
-            'M_Number' => $_POST['mobile'],
-            'Address' => $_POST['address']
-        );
+                'StudentID' => $_POST['sID'],
+                'First_Name' => $_POST['fName'],
+                'Last_Name' => $_POST['lName'],
+                'Password' => $_POST['Password'],
+                'E-mail' => $_POST['email'],
+                'P_Number' => $_POST['Pnumber'],
+                'M_Number' => $_POST['mobile'],
+                'Address' => $_POST['Address'],
+                'Postal_Code' => $_POST['Postal']);
         $tempArray[] = $arr;
-        $json_data = json_encode($tempArray);
+        $json_data = json_encode($tempArray, JSON_PRETTY_PRINT);
         file_put_contents($file, $json_data);
         echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Success!</strong> new user has been signedup successfully!
@@ -129,15 +130,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <span aria-hidden="true">×</span>
         </button>
       </div>';
+      header("Location: ../index.php");
         }
 
         else{
-            echo "<h3> <b>You didn't filled up the form correctly.</b> </h3>";
-
+            $_SESSION["error"]="Missing required fields.";
+            header("Location: signup.php");
         }
+        
     }
 
-
+   
 
     // function test_input($data)
     // {
