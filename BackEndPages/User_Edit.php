@@ -74,13 +74,12 @@ else {
 
       <article>
         <div class="userContainer">
+          <?php echo "StudentID<br>".$currentUser['StudentID']."<br><br>";?>
           <form action="UserUpdate.php" method='post'>
           <label for="fName"><large>F</large>irst <large>N</large>ame</label><br>
             <input type="text" id="fName" name="fName" value="<?php echo $currentUser['First_Name'];?>"><br><br>
           <label for="lName"><large>L</large>ast <large>N</large>ame</label><br>
           <input type="lName" id="lName" name="lName" value="<?php echo $currentUser['Last_Name'];?>"><br><br>
-            <label for="sID"><large>S</large>tudentID</label><br>
-          <input type="text"  id="sID" name="sID" value="<?php echo $currentUser['StudentID'];?>"><br><br>
           <label for="email"><large>E</large>-mail</label><br>
           <input type="text"  id="email" name="email" value="<?php echo $currentUser['E-mail'];?>"><br><br>
           <label for="Phone Number"><large>P</large>hone <large>N</large>umber</label><br>
