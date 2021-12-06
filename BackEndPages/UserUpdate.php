@@ -6,8 +6,8 @@
   $json_data;
       $arr = array(
             'StudentID' => $_POST['sID'],
-            'First_name' => $_POST['fName'],
-            'Last_name' => $_POST['lName'],
+            'First_Name' => $_POST['fName'],
+            'Last_Name' => $_POST['lName'],
             'Password' => $_POST['Password'],
             'E-mail' => $_POST['email'],
             'P_Number' => $_POST['Pnumber'],
