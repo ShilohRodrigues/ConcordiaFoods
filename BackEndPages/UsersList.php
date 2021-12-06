@@ -62,7 +62,7 @@ if (isset($_POST['StudentID'])) {
             if(isset($_SESSION['StudentID'])){echo'<a href="Logout.php">Logout</a>';}
             else{echo'<a href="../FrontEndPages/login.php">Login</a>';}
             ?>
-            <?php if(isset($_SESSION['StudentID']{}else{echo '<a href="../FrontEndPages/p6.html">Sign Up</a>';})) ?>
+            <?php if(isset($_SESSION['StudentID']){}else{echo '<a href="../FrontEndPages/p6.html">Sign Up</a>';})) ?>
           </div>
         </div>
         <a href="../FrontEndPages/Cart_P4.html">View Cart</a>
