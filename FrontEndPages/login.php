@@ -22,7 +22,7 @@ session_start();
 		    </div>
 		    <nav>
 		      <div class="dropdown">
-		        <<?php if(isset($_SESSION['StudentID'])){echo "<button class='dropbtn active'>".$_SESSION['StudentID']."</button>";}
+		        <?php if(isset($_SESSION['StudentID'])){echo "<button class='dropbtn active'>".$_SESSION['StudentID']."</button>";}
                     else{echo "<button class='dropbtn active'>Account</button>";}?>
 		        <div class="dropdown-content">
 		          <?php
