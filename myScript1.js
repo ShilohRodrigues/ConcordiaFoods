@@ -129,15 +129,12 @@ function openDescription() {
 
 
 //Cart//////////////////////////
-removed_element_array = [];
-const PricePerUnit = [1.49 , 4.49];
-let i1 = 0;
-let i2 = 0;
+
 function Cart_Adjust(calling_element) {
 
-
+  
   let ClassName = calling_element.className;
-  let subtotal = 0;
+  //let subtotal = 0;
   let name = ClassName.match(/\D+/)[0];
   let number = ClassName.match(/\d+/)[0];
   let feild = "quantity" + number;
@@ -145,33 +142,82 @@ function Cart_Adjust(calling_element) {
   console.log(".Pquantity" + number + " ." + feild);
 
   if (name == "PButton") {
+
    if (1 < parseInt(Quantity.textContent)) {
          QuantityNumber = parseInt(Quantity.textContent) - 1
-         //localStorage.setItem(".Pquantity" + number + " ." + feild , QuantityNumber);
          Quantity.innerHTML = QuantityNumber;
-         let ItemTotal = document.querySelector(".Pprice" + number);
-         ItemTotal.innerHTML = precise(QuantityNumber * PricePerUnit[number-1] )+ " $";
-         //localStorage.setItem(".Pprice" + number, precise(QuantityNumber * PricePerUnit[number-1] )+ " $");
-
+         console.log(QuantityNumber);
+         document.getElementById("hiddenElement" + number).setVa = QuantityNumber;
+         document.getElementById("hiddenElement" + number).setAttribute("value" , QuantityNumber);
+         console.log(document.getElementById("hiddenElement" + number).getAttribute("value"));
+let PricePerUnit =    document.querySelector(".Pprice" + number );
+  var p = String(PricePerUnit.innerHTML).replace( /^\D+/g, ''); // replace all leading non-digits with nothing
+  let Q= QuantityNumber+1;
+  console.log(p);
+  console.log(Q);
+  Pperunit = p/Q;
+  console.log(Pperunit);
+  PricePerUnit.innerHTML = "$"+(Pperunit*(Q-1));
+         
    }
 
 
  }else {
          QuantityNumber = parseInt(Quantity.textContent) + 1;
          Quantity.innerHTML = QuantityNumber;
-         //localStorage.setItem(".Pquantity" + number + " ." + feild, QuantityNumber);
-         let ItemTotal = document.querySelector(".Pprice" + number);
-         ItemTotal.innerHTML = precise(QuantityNumber * PricePerUnit[number-1] ) + " $";
-         //localStorage.setItem(".Pprice" + number, precise(QuantityNumber * PricePerUnit[number-1] )+ " $");
+         console.log(QuantityNumber);
+         document.getElementById("hiddenElement" + number).setVa = QuantityNumber;
+         document.getElementById("hiddenElement" + number).setAttribute("value" , QuantityNumber);
+         console.log(document.getElementById("hiddenElement" + number).getAttribute("value"));
+
+         let PricePerUnit =    document.querySelector(".Pprice" + number );
+  var p = String(PricePerUnit.innerHTML).replace( /^\D+/g, ''); // replace all leading non-digits with nothing
+  let Q= QuantityNumber-1;
+  console.log(p);
+  console.log(Q);
+  Pperunit = p/Q;
+  console.log(Pperunit);
+  PricePerUnit.innerHTML = "$"+(Pperunit*(Q+1));
+
 
 
   }
+  let i = 1;
+  let arr= [];
+  while (true){
+  try {
+  p = String((document.querySelector(".Pprice" + i )).innerHTML).replace( /^\D+/g, ''); 
+  arr.push(parseInt(p));
+  i++;
+} catch (error) {
+  break;
 
+  }}
 
+    
+    // Getting sum of numbers
+    var sum = arr.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    
+    console.log(sum); 
+     //localStorage.setItem("Amounttext", subtotal);
+ document.querySelector(".Amounttext").innerHTML = Number.parseFloat(sum).toPrecision(4) + " $";
+ let QST = sum * 0.09975;
+ document.querySelector(".QSTamount").innerHTML = Number.parseFloat(QST).toPrecision(4) + " $";
+ //localStorage.setItem("QSTamount",   QST);
 
+ let GST = sum * 0.05;
+  document.querySelector(".GSTamount").innerHTML = Number.parseFloat(GST).toPrecision(4) + " $";
+ //localStorage.setItem("GSTamount", GST);
 
+ let total = sum + QST + GST;
+ document.querySelector(".totalamount").innerHTML = Number.parseFloat(total).toPrecision(4) + " $";
+ //localStorage.setItem("totalamount", total);*/
 
-
+ 
+/*
+ 
  let n = 1;
   while (document.querySelector(".Pquantity" + n + " ." + "quantity" + n)!= null) {
 
@@ -188,9 +234,9 @@ function Cart_Adjust(calling_element) {
       subtotal = subtotal + document.querySelector(".Pquantity" + n + " ." + "quantity" + n).textContent* PricePerUnit[n-1];
      n++;
     }
-
+     
     }
-
+    
    }
  console.log(subtotal);
  //localStorage.setItem("Amounttext", subtotal);
@@ -205,7 +251,7 @@ function Cart_Adjust(calling_element) {
 
  let total = subtotal + QST + GST;
  document.querySelector(".totalamount").innerHTML = Number.parseFloat(total).toPrecision(4) + " $";
- //localStorage.setItem("totalamount", total);
+ //localStorage.setItem("totalamount", total);*/
 
 
 
@@ -214,8 +260,45 @@ function precise(x) {
   return Number.parseFloat(x).toPrecision(4);
 }
 
-/*document.addEventListener("DOMContentLoaded", function(event) {
+function Summary(){
+let i = 1;
+  let arr= [];
+  while (true){
+  try {
+  p = String((document.querySelector(".Pprice" + i )).innerHTML).replace( /^\D+/g, ''); 
+  arr.push(parseInt(p));
+  i++;
+} catch (error) {
+  break;
 
+  }}
+
+    
+    // Getting sum of numbers
+    var sum = arr.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    
+    console.log(sum); 
+     //localStorage.setItem("Amounttext", subtotal);
+ document.querySelector(".Amounttext").innerHTML = Number.parseFloat(sum).toPrecision(4) + " $";
+ let QST = sum * 0.09975;
+ document.querySelector(".QSTamount").innerHTML = Number.parseFloat(QST).toPrecision(4) + " $";
+ //localStorage.setItem("QSTamount",   QST);
+
+ let GST = sum * 0.05;
+  document.querySelector(".GSTamount").innerHTML = Number.parseFloat(GST).toPrecision(4) + " $";
+ //localStorage.setItem("GSTamount", GST);
+
+ let total = sum + QST + GST;
+ document.querySelector(".totalamount").innerHTML = Number.parseFloat(total).toPrecision(4) + " $";
+ //localStorage.setItem("totalamount", total);*/
+
+  
+}
+
+/*document.addEventListener("DOMContentLoaded", function(event) {
+  
   document.querySelector(".Pquantity1 .quantity1").innerHTML = localStorage.getItem(".Pquantity1 .quantity1");
   document.querySelector(".Pquantity2 .quantity2").innerHTML = localStorage.getItem(".Pquantity2 .quantity2");
   document.querySelector(".Pprice1").innerHTML = localStorage.getItem(".Pprice1");
@@ -225,18 +308,18 @@ function precise(x) {
   document.querySelector(".QSTamount").innerHTML = Number.parseFloat(localStorage.getItem("QSTamount")).toPrecision(4) + " $";
   document.querySelector(".GSTamount").innerHTML = Number.parseFloat(localStorage.getItem("GSTamount")).toPrecision(4) + " $";
   document.querySelector(".totalamount").innerHTML = Number.parseFloat(localStorage.getItem("totalamount")).toPrecision(4) + " $";
-
+  
 });*/
 
 
 
 function Cart_X(calling_element) {
 
-  let subtotal = 0;
-  let reduced = 0;
+  //let subtotal = 0;
+  //let reduced = 0;
   let ClassName = calling_element.className;
   let number = ClassName.match(/\d+/)[0];
-
+/*
   if (number == 1) {
     i1 = 1;
   }
@@ -244,20 +327,20 @@ function Cart_X(calling_element) {
     i2 = 1;
         console.log("subtotal");
 
-  }
+  }*/
 
-  removed_element_array.push(number);
+  //removed_element_array.push(number);
   console.log(number);
-  document.querySelector(".Pquantity" + number).style.display = 'none';
-  document.querySelector(".Pimage" + number).style.display = 'none';
-  document.querySelector(".Pname" + number).style.display = 'none';
-  document.querySelector(".Pprice" + number).style.display = 'none';
-  document.querySelector(".xbutton" + number).style.display = 'none';
-
-
-
+  document.querySelector(".Pquantity" + number).style.display = 'none'; 
+  //document.querySelector(".Pimage" + number).style.display = 'none'; 
+  document.querySelector(".Pname" + number).style.display = 'none'; 
+  document.querySelector(".Pprice" + number).style.display = 'none'; 
+  document.querySelector(".xbutton" + number).style.display = 'none'; 
+ 
+ 
+ /*
   //let n = 1;
-
+    
     if (i1 == 1) {
        subtotal =  document.querySelector(".Pquantity" + 2 + " ." + "quantity" + 2).textContent* PricePerUnit[1];
        console.log(subtotal);
@@ -273,7 +356,7 @@ console.log(subtotal);
     if (i1 == 1 && i2 == 1) {
       subtotal=0;
       console.log(subtotal);
-      var div = document.querySelector('.line');
+      var div = document.querySelector('.line');    
       p = document.createElement("p");
     p.innerHTML = 'Empty cart';
     div.appendChild(p);
@@ -281,8 +364,8 @@ console.log(subtotal);
        div.innerHTML = '0 Item'
 
     }
-
-
+     
+   
 
 
 
@@ -306,6 +389,8 @@ function delete_user(calling_element){
 
   console.log("d");
 }
+*/
+
 
 ////////////////////////////////////////////////////////////
 
