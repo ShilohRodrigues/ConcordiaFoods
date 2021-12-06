@@ -12,7 +12,9 @@
             'E-mail' => $_POST['email'],
             'P_Number' => $_POST['Pnumber'],
             'M_Number' => $_POST['mobile'],
-            'Address' => $_POST['Address']);
+            'Address' => $_POST['Address'],
+            'Postal_Code' => $_POST['Postal']);
+            
       for($i=0; $i<($l);$i++){
         if(strcmp($userArray[$i]['StudentID'],$arr['StudentID'])==0){
           $userArray[$i] = $arr;

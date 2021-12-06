@@ -34,12 +34,13 @@
     },
     {
         "StudentID": "40156605",
-        "First_Name": "Shiloh",
+        "First_Name": "ShilohEdited",
         "Last_Name": "Rodrigues",
         "Password": "test",
         "E-mail": "shilohrodrigues@hotmail.com",
         "P_Number": "15147738698",
         "M_Number": "15147738698",
-        "Address": "H3Z 2K3"
+        "Address": "H3Z 2K3",
+        "Postal_Code": "141 Irvine"
     }
 ]
