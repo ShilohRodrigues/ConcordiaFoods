@@ -56,7 +56,7 @@ function deleteProductTableRow(r) {
   let name = table.rows[i].cells[0].innerHTML;
   console.log(name);
   $.ajax({
-    url:"http://localhost/ConcordiaFoods/BackEndPages/ProductList.php",
+    url:"../BackEndPages/ProductList.php",
     type: "post",
     data: {"prodName": name}
   });
@@ -71,7 +71,7 @@ function deleteOrderTableRow(r) {
   let num = table.rows[i].cells[0].innerHTML;
   console.log(num);
   $.ajax({
-    url:"http://localhost/ConcordiaFoods/BackEndPages/p11.php",
+    url:"../BackEndPages/p11.php",
     type: "post",
     data: {"orderNum": num}
   });
@@ -87,7 +87,7 @@ function deleteUserRow(r) {
   let id = table.rows[i].cells[1].innerHTML;
   console.log(id);
   $.ajax({
-    url:"http://localhost/ConcordiaFoods/BackEndPages/UsersList.php",
+    url:"../BackEndPages/UsersList.php",
     type: "post",
     data: {"StudentID": id}
   });
