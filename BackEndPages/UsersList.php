@@ -133,7 +133,7 @@ if (isset($_POST['StudentID'])) {
         <div class="ftList">
           <p>Login/Sign Up</p>
           <ul>
-            <li><a href="../FrontEndPages/login.html">Login</a></li>
+            <li><a href="../FrontEndPages/login.php">Login</a></li>
             <li><a href="../FrontEndPages/p6.html">Sign Up</a></li>
           </ul>
         </div>
