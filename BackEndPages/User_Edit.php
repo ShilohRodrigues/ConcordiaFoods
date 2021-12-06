@@ -74,10 +74,11 @@ else {
 
       <article>
         <div class="userContainer">
-          <?php echo "StudentID<br>".$currentUser['StudentID']."<br><br>";?>
           <form action="UserUpdate.php" method='post'>
+          <label for="StudentID"><large>S</large>tudent <large>ID</large></label><br>
+          <input name="sID" id=sID type=text value="<?php echo $currentUser['StudentID'];?>" <?php if(strcmp($currentUser['StudentID'],"")!=0){echo "readonly";}?>><br><br>
           <label for="fName"><large>F</large>irst <large>N</large>ame</label><br>
-            <input type="text" id="fName" name="fName" value="<?php echo $currentUser['First_Name'];?>"><br><br>
+          <input type="text" id="fName" name="fName" value="<?php echo $currentUser['First_Name'];?>"><br><br>
           <label for="lName"><large>L</large>ast <large>N</large>ame</label><br>
           <input type="lName" id="lName" name="lName" value="<?php echo $currentUser['Last_Name'];?>"><br><br>
           <label for="email"><large>E</large>-mail</label><br>
@@ -110,7 +111,7 @@ else {
           <input type="password" id="Password" name="Password" value="<?php echo $currentUser['Password'];?>"><br><br>
           <label for="confirmpassword"><large>C</large>onfirm <large>P</large>assword</label><br>
           <input type="password" id="cPassword" name="CPassword"><br><br>
-          <button type="submit" name=<?php if($currentUser['StudentID']==""){echo 'add';} else{echo 'edit';}?>>Save</button>
+          <button type="submit" name="Save">Save</button>
           </form>
         </div>
       </article>
