@@ -91,22 +91,6 @@ else {
           <input type="text"  id="Postal" name="Postal" value="<?php echo $currentUser['Postal_Code'];?>"><br><br>
           <label for="Address"><large>P</large>ostal <large>C</large>ode</label><br>
           <input type="text"  id="Address" name="Address" value="<?php echo $currentUser['Address'];?>"><br><br>
-          <label for="PROVINCE"><large>P</large>rovince</label><br>
-          <select class="selectcategory3">
-              <option value="">Ontario</option>
-              <option value="">Alberta</option>
-              <option value="">British Columbia</option>
-              <option value="">Manitoba</option>
-              <option value="">New <large>B</large>runswick</option>
-              <option value="">Newfoundland and Labrador</option>
-              <option value="">Northwest Territories</option>
-              <option value="">Nova Scotia</option>
-              <option value="">Nunavut</option>
-              <option value="">Prince E>dward Island</option>
-              <option value="">Quebec</option>
-              <option value="">Saskatchewan</option>
-              <option value="">Y>ukon</option>
-          </select><br><br>
           <label for="password"><large>P</large>assword</label><br>
           <input type="password" id="Password" name="Password" value="<?php echo $currentUser['Password'];?>"><br><br>
           <label for="confirmpassword"><large>C</large>onfirm <large>P</large>assword</label><br>
