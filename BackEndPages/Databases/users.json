@@ -31,5 +31,27 @@
         "M_Number": "15147738698",
         "Address": "H3Z 2K3",
         "Postal_Code": "141 Irvine"
+    },
+    {
+        "StudentID": "261006",
+        "First_Name": "Emma",
+        "Last_Name": "Cloutier",
+        "Password": "test",
+        "E-mail": "shilohrodrigues@hotmail.com",
+        "P_Number": "15147738698",
+        "M_Number": "15147738698",
+        "Address": "141 Irvine",
+        "Postal_Code": "H3Z 2K3"
+    },
+    {
+        "StudentID": "1234567890",
+        "First_Name": "Billy",
+        "Last_Name": "Bob",
+        "Password": "test",
+        "E-mail": "shilohrodrigues@hotmail.com",
+        "P_Number": "5147738698",
+        "M_Number": "15147738698",
+        "Address": "5287 Doherty",
+        "Postal_Code": "H4V 2B4"
     }
 ]

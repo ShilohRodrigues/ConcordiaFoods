@@ -32,7 +32,7 @@ session_start();
             <?php if(!(isset($_SESSION['StudentID']))) {echo '<a href="signup.php">Sign Up</a>';} ?>
           </div>
         </div>
-        <a href="Cart_P4.php">View Cart</a>
+        <a href="Cart_P4.php">Cart</a>
         <div class="dropdown">
           <button class="dropbtn">Products</button>
           <div class="dropdown-content">

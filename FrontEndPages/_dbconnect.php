@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
 $nameErr = $emailErr = $genderErr = $websiteErr = $studentErr = $passerr= $passerragain= "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -112,15 +115,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         {
             $arr = array(
-                'StudentID' => $_POST['sID'],
-                'First_Name' => $_POST['fName'],
-                'Last_Name' => $_POST['lName'],
-                'Password' => $_POST['Password'],
-                'E-mail' => $_POST['email'],
-                'P_Number' => $_POST['Pnumber'],
-                'M_Number' => $_POST['mobile'],
-                'Address' => $_POST['Address'],
-                'Postal_Code' => $_POST['Postal']);
+                'StudentID' => $_POST['studentID'],
+            'First_Name' => $_POST['fname'],
+            'Last_Name' => $_POST['lname'],
+            'Password' => $_POST['password'],
+            'E-mail' => $_POST['email'],
+            'P_Number' => $_POST['phone'],
+            'M_Number' => $_POST['mobile'],
+            'Address' => $_POST['address'],
+            'Postal_Code' => $_POST['Postal']
+        );
         $tempArray[] = $arr;
         $json_data = json_encode($tempArray, JSON_PRETTY_PRINT);
         file_put_contents($file, $json_data);

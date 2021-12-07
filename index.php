@@ -22,8 +22,8 @@
       </div>
       <nav>
         <div class="dropdown">
-          <?php if(isset($_SESSION['StudentID'])){echo "<button class='dropbtn'>".$_SESSION['StudentID']."</button>";}
-                  else{echo "<button class='dropbtn'>Account</button>";}?>
+          <?php if(isset($_SESSION['StudentID'])){echo '<button class="dropbtn">'.$_SESSION['StudentID'].'</button>';}
+                  else{echo '<button class="dropbtn">Account</button>';}?>
           <div class="dropdown-content">
             <?php
             if(isset($_SESSION['StudentID'])){echo'<a href="FrontEndPages/Logout.php">Logout</a>';}
@@ -32,7 +32,7 @@
             <?php if(!(isset($_SESSION['StudentID']))) {echo '<a href="FrontEndPages/signup.php">Sign Up</a>';} ?>
           </div>
         </div>
-        <a href="FrontEndPages/Cart_P4.php">View Cart</a>
+        <a href="FrontEndPages/Cart_P4.php">Cart</a>
         <div class="dropdown">
           <button class="dropbtn">Products</button>
           <div class="dropdown-content">
@@ -43,7 +43,7 @@
             <a href="AislePages/aisle.php?aisle=Drinks">Drinks</a>
           </div>
         </div>
-        <a href="index.php" class="active">Home</a>
+        <a class="active" href="index.php">Home</a>
       </nav>
     </header>
 

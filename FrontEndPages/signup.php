@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
 include("_dbconnect.php");
 ?>
 
@@ -37,7 +40,7 @@ include("_dbconnect.php");
                 <?php if(!(isset($_SESSION['StudentID']))) {echo '<a href="signup.php">Sign Up</a>';} ?>
             </div>
             </div>
-            <a href="Cart_P4.php">View Cart</a>
+            <a href="Cart_P4.php">Cart</a>
             <div class="dropdown">
             <button class="dropbtn">Products</button>
             <div class="dropdown-content">
@@ -93,7 +96,7 @@ include("_dbconnect.php");
                         <label for="tb-address">ADDRESS (NO, STREET)</label>
                         <input type="text" id="tb-address" name="address">
                         <label for="tb-city">CITY</label>
-                        <input id="tb-city" name="city" name="postal">
+                        <input id="tb-city" name="city">
                         <label for="select-country">Country</label>
                         <select id="select-country">
                             <option>Canada</option>
@@ -114,6 +117,8 @@ include("_dbconnect.php");
                             <option value="">Saskatchewan</option>
                             <option value="">Yukon</option>
                         </select>
+                        <label for="tb-zip">ZIP</label>
+                        <input id="tb-Postal" name="Postal">
                         <label for="tb-phone">PHONE NUMBER</label>
                         <input id="tb-phone" name="phone">
                         <label for="tb-mobile">MOBILE PHONE</label>

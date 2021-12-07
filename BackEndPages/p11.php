@@ -69,7 +69,7 @@ session_start();
              <?php if(!(isset($_SESSION['StudentID']))) {echo '<a href="../FrontEndPages/signup.php">Sign Up</a>';} ?>
             </div>
           </div>
-          <a href="../FrontEndPages/Cart_P4.php">View Cart</a>
+          <a href="../FrontEndPages/Cart_P4.php">Cart</a>
           <div class="dropdown">
             <button class="dropbtn">Products</button>
             <div class="dropdown-content">
