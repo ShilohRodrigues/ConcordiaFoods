@@ -7,6 +7,10 @@ session_start();
 
 <?php 
 
+  if ($_SESSION['StudentID'] != 'Admin') {
+    header("Location: ../index.php");
+  }
+
   //Get the product list from the json
   $file = "../BackEndPages/Databases/ProductList.json";
   $jsonFile = file_get_contents("$file");

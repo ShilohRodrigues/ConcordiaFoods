@@ -89,8 +89,8 @@
               }
               echo 
               '<div class="productContainer">
-                <img class="img-fluid" src="' . $product['img'] . '" alt="' . $product['name'] . '" />
-                <h3>' . $product['name'] . '</h3>
+                <img onclick="window.location.href = \'../FrontEndPages/ProdDesc.php?prod=' . $product['name'] . '\'" class="img-fluid" src="' . $product['img'] . '" alt="' . $product['name'] . '" />
+                <h3 onclick="window.location.href = \'../FrontEndPages/ProdDesc.php?prod=' . $product['name'] . '\'">' . $product['name'] . '</h3>
                 <p class="price">$' . $product['price'] . $weight . '</p>
                 <button type="button" onclick="window.location.href = \'../FrontEndPages/ProdDesc.php?prod=' . $product['name'] . '\'">View Details</button>
               </div>';

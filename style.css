@@ -278,6 +278,10 @@ h1, h2, h3 {
   height: 150px;
 }
 
+.productContainer img:hover, .productContainer h3:hover {
+ 	cursor: pointer;
+}
+
 .productContainer button {
   background-color: #800;
   font-size: 1.2em;
